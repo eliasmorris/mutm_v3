@@ -13,7 +13,7 @@
   <tbody>
       <?php
         $num = 1;
-        foreach ($arr as $value) {
+        foreach ($arr as $key => $value) {
           echo '<td>'.$value['bname'].'</td>';
           echo '<td>'.$value['btype'].'</td>';
           echo '<td class="font-weight-bold">'.$value['email'].'</td>';
