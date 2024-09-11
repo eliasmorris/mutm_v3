@@ -11,9 +11,8 @@
 
 	$jsIPConnect = 'http://102.223.7.135:8881/'; //server PUBLIC IP FOR JAVASCRIPT CONNECTION
 
-	
 
-	$localPHPIp = 'http://172.18.18.20:6060/'; //server local IP FOR PHP CONNECTION
+
 
 	$localIp = 'http://172.18.18.20:6060/'; //server local ip for javascript connect
 
