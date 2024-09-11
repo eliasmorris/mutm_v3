@@ -13,7 +13,7 @@
 
 	$localIp = 'http://172.18.18.20:8881/'; //server local ip for javascript connect
 
-	$publicIPConnent = 'http://102.214.45.147:6060/mutm/api'; //server PUBLIC IP FOR JAVASCRIPT CONNECTION
+	$publicIPConnent = 'http://102.214.45.147:6060/'; //server PUBLIC IP FOR JAVASCRIPT CONNECTION
 
 
 	//get user location
