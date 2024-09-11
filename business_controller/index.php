@@ -24,7 +24,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Biashara2</h1>
+            <h1>Biashara</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -81,7 +81,7 @@
               <div class="card-body" id="listTable">
                 <?php
 
-                  // $json = file_get_contents($pubIP.'selectInstitutionInfo'); //receive json from url
+                  
                   $json = file_get_contents($publicIPConnent.'mutm/api/getAllBusiness?pageNum=1&pageSize=3');
                   $arr = json_decode($json, true); //covert json data into array format
 
