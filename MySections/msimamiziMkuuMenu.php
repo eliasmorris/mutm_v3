@@ -15,6 +15,14 @@
   </a>
 </li>
 <li class="nav-item">
+  <a href="../business_controller/" class="nav-link text-white font-weight-bold">
+    <i class="nav-icon fas fa-money-bill-alt"></i>
+    <p>
+      Biashara
+    </p>
+  </a>
+</li>
+<li class="nav-item">
   <a href="../zoni/" class="nav-link text-white font-weight-bold">
     <i class="nav-icon fas fa-globe-africa"></i>
     <p>
@@ -188,32 +196,3 @@
     </li>
   </ul>
 </li>
-<!-- <li class="nav-item">
-  <a href="#" class="nav-link text-white font-weight-bold">
-    <i class="nav-icon fas fa-users"></i>
-    <p>
-      Matumizi
-      <i class="right fas fa-angle-left"></i>
-    </p>
-  </a>
-  <ul class="nav nav-treeview">
-    <li class="nav-item">
-      <a href="../users/" class="nav-link text-yellow font-weight-bold">
-        <i class="far fa-circle nav-icon"></i>
-        <p>Watumiaji</p>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="../ukaguzi/" class="nav-link text-yellow font-weight-bold">
-        <i class="far fa-circle nav-icon"></i>
-        <p>Ukaguzi</p>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link text-yellow font-weight-bold" data-toggle="modal" data-target="#badiliNenoSiri">
-        <i class="far fa-circle nav-icon"></i>
-        <p>Neno la siri</p>
-      </a>
-    </li>
-  </ul>
-</li> -->
