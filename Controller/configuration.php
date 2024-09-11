@@ -6,7 +6,9 @@ function getServer(){
     //$serverName = "http://localhost/ocgs-api";
     include('../Controller/connect.php');
     $serverName = $ipConnect;
+    $serverName1 = $localPHPIp;
     return $serverName;
+    return $serverName1;
 }
 
 //fetch result from database table
