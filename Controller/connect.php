@@ -1,25 +1,22 @@
 <?php
-	// $ipConnect = 'http://10.0.200.78:8881/'; //server local IP FOR PHP CONNECTION
+	$ipConnect = 'http://10.0.200.78:8881/'; //server local IP FOR PHP CONNECTION
 
-	// // $pubIP2 = 'http://102.223.7.177:8888/'; //Test server PUBLIC IP FOR JAVASCRIPT CONNECTION
+	// $pubIP2 = 'http://102.223.7.177:8888/'; //Test server PUBLIC IP FOR JAVASCRIPT CONNECTION
 
-	// $pubIP2 = 'http://10.0.200.78:8881/'; //server local IP FOR JAVASCRIPT CONNECTION
+	$pubIP2 = 'http://10.0.200.78:8881/'; //server local IP FOR JAVASCRIPT CONNECTION
 
-	// $pubIP = 'http://10.0.200.78:8881/'; //server local IP FOR JAVASCRIPT CONNECTION
+	$pubIP = 'http://10.0.200.78:8881/'; //server local IP FOR JAVASCRIPT CONNECTION
 
-	// $locIP = 'http://10.0.200.78:8881/'; //server local IP FOR JAVASCRIPT CONNECTION
+	$locIP = 'http://10.0.200.78:8881/'; //server local IP FOR JAVASCRIPT CONNECTION
 
-	// $jsIPConnect = 'http://102.223.7.135:8881/'; //server PUBLIC IP FOR JAVASCRIPT CONNECTION
+	$jsIPConnect = 'http://102.223.7.135:8881/'; //server PUBLIC IP FOR JAVASCRIPT CONNECTION
 
 
 
-	
-	$ipConnect = 'http://172.18.18.20:6060/'; //server local ip for javascript connect
-	$pubIP2 = 'http://172.18.18.20:6060/'; //server local ip for javascript connect
-	$pubIP = 'http://172.18.18.20:6060/'; //server local ip for javascript connect
-	$locIP = 'http://172.18.18.20:6060/'; //server local ip for javascript connect
 
-	$jsIPConnect = 'http://102.214.45.147:6060/'; //server PUBLIC IP FOR JAVASCRIPT CONNECTION
+	$localIp = 'http://172.18.18.20:6060/'; //server local ip for javascript connect
+
+	$publicIPConnent = 'http://102.214.45.147:6060/'; //server PUBLIC IP FOR JAVASCRIPT CONNECTION
 
 
 	//get user location
