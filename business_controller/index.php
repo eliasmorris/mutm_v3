@@ -9,7 +9,8 @@
     include('../MySections/HeaderLinks.php');
   ?>
 </head>
-<body class="hold-transition sidebar-mini" oncontextmenu="return false">
+<!-- (oncontextmenu="return false")for stoping inspect element -->
+<body class="hold-transition sidebar-mini">
   <div id="loader" class="center"></div>
 <div class="wrapper">
   <?php
