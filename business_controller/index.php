@@ -87,6 +87,7 @@
                   $arr = json_decode($json, true); //covert json data into array format
 
                   include('instituteList.php');
+                  echo 'helloo';
                 ?>
                 
               </div>
