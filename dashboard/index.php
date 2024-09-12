@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" oncontextmenu="return false">
+<html lang="en"> 
+  <!-- (oncontextmenu="return false") used for stoping inspect element from the page -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">

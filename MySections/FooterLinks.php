@@ -93,21 +93,21 @@
 
 
   //avoid viewing the code
-  function keydown(e) {
-      if (e.ctrlKey && e.keyCode == 85) {
-          // 82 = r
+  // function keydown(e) {
+  //     if (e.ctrlKey && e.keyCode == 85) {
+  //         // 82 = r
 
-          // TODO: your thing.
+  //         // TODO: your thing.
 
-          if (e.preventDefault) {
-              e.preventDefault();
-          }
-          else {
-              return false;
-          }
-      }
-  }
-  $(document).keydown(keydown);
+  //         if (e.preventDefault) {
+  //             e.preventDefault();
+  //         }
+  //         else {
+  //             return false;
+  //         }
+  //     }
+  // }
+  // $(document).keydown(keydown);
 
 
   $(function () {
