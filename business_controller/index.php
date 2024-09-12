@@ -82,7 +82,7 @@
                 <?php
 
                   // $json = file_get_contents($pubIP.'selectInstitutionInfo'); //receive json from url
-                  $json = file_get_contents($pubIP.'mutm/api/getAllBusiness?pageNum=1&pageSize=3');
+                  $json = file_get_contents('http://102.214.45.147:6060/mutm/api/getAllBusiness?pageNum=1&pageSize=2');
                   $arr = json_decode($json, true); //covert json data into array format
 
                   include('instituteList.php');
