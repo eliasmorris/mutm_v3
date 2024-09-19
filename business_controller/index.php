@@ -58,7 +58,7 @@
                           <span class="fa fa-eye"></span>&nbsp;Akaunti za Malipo zilizosajiliwa
                         </a> -->
                         &nbsp;
-                        <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#addInstitute">
+                        <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#addBusiness">
                           <span class="fa fa-plus"></span>&nbsp;Biashara
                         </button>
                       </div>
@@ -83,10 +83,10 @@
                 <?php
 
                   // $json = file_get_contents($pubIP.'selectInstitutionInfo'); //receive json from url
-                  $json = file_get_contents($localIp.'mutm/api/getAllBusiness?pageNum=1&pageSize=3');
+                  $json = file_get_contents($publicIPConnent.'mutm/api/getAllBusiness?pageNum=1&pageSize=20');
                   $arr = json_decode($json, true); //covert json data into array format
 
-                  include('instituteList.php');
+                  include('biasharaList.php');
                 ?>
                 
               </div>
@@ -117,9 +117,9 @@
 
 <?php
   include('../MySections/FooterLinks.php');
-  include('taasisiModals.php');
+  include('biasharaModals.php');
 ?>
 
-<script type="text/javascript" src="taasisiScripts.js"></script>
+<script type="text/javascript" src="biasharaScripts.js"></script>
 </body>
 </html>

@@ -8,15 +8,15 @@
 		$insertLog['device'] = gethostbyaddr($_SERVER['REMOTE_ADDR']); //get device
 		if (isset($_POST['act'])) {
 			if ($_POST['act'] == 'insertLog') {
-				$insertLog['eventts'] = "Amesajili Taasisi mpya ya ".$_POST['instname']; //get event
+				$insertLog['eventts'] = "Amesajili Biashara mpya ya ".$_POST['bname']; //get event
 			}elseif ($_POST['act'] == 'updateLog') {
-				$insertLog['eventts'] = "Amebadilisha Taarifa za Taasisi ya  ".$_POST['instname']; //get event
+				$insertLog['eventts'] = "Amebadilisha Taarifa za Biashara ya  ".$_POST['bname']; //get event
 			}elseif ($_POST['act'] == 'addAccountLog') {
-				$insertLog['eventts'] = "Amesajili Akaunti namba mpya katika taasisi ya  ".$_POST['instname'] . " (" . $_POST['accnum'] . " - " . $_POST['accname'] . " - " . $_POST['bankcode'] . ")" ; //get event
+				$insertLog['eventts'] = "Amesajili Akaunti namba mpya katika Biashara ya  ".$_POST['bname']; //get event
 			}elseif ($_POST['act'] == 'addImeiLog') {
-				$insertLog['eventts'] = "Amesajili POS mpya yenye imei namba ".$_POST['imei']." katika taasisi ya  ".$_POST['instname']; //get event
+				$insertLog['eventts'] = "Amesajili POS mpya yenye imei namba ".$_POST['imei']." katika taasisi ya  ".$_POST['bname']; //get event
 			}else{
-				$insertLog['eventts'] = "Ameifuta Taasisi ya ".$_POST['instname']; //get event
+				$insertLog['eventts'] = "Ameifuta Biashara ya ".$_POST['bname']; //get event
 			}
 		}
 		

@@ -1,5 +1,5 @@
 
-
+    Header set  Access-Control-Allow-Origin http://102.214.45.147:6060 
 
     RewriteEngine On
     RewriteBase /	

@@ -9,7 +9,7 @@
     include('../MySections/HeaderLinks.php');
   ?>
 </head>
-<body class="hold-transition sidebar-mini" oncontextmenu="return false">
+<body class="hold-transition sidebar-mini">
   <div id="loader" class="center"></div>
 <div class="wrapper">
   <?php

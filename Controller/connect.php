@@ -13,9 +13,9 @@
 
 
 
-
+	
 	$localIp = 'http://172.18.18.20:6060/'; //server local ip for javascript connect
-
+	$publicIp = 'http://172.18.18.20:6060/'; //server local ip for javascript connect
 	$publicIPConnent = 'http://102.214.45.147:6060/'; //server PUBLIC IP FOR JAVASCRIPT CONNECTION
 
 

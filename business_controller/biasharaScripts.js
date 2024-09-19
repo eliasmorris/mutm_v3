@@ -1,71 +1,77 @@
-var form = document.getElementById('addInstituteForm');
+var form = document.getElementById('addBusinessForm');
 form.addEventListener('submit', function(e){
 
-  // e.preventDefault(); // dont remove modal if success
+   e.preventDefault(); // dont remove modal if success
   
-  var instcode = document.getElementById('instcode').value;
-  var instname = document.getElementById('instname').value;
-  var insttype = document.getElementById('insttype').value;
-  var regid = document.getElementById('regid').value;
-  var intergratingcode = document.getElementById('intergratingcode').value;
+  var bname = document.getElementById('bname').value;
+  var btype = document.getElementById('btype').value;
+  var email = document.getElementById('email').value;
+  var restaurentnumber = document.getElementById('restaurentnumber').value;
+  var pnumber = document.getElementById('pnumber').value;
+  var sheh = document.getElementById('sheh').value;
 
-  var pubIP = document.getElementById('pubIPa').value;
-  var locIP = document.getElementById('locIPa').value;
+  var publicIP = document.getElementById('publicIPa').value;
+  var localIPa = document.getElementById('localIPa').value;
 
   //generate institution id
   // get milliseconds since 1st Jan. 1970
-  var instid = new Date().getTime(); 
+  //var bussid = new Date().getTime(); 
   
-  fetch(pubIP+"insertInstitute",{
+  fetch(publicIP+"mutm/api/insertBusiness",{
     method:'POST',
+    mode: 'no-cors',  // This disables CORS
     body:JSON.stringify({
       //change data into json format
-        "instid": instid,
-        "instcode": instcode,
-        "intergratingcode": intergratingcode,
-        "instname": instname,
-        "insttype": insttype,
-        "regid": regid,
-        "inststatus": 'active'
+        //"bussid": bussid,
+        "bname": bname,
+        "btype": btype,
+        "email": email,
+        "restaurentnumber": restaurentnumber,
+        "pnumber": pnumber,
+        "sheh": sheh,
+        // "regid": regid,
+        // "inststatus": 'active'
     }),
     headers:{
       "Content-Type":"application/json;charset= UTF-8"
-    }
+    },
   }).then(function(response){
     return response.json();
   }).then(function(data){
-    // console.log(data); //for testing only
+     console.log(data); //for testing only
   })
 
-  fetch(pubIP+"insetZone",{
-    method:'POST',
-    body:JSON.stringify({
-      //change data into json format
-        "instituteid": instid,
-        "zonename": 'OFISINI'
-    }),
-    headers:{
-      "Content-Type":"application/json;charset= UTF-8"
-    }
-  }).then(function(response){
-    return response.json();
-  }).then(function(data){
-    // console.log(data); //for testing only
-  })
+  // fetch(pubIP+"insetZone",{
+  //   method:'POST',
+  //   body:JSON.stringify({
+  //     //change data into json format
+  //       "instituteid": instid,
+  //       "zonename": 'OFISINI'
+  //   }),
+  //   headers:{
+  //     "Content-Type":"application/json;charset= UTF-8"
+  //   }
+  // }).then(function(response){
+  //   return response.json();
+  // }).then(function(data){
+  //   // console.log(data); //for testing only
+  // })
 
 
   //SEND INTO LOG
   $.ajax({
     url:"insertIntoLog.php", //CODE TO GET REG NAME
     type:"POST",
-    data:{instname:instname, act:'insertLog'}, //ELEMENT ID WHERE I GET VALUE
+    data:{bname:bname, act:'insertLog'}, //ELEMENT ID WHERE I GET VALUE
       success:function(data){
         if(data == 'success'){
-          alert('Umefanikiwa kusajili taasisi mpya ya ' + instname);
+          
+          alert('Umefanikiwa kusajili Biashara mpya ya ' + bname);
           // $( "#listTable" ).load( "index.php #listTable" );
           window.location.load(); //refresh current page
         }else{
-          alert('Samahani taasisi imeshindwa kusajiliwa! Jaribu tena');
+          alert(data);
+          alert('Samahani Biashara imeshindwa kusajiliwa! Jaribu tena');
         }
     }
   });
@@ -75,52 +81,59 @@ form.addEventListener('submit', function(e){
 
 
 //update intitution
-var form = document.getElementById('editInstitutionForm');
+var form = document.getElementById('editBiasharaForm');
 form.addEventListener('submit', function(e){
 
-  // e.preventDefault(); // dont remove modal if success
+   e.preventDefault(); // dont remove modal if success
   
-  var instituteid = document.getElementById('instituteidi').value;
-  var instcode = document.getElementById('instcodei').value;
-  var instname = document.getElementById('instnamei').value;
-  var insttype = document.getElementById('insttypei').value;
-  var regid = document.getElementById('regidi').value;
-  var intergratingcode = document.getElementById('intergratingcodei').value;
+  var busId = document.getElementById('busId').value;
+  var bnamee = document.getElementById('bnamee').value;
+  var btypee = document.getElementById('btypee').value;
+  var emaill = document.getElementById('emaill').value;
+  var restaurentnumberr = document.getElementById('restaurentnumberr').value;
+  var phonenumberr = document.getElementById('phonenumberr').value;
+  var shehh = document.getElementById('shehh').value;
+  
 
-  var pubIP = document.getElementById('pubIPe').value;
-  var locIP = document.getElementById('locIPe').value;
+  var publicIPu = document.getElementById('pubIPu').value;
+  var localIPu = document.getElementById('locIPu').value;
   
-  fetch(pubIP+"updateInstitute/"+instituteid,{
+  fetch(publicIPu+"mutm/api/updateBusiness/"+busId,{
     method:'PUT',
+    //mode: 'cors',  // This disables CORS
+    headers:{
+      "Content-Type":"application/json;"
+    },
     body:JSON.stringify({
       //change data into json format
-        "instcode": instcode,
-        "intergratingcode": intergratingcode,
-        "instname": instname,
-        "insttype": insttype,
-        "regid": regid
+        bname: bnamee,
+        btype: btypee,
+        email: emaill,
+        restaurentnumber: restaurentnumberr,
+        pnumber: phonenumberr,
+        sheh: shehh
     }),
-    headers:{
-      "Content-Type":"application/json;charset= UTF-8"
-    }
+    
   }).then(function(response){
     return response.json();
   }).then(function(data){
     console.log(data); //for testing only
+    //alert(data);
   })
 
   //SEND INTO LOG
   $.ajax({
     url:"insertIntoLog.php", //CODE TO GET REG NAME
     type:"POST",
-    data:{instname:instname, act:'updateLog'}, //ELEMENT ID WHERE I GET VALUE
+    data:{bname:bnamee, act:'updateLog'}, //ELEMENT ID WHERE I GET VALUE
       success:function(data){
         if(data == 'success'){
-          alert('Taarifa za taasisi zimebadilishwa kikamilifu');
-          window.location.load(); //refresh current page
+          alert('Taarifa za Biashara zimebadilishwa kikamilifu');
+          //window.location.load(); //refresh current page
           // $( "#listTable" ).load( "index.php #listTable" );
         }else{
-          alert('Samahani Taarifa za taasisi zimeshindwa kubadilishwa! Jaribu tena');
+          // alert('Samahani Taarifa za biashara zimeshindwa kubadilishwa! Jaribu tena');
+          alert(data);
         }
     }
   });
@@ -130,34 +143,34 @@ form.addEventListener('submit', function(e){
 
 
 //call add new Institution modal function
-$(document).on("click", ".open-editInstitutionf", function (e) {
+$(document).on("click", ".open-editBusinessinfo", function (e) {
 
   e.preventDefault();
 
   var _self = $(this);
 
-  var instituteid = _self.data('id');
-  $("#instituteidi").val(instituteid);
+  var busId = _self.data('id');
+  $("#busId").val(busId);
 
-  var instcode = _self.data('conf2');
-  $("#instcodei").val(instcode);
+  var bnamee = _self.data('conf2');
+  $("#bnamee").val(bnamee);
 
-  var instname = _self.data('conf3');
-  $("#instnamei").val(instname);
+  var btypee = _self.data('conf3');
+  $("#btypee1").val(btypee);
+  document.getElementById('btypee1').innerHTML = btypee;
 
-  var insttype = _self.data('conf4');
-  $("#insttypei2").val(insttype);
-  document.getElementById('insttypei2').innerHTML = insttype;
+  var emaill = _self.data('conf4');
+  $("#emaill").val(emaill);
 
-  var regname = _self.data('conf5');
+  var restaurentnumberr = _self.data('conf5');
+  $("#restaurentnumberr").val(restaurentnumberr);
 
-  var regid = _self.data('conf6');
-  $("#regidi2").val(regid);
-  document.getElementById('regidi2').innerHTML = regname;
+  var phonenumberr = _self.data('conf6');
+  $("#phonenumberr").val(phonenumberr);
 
-  var intergratingcode = _self.data('conf7');
-  $("#intergratingcodei").val(intergratingcode);
-
+  var shehhia = _self.data('conf7');
+  $("#shehhia").val(shehhia);
+  document.getElementById('shehhia').innerHTML = shehhia;
 
   $(_self.attr('href')).modal('show');
 });
@@ -170,7 +183,7 @@ function deleteInstitution(instituteid, instname) {
   // var pubIP = document.getElementById('pubIP').value;
   // var locIP = document.getElementById('locIP').value;
   // var zonestatus = 'inactive';
-  var c =confirm("Hakika unataka kufuta Taasisi?");
+  var c =confirm("Hakika unataka kufuta Biashara?");
 
   if(c){
     fetch("http://102.223.7.135:8881/deleteInstitute/"+instituteid,{
