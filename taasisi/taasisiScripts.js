@@ -117,7 +117,7 @@ form.addEventListener('submit', function(e){
       success:function(data){
         if(data == 'success'){
           alert('Taarifa za taasisi zimebadilishwa kikamilifu');
-          window.location.load(); //refresh current page
+          //window.location.load(); //refresh current page
           // $( "#listTable" ).load( "index.php #listTable" );
         }else{
           alert('Samahani Taarifa za taasisi zimeshindwa kubadilishwa! Jaribu tena');
