@@ -78,7 +78,7 @@ form.addEventListener('submit', function(e){
 var form = document.getElementById('editInstitutionForm');
 form.addEventListener('submit', function(e){
 
-  // e.preventDefault(); // dont remove modal if success
+   e.preventDefault(); // dont remove modal if success
   
   var instituteid = document.getElementById('instituteidi').value;
   var instcode = document.getElementById('instcodei').value;
