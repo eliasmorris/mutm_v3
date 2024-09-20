@@ -9,7 +9,7 @@
       </div>
       <div class="modal-body">
         <form id="addBusinessForm">
-
+          
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
@@ -48,7 +48,7 @@
                   <span class="text-danger">*</span>
                 </label>
                 <!-- style="border: solid 1px green; text-transform:uppercase;" -->
-                <input type="email" name="email" id="email" class="form-control" placeholder="Ingiza Email" required="required" style="border: solid 1px green;">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Ingiza Email" required="required">
               </div>
             </div>
             <div class="col-sm-6">
@@ -62,7 +62,7 @@
           </div>
 
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
               <div class="form-group">
                 <label for="phonenumber">Nambari ya Simu
                   <span class="text-danger">*</span>
@@ -70,8 +70,7 @@
                 <input type="text" name="pnumber" id="pnumber" class="form-control" placeholder="Ingiza Nambari ya Simu" required="required" style="border: solid 1px green;">
               </div>
             </div>
-          </div>
-          <div class="row">
+
             <div class="col-md-6">
               <?php
 
@@ -80,11 +79,11 @@
               $arr = json_decode($json, true); //covert json data into array format
               ?>
               <div class="form-group">
-                <label for="wilaya">Wilaya
+                <label for="sheh">Shehia
                   <span class="text-danger">*</span>
                 </label>
-                <select class="form-control" id="distrct" name="distrct" required="required" style="border: solid 1px green;" onchange="showShehia()">
-                  <option value="" hidden>Chagua Wilaya</option>
+                <select class="form-control" id="sheh" name="sheh" required="required" style="border: solid 1px green;">
+                  <option value="" hidden>Chagua Shehia</option>
                   <?php
                   foreach ($arr as $key => $value) {
                     echo '<option value="' . $value['did'] . '">' . $value['dname'] . '</option>';
@@ -93,16 +92,28 @@
                 </select>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group" id="shehiaDiv">
-                <label for="sheh">Shehia
-                  <span class="text-danger">*</span>
-                </label>
-                <select class="form-control" id="sheh" name="sheh" required="required" style="border: solid 1px green;">
-                  <option value="" hidden>Chagua Shehia</option>
-                </select>
-              </div>
-            </div>
+
+            <!-- <div class="col-md-6">
+                <?php
+
+                //$json = file_get_contents($pubIP.'selectRegions'); //receive json from url
+
+                //$arr = json_decode($json, true); //covert json data into array format
+                ?>
+                  <div class="form-group">
+                      <label for="regid">Mikoa
+                        <span class="text-danger">*</span>
+                      </label>
+                      <select class="form-control" id="regid" name="regid" required="required" style="border: solid 1px green;">
+                          <option value="" hidden>Chagua Mkoa</option>
+                          <?php
+                          //foreach ($arr as $key => $value) {
+                          // echo '<option value="'.$value['regionid'].'">'.$value['regname'].'</option>';
+                          //}
+                          ?>
+                      </select>
+                  </div>
+              </div> -->
           </div>
 
           <input type="hidden" name="publicIPa" id="publicIPa" value="<?php echo $publicIPConnent; ?>">

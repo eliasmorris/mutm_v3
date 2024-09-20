@@ -1,7 +1,7 @@
 var form = document.getElementById('addBusinessForm');
 form.addEventListener('submit', function(e){
 
-   //e.preventDefault(); // dont remove modal if success
+   e.preventDefault(); // dont remove modal if success
   
   var bname = document.getElementById('bname').value;
   var btype = document.getElementById('btype').value;
@@ -10,30 +10,34 @@ form.addEventListener('submit', function(e){
   var pnumber = document.getElementById('pnumber').value;
   var sheh = document.getElementById('sheh').value;
 
-  // var publicIP = document.getElementById('publicIPa').value;
-  // var localIPa = document.getElementById('localIPa').value;
-  
-  // fetch(publicIP+"mutm/api/insertBusiness",{
-  //   method:'POST',
-  //   //mode: 'no-cors',  // This disables CORS
+  var publicIP = document.getElementById('publicIPa').value;
+  var localIPa = document.getElementById('localIPa').value;
 
-  //   body:JSON.stringify({ //change data into json format 
-  //       "bname": bname,
-  //       "btype": btype,
-  //       "email": email,
-  //       "restaurentnumber": restaurentnumber,
-  //       "pnumber": pnumber,
-  //       "sheh": sheh
+  //generate institution id
+  // get milliseconds since 1st Jan. 1970
+  //var bussid = new Date().getTime(); 
+  
+  fetch(publicIP+"mutm/api/insertBusiness",{
+    method:'POST',
+    //mode: 'no-cors',  // This disables CORS
+
+    body:JSON.stringify({ //change data into json format 
+        "bname": bname,
+        "btype": btype,
+        "email": email,
+        "restaurentnumber": restaurentnumber,
+        "pnumber": pnumber,
+        "sheh": sheh
         
-  //   }),
-  //   headers:{
-  //     "Content-Type":"application/json;charset= UTF-8"
-  //   },
-  // }).then(function(response){
-  //   return response.json();
-  // }).then(function(data){
-  //    console.log(data); //for testing only
-  // })
+    }),
+    headers:{
+      "Content-Type":"application/json;charset= UTF-8"
+    },
+  }).then(function(response){
+    return response.json();
+  }).then(function(data){
+     console.log(data); //for testing only
+  })
 
   //SEND INTO LOG
   $.ajax({
@@ -54,38 +58,6 @@ form.addEventListener('submit', function(e){
   });
 
 })
-
-
-//get shehia list from wilaya
-function showShehia() {
-  $.ajax({
-    url:"getShehia.php", //CODE TO GET REG NAME
-    type:"POST",
-    data:{did:$('#distrct').val()}, //ELEMENT ID WHERE I GET VALUE
-      success:function(data){
-      $("#shehiaDiv").html(data); //WHERE RESULT WILL BE DISPLAYED
-
-      $(function () {
-        bsCustomFileInput.init();
-      });
-      
-      $(function () {
-        //Initialize Select2 Elements
-        $('.select2').select2(
-            {
-          theme: 'bootstrap4'
-        })
-
-        //Initialize Select2 Elements
-        $('.select2bs4').select2({
-          theme: 'bootstrap4'
-        })
-
-      })
-      
-    }
-  });
-}
 
 
 //update Biashara
@@ -120,13 +92,13 @@ form.addEventListener('submit', function(e){
         "sheh": shehh,
         "restaurentnumber": restaurentnumberr
         
-    })
+    }),
     
   }).then(function(response){
     return response.json();
   }).then(function(data){
     console.log(data); //for testing only
-    
+    //alert(data);
   })
 
   //SEND INTO LOG
@@ -137,7 +109,7 @@ form.addEventListener('submit', function(e){
       success:function(data){
         if(data == 'success'){
           alert('Taarifa za Biashara zimebadilishwa kikamilifu');
-          window.location.load(); //refresh current page
+          //window.location.load(); //refresh current page
           // $( "#listTable" ).load( "index.php #listTable" );
         }else{
           // alert('Samahani Taarifa za biashara zimeshindwa kubadilishwa! Jaribu tena');
@@ -150,7 +122,7 @@ form.addEventListener('submit', function(e){
 })
 
 
-//call and fetch data from edit modal function
+//call add new Institution modal function
 $(document).on("click", ".open-editBusinessinfo", function (e) {
 
   e.preventDefault();

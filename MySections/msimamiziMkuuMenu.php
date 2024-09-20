@@ -23,6 +23,14 @@
   </a>
 </li>
 <li class="nav-item">
+  <a href="../license_controller/" class="nav-link text-white font-weight-bold">
+    <i class="nav-icon fas fa-balance-scale"></i>
+    <p>
+      License
+    </p>
+  </a>
+</li>
+<li class="nav-item">
   <a href="../zoni/" class="nav-link text-white font-weight-bold">
     <i class="nav-icon fas fa-globe-africa"></i>
     <p>
