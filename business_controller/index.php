@@ -83,13 +83,11 @@
                 <?php
 
                   // $json = file_get_contents($pubIP.'selectInstitutionInfo'); //receive json from url
-                  // if($json = file_get_contents($publicIPConnent.'mutm/api/getAllBusiness?pageNum=1&pageSize=20')){
-                  //   echo 'hello';
-                  // }else{
-                  //   echo 'error';
-                  // }
-                  $json = file_get_contents($publicIPConnent.'mutm/api/getAllBusiness?pageNum=1&pageSize=20');
-                  echo $json;
+                  if($json = file_get_contents($publicIPConnent.'mutm/api/getAllBusiness?pageNum=1&pageSize=20')){
+                    echo 'hello';
+                  }else{
+                    echo 'error';
+                  }
                   $arr = json_decode($json, true); //covert json data into array format
 
                   include('biasharaList.php');
