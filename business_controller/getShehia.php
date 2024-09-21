@@ -8,7 +8,7 @@
   $arr = json_decode($json, true); //covert json data into array format
 
 ?>
-<label for="userid">Shehia
+<label for="sheh">Shehia
   <span class="text-danger">*</span>
 </label>
 <select class="form-control select2" id="sheh" name="sheh" required="required" style="border: solid 1px green;" onchange="getCollectionByCollector()">
@@ -22,5 +22,7 @@
     }
   ?>
 </select>
+
+
                        
                          

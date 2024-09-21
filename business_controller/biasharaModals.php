@@ -187,14 +187,16 @@
           </div>
 
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
               <div class="form-group">
                 <label for="phonenumber">Nambari ya Simu
                   <span class="text-danger">*</span>
                 </label>
                 <input type="text" name="phonenumberr" id="phonenumberr" class="form-control" placeholder="Ingiza Nambari ya Simu" required="required" style="border: solid 1px green;">
               </div>
-            </div>
+            </div> 
+          </div>
+          <div class="row">
             <div class="col-md-6">
               <?php
 
@@ -203,16 +205,26 @@
               $arr = json_decode($json, true); //covert json data into array format
               ?>
               <div class="form-group">
-                <label for="regidi">Shehia
+                <label for="wilaya">Wilaya
                   <span class="text-danger">*</span>
                 </label>
-                <select class="form-control" id="shehh" name="shehh" required="required" style="border: solid 1px green;">
-                  <option id="shehhia" value="">Chagua Shehia</option>
+                <select class="form-control" id="distrctt" name="distrctt" style="border: solid 1px green;" onchange="displayShehia()">
+                  <option value="" hidden>Chagua Wilaya</option>
                   <?php
                   foreach ($arr as $key => $value) {
                     echo '<option value="' . $value['did'] . '">' . $value['dname'] . '</option>';
                   }
                   ?>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group" id="shehiaDivision">
+                <label for="sheh">Shehia
+                  <span class="text-danger">*</span>
+                </label>
+                <select class="form-control" id="shehh" name="shehh" required="required" style="border: solid 1px green;">
+                  <option id="shehhia" value="" hidden>Chagua Shehia</option>
                 </select>
               </div>
             </div>

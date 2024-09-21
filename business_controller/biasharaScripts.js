@@ -10,30 +10,29 @@ form.addEventListener('submit', function(e){
   var pnumber = document.getElementById('pnumber').value;
   var sheh = document.getElementById('sheh').value;
 
-  // var publicIP = document.getElementById('publicIPa').value;
-  // var localIPa = document.getElementById('localIPa').value;
+  var publicIP = document.getElementById('publicIPa').value;
+  var localIPa = document.getElementById('localIPa').value;
   
-  // fetch(publicIP+"mutm/api/insertBusiness",{
-  //   method:'POST',
-  //   //mode: 'no-cors',  // This disables CORS
-
-  //   body:JSON.stringify({ //change data into json format 
-  //       "bname": bname,
-  //       "btype": btype,
-  //       "email": email,
-  //       "restaurentnumber": restaurentnumber,
-  //       "pnumber": pnumber,
-  //       "sheh": sheh
-        
-  //   }),
-  //   headers:{
-  //     "Content-Type":"application/json;charset= UTF-8"
-  //   },
-  // }).then(function(response){
-  //   return response.json();
-  // }).then(function(data){
-  //    console.log(data); //for testing only
-  // })
+  fetch(publicIP+"mutm/api/insertBusiness",{
+    method:'POST',
+    //mode: 'no-cors',  // This disables CORS
+    headers:{
+      "Content-Type":"application/json;charset= UTF-8"
+    },
+    body:JSON.stringify({ //change data into json format 
+        "bname": bname,
+        "btype": btype,
+        "email": email,
+        "restaurentnumber": restaurentnumber,
+        "pnumber": pnumber,
+        "sheh": sheh  
+    })
+    
+  }).then(function(response){
+    return response.json();
+  }).then(function(data){
+     console.log(data); //for testing only
+  })
 
   //SEND INTO LOG
   $.ajax({
@@ -87,12 +86,43 @@ function showShehia() {
   });
 }
 
+//get shehia list from wilaya for update function
+function displayShehia() {
+  $.ajax({
+    url:"getShehiaupdate.php", //CODE TO GET REG NAME
+    type:"POST",
+    data:{did:$('#distrctt').val()}, //ELEMENT ID WHERE I GET VALUE
+      success:function(data){
+      $("#shehiaDivision").html(data); //WHERE RESULT WILL BE DISPLAYED
 
-//update Biashara
+      $(function () {
+        bsCustomFileInput.init();
+      });
+      
+      $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2(
+            {
+          theme: 'bootstrap4'
+        })
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+          theme: 'bootstrap4'
+        })
+
+      })
+      
+    }
+  });
+}
+
+
+//update Biashara info
 var form = document.getElementById('editBiasharaForm');
 form.addEventListener('submit', function(e){
 
-   e.preventDefault(); // dont remove modal if success
+   //e.preventDefault(); // dont remove modal if success
   
   var busId = document.getElementById('busId').value;
   var bnamee = document.getElementById('bnamee').value;
@@ -186,17 +216,17 @@ $(document).on("click", ".open-editBusinessinfo", function (e) {
 });
 
 //delete institution function
-function deleteInstitution(instituteid, instname) {
-  var instituteid = instituteid;
-  var instname = instname;
+function deleteBiashara(bussid, bname) {
+  var bussid = bussid;
+  var bname = bname;
 
   // var pubIP = document.getElementById('pubIP').value;
   // var locIP = document.getElementById('locIP').value;
   // var zonestatus = 'inactive';
-  var c =confirm("Hakika unataka kufuta Biashara?");
+  var c =confirm("Hakika unataka kufuta Biashara ya " + bname+"?");
 
   if(c){
-    fetch("http://102.223.7.135:8881/deleteInstitute/"+instituteid,{
+    fetch("http://102.223.7.135:8881/deleteInstitute/"+bussid,{
       method:'PUT',
       body:JSON.stringify({
       "status": 'inactive'
