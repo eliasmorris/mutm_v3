@@ -27,9 +27,9 @@
         // if ($value['status'] == 'ACTIVE') {
           echo '<td class="text-right">';
           echo '<div class="btn-group">';
-          echo '<a data-id="' . $value['lid'] . '" data-conf2="' . $value['lnumber'] . '" data-conf3="' . $value['licensetype'] . '" data-conf4="' . $value['bname'] . '" data-conf5="' . $value['amount'] . '" data-conf6="'.$value['businessid'].'" href="#editLicense" class="btn btn-xs btn-info open-editLicenseinfo" title="Bonyeza kubadili taariza za Leseni"><i class="fas fa-pencil-alt"></i></a>';
+          echo '<a data-id="' . $value['lid'] . '" data-conf2="' . $value['lnumber'] . '" data-conf3="' . $value['licensetype'] . '" data-conf4="' . $value['bname'] . '" data-conf5="' . $value['amount'] . '" href="#editInvoice" class="btn btn-xs btn-info open-editInvoiceinfo" title="Bonyeza kubadili taariza za Leseni"><i class="fas fa-pencil-alt"></i> Badili</a>';
     ?>
-          <a class="btn btn-xs btn-danger" onClick="deleteLicenseinfo('<?php echo $value['lid']; ?>', '<?php echo $value['lnumber']; ?>')" title="Bonyeza kufuta Leseni"><i class="fas fa-trash"></i></a>
+          <a class="btn btn-xs btn-danger" onClick="deleteLicenseinfo('<?php echo $value['lid']; ?>', '<?php echo $value['lnumber']; ?>')" title="Bonyeza kufuta Invoice"><i class="fas fa-trash"></i> Futa</a>
           </div>
     <?php
           echo '</td>';

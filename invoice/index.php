@@ -25,12 +25,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Leseni za Biashara</h1>
+            <h1>Invoice za Malipo</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../dashboard/">Nyumbani</a></li>
-              <li class="breadcrumb-item active">Leseni</li>
+              <li class="breadcrumb-item active">Invoice</li>
             </ol>
           </div>
         </div>
@@ -50,12 +50,8 @@
                     ?>
                     <div class="row">
                       <div class="col-sm-12 text-right">
-                      <a href="../invoice/" class="btn btn-sm btn-success" title="Orodha ya POS zilizosajiliwa">
-                          <span class="fa fa-eye"></span>&nbsp;Invoice
-                        </a>
-                        &nbsp;
-                        <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#addlicense">
-                          <span class="fa fa-plus"></span>&nbsp;Leseni ya Biashara
+                        <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#addInvoice">
+                          <span class="fa fa-plus"></span>&nbsp;Invoice
                         </button>
                       </div>
                     </div>
@@ -82,7 +78,7 @@
                   $json = file_get_contents($publicIPConnent.'mutm/api/getAllLicense?pageNum=1&pageSize=10');
                   $arr = json_decode($json, true); //covert json data into array format
 
-                  include('licenseList.php');
+                  include('invoiceList.php');
                 ?>
                 
               </div>
@@ -113,9 +109,9 @@
 
 <?php
   include('../MySections/FooterLinks.php');
-  include('licenseModals.php');
+  include('invoiceModals.php');
 ?>
 
-<script type="text/javascript" src="licenseScripts.js"></script>
+<script type="text/javascript" src="invoiceScripts.js"></script>
 </body>
 </html>

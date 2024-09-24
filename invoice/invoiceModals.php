@@ -1,8 +1,8 @@
-<div class="modal fade" id="addlicense">
+<div class="modal fade" id="addInvoice">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header bg-info">
-        <h4 class="modal-title">Sajili Leseni Mpya</h4>
+        <h4 class="modal-title">Sajili Invoice Mpya</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -13,50 +13,72 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="lnumber">Namba ya Leseni
+                <label for="sdate">Tarehe ya Mwanzo
                   <span class="text-danger">*</span>
                 </label>
-                <input type="text" name="lnumber" id="lnumber" class="form-control" placeholder="Ingiza Namba ya Leseni" required="required" style="border: solid 1px green;">
+                <input type="date" name="sdate" id="sdate" class="form-control" placeholder="Ingiza Tarehe ya Mwanzo" required="required" style="border: solid 1px green;">
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="licensetype">Aina ya Leseni
+                <label for="edate">Tarehe ya Mwisho
                   <span class="text-danger">*</span>
                 </label>
-                <input type="text" name="licensetype" id="licensetype" class="form-control" placeholder="Ingiza Namba ya Leseni" required="required" style="border: solid 1px green;">
+                <input type="date" name="edate" id="edate" class="form-control" placeholder="Ingiza Terehe ya Mwisho" required="required" style="border: solid 1px green;">
               </div>
             </div>
           </div>
 
           <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="description">Maelezo
+                  <span class="text-danger">*</span>
+                </label>
+                <textarea name="description" id="description" class="form-control" placeholder="Ingiza Maelezo" required="required" style="border: solid 1px green;"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+          <div class="col-sm-12">
+              <div class="form-group">
+                <label for="invoicetype">Aina ya Invoice
+                  <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="invoicetype" id="invoicetype" class="form-control" placeholder="Ingiza Aina ya Invoice" required="required" style="border: solid 1px green;">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="amount">Kiwango
+                  <span class="text-danger">*</span>
+                </label>
+                <input type="number" name="amount" id="amount" class="form-control" placeholder="Ingiza kiwanga cha Pesa" required="required" style="border: solid 1px green;">
+              </div>
+            </div>
             <div class="col-md-6">
               <?php
 
-              $json = file_get_contents($publicIPConnent . 'mutm/api/getAllBusiness?pageNum=1&pageSize=20'); //receive json from url
+              $json = file_get_contents($publicIPConnent . 'mutm/api/getAllLicense?pageNum=1&pageSize=100'); //receive json from url
 
               $arr = json_decode($json, true); //covert json data into array format
               ?>
               <div class="form-group">
-                <label for="bname">Biashara
+                <label for="lnumber">Leseni
                   <span class="text-danger">*</span>
                 </label>
-                <select class="form-control" id="bname" name="bname" required="required" style="border: solid 1px green;">
+                <select class="form-control" id="lnumber" name="lnumber" required="required" style="border: solid 1px green;">
                   <option value="" hidden>Chagua Biashara</option>
                   <?php
                   foreach ($arr as $key => $value) {
-                    echo '<option value="' . $value['bussid'] . '">' . $value['bname'] . '</option>';
+                    echo '<option value="' . $value['licenseid'] . '">' . $value['lnumber'] . '</option>';
                   }
                   ?>
                 </select>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="restaurentnumber">Kiwango
-                  <span class="text-danger">*</span>
-                </label>
-                <input type="number" name="amount" id="amount" class="form-control" placeholder="Ingiza kiwanga cha Pesa" required="required" style="border: solid 1px green;">
               </div>
             </div>
           </div>
@@ -88,7 +110,7 @@
         </button>
       </div>
       <div class="modal-body">
-      <form id="editLicenseForm">
+      <form id="addLicenseForm">
           <input type="hidden" name="lid" id="lid" class="form-control">
           <div class="row">
             <div class="col-sm-6">
@@ -141,12 +163,12 @@
             </div>
           </div>
           
-          <input type="hidden" name="pubIPu" id="pubIPu" value="<?php echo $publicIPConnent; ?>">
-          <input type="hidden" name="locIPu" id="locIPu" value="<?php echo $localIp; ?>">
+          <input type="hidden" name="publicIPa" id="publicIPa" value="<?php echo $publicIPConnent; ?>">
+          <input type="hidden" name="localIPa" id="localIPa" value="<?php echo $localIp; ?>">
 
           <button class="btn btn-info">
             <span class="far fa-save"></span>&nbsp;
-            Badili
+            Sajili
           </button>
         </form>
       </div>

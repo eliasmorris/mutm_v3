@@ -1,7 +1,7 @@
 var form = document.getElementById('addLicenseForm');
 form.addEventListener('submit', function(e){
 
-   //e.preventDefault(); // dont remove modal if success
+   e.preventDefault(); // dont remove modal if success
   
   // var businessid = document.getElementById('businessid').value;
   var lnumber = document.getElementById('lnumber').value;
@@ -10,7 +10,11 @@ form.addEventListener('submit', function(e){
   var amount = document.getElementById('amount').value;
 
   var publicIP = document.getElementById('publicIPa').value;
-  var localIPa = document.getElementById('localIPa').value; 
+  var localIPa = document.getElementById('localIPa').value;
+
+  //generate institution id
+  // get milliseconds since 1st Jan. 1970
+  //var bussid = new Date().getTime(); 
   
   fetch(publicIP+"mutm/api/insertLicense",{
     method:'POST',
@@ -20,7 +24,7 @@ form.addEventListener('submit', function(e){
         // "businessid": businessid,
         "lnumber": lnumber,
         "licensetype": licensetype,
-        "businessid": bname,
+        "bname": bname,
         "amount": amount
         
         
@@ -42,7 +46,7 @@ form.addEventListener('submit', function(e){
       success:function(data){
         if(data == 'success'){
           
-          alert('Umefanikiwa kusajili Leseni mpya');
+          alert('Umefanikiwa kusajili Leseni mpya ya ' + bname);
           // $( "#listTable" ).load( "index.php #listTable" );
           window.location.load(); //refresh current page
         }else{
@@ -56,60 +60,60 @@ form.addEventListener('submit', function(e){
 
 
 //update Leseni info
-var form = document.getElementById('editLicenseForm');
-form.addEventListener('submit', function(e){
+// var form = document.getElementById('editLeseniForm');
+// form.addEventListener('submit', function(e){
 
-   e.preventDefault(); // dont remove modal if success
+//    e.preventDefault(); // dont remove modal if success
   
-  var lid = document.getElementById('lid').value;
-  var lnumberr = document.getElementById('lnumberr').value;
-  var licensetypee = document.getElementById('licensetypee').value;
-  var bnamee = document.getElementById('bnamee').value;
-  var amountt = document.getElementById('amountt').value;
+//   var lid = document.getElementById('lid').value;
+//   var lnumberr = document.getElementById('lnumberr').value;
+//   var licensetypee = document.getElementById('licensetypee').value;
+//   var bnamee = document.getElementById('bnamee').value;
+//   var amountt = document.getElementById('amountt').value;
   
-  var publicIPu = document.getElementById('pubIPu').value;
-  var localIPu = document.getElementById('locIPu').value;
+//   var publicIPu = document.getElementById('pubIPu').value;
+//   var localIPu = document.getElementById('locIPu').value;
   
-  fetch(publicIPu+"mutm/api/updateBusiness/"+lid,{
-    method:'PUT',
-    //mode: 'cors',  // This disables CORS
-    headers:{
-      "Content-Type":"application/json; charset= UTF-8"
-    },
-    body:JSON.stringify({
-      //change data into json format
-        "lnumber": lnumberr,
-        "licensetype": licensetypee,
-        "businessid": bnamee,
-        "amount": amountt 
-    })
+//   fetch(publicIPu+"mutm/api/updateBusiness/"+lid,{
+//     method:'PUT',
+//     //mode: 'cors',  // This disables CORS
+//     headers:{
+//       "Content-Type":"application/json; charset= UTF-8"
+//     },
+//     body:JSON.stringify({
+//       //change data into json format
+//         "lnumber": lnumberr,
+//         "licensetype": licensetypee,
+//         "bname": bnamee,
+//         "amount": amountt 
+//     }),
     
-  }).then(function(response){
-    return response.json();
-  }).then(function(data){
-    console.log(data); //for testing only
-    //alert(data);
-  })
+//   }).then(function(response){
+//     return response.json();
+//   }).then(function(data){
+//     console.log(data); //for testing only
+//     //alert(data);
+//   })
 
-  //SEND INTO LOG
-  $.ajax({
-    url:"insertIntoLog.php", //CODE TO GET REG NAME
-    type:"POST",
-    data:{bname:bnamee, act:'updateLog'}, //ELEMENT ID WHERE I GET VALUE
-      success:function(data){
-        if(data == 'success'){
-          alert('Taarifa za Leseni zimebadilishwa kikamilifu');
-          //window.location.load(); //refresh current page
-          // $( "#listTable" ).load( "index.php #listTable" );
-        }else{
-          // alert('Samahani Taarifa za biashara zimeshindwa kubadilishwa! Jaribu tena');
-          alert(data);
-        }
-    }
-  });
+//   //SEND INTO LOG
+//   $.ajax({
+//     url:"insertIntoLog.php", //CODE TO GET REG NAME
+//     type:"POST",
+//     data:{bname:bnamee, act:'updateLog'}, //ELEMENT ID WHERE I GET VALUE
+//       success:function(data){
+//         if(data == 'success'){
+//           alert('Taarifa za Leseni zimebadilishwa kikamilifu');
+//           //window.location.load(); //refresh current page
+//           // $( "#listTable" ).load( "index.php #listTable" );
+//         }else{
+//           // alert('Samahani Taarifa za biashara zimeshindwa kubadilishwa! Jaribu tena');
+//           alert(data);
+//         }
+//     }
+//   });
 
 
-})
+// })
 
 
 //call add new Institution modal function
@@ -128,11 +132,9 @@ $(document).on("click", ".open-editLicenseinfo", function (e) {
   var licensetypee = _self.data('conf3');
   $("#licensetypee").val(licensetypee);
 
-   var businessname = _self.data('conf4');
-
-  var bssname = _self.data('conf6');
+  var bssname = _self.data('conf4');
   $("#bssname").val(bssname);
-  document.getElementById('bssname').innerHTML = businessname;
+  document.getElementById('bssname').innerHTML = bssname;
 
   var amountt = _self.data('conf5');
   $("#amountt").val(amountt);
