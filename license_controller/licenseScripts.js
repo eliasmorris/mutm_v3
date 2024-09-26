@@ -59,7 +59,7 @@ form.addEventListener('submit', function(e){
 var form = document.getElementById('editLicenseForm');
 form.addEventListener('submit', function(e){
 
-   e.preventDefault(); // dont remove modal if success
+   //e.preventDefault(); // dont remove modal if success
   
   var lid = document.getElementById('lid').value;
   var lnumberr = document.getElementById('lnumberr').value;
@@ -70,7 +70,7 @@ form.addEventListener('submit', function(e){
   var publicIPu = document.getElementById('pubIPu').value;
   var localIPu = document.getElementById('locIPu').value;
   
-  fetch(publicIPu+"mutm/api/updateBusiness/"+lid,{
+  fetch(publicIPu+"mutm/api/updateLicense/"+lid,{
     method:'PUT',
     //mode: 'cors',  // This disables CORS
     headers:{
