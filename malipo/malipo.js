@@ -166,7 +166,7 @@ function deletesingleBills(myVar){
 var form = document.getElementById('cnNoForm');
 form.addEventListener('submit', function(e){
 
-  e.preventDefault(); // dont remove modal if success
+  //e.preventDefault(); // dont remove modal if success
 
   var fullName = document.getElementById('fullName').value;
   var email = document.getElementById('email').value;
