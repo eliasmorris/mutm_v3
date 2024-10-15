@@ -25,7 +25,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Leseni za Biashara1</h1>
+            <h1>Leseni za Biashara</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -34,7 +34,8 @@
             </ol>
           </div>
         </div>
-      </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.container-fluid -->
     </section>
 
     <!-- Main content -->
@@ -50,7 +51,11 @@
                     ?>
                     <div class="row">
                       <div class="col-sm-12 text-right">
-                      <a href="../invoice/" class="btn btn-sm btn-success" title="Orodha ya POS zilizosajiliwa">
+                      <a href="../billcontroller/" class="btn btn-sm btn-success" title="View bill iteams">
+                          <span class="fa fa-eye"></span>&nbsp;Bill Iteam
+                        </a>
+                        &nbsp;
+                      <a href="../invoice/" class="btn btn-sm btn-success" title="View invoice">
                           <span class="fa fa-eye"></span>&nbsp;Invoice
                         </a>
                         &nbsp;

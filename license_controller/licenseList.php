@@ -3,6 +3,7 @@
     <tr>
       <th>Namba ya Leseni</th>
       <th>Aina ya leseni</th>
+      <th>Kategoria</th>
       <th>Jina la Biashara</th>
       <th>Kiwango</th>
       <th>Hali</th>
@@ -15,6 +16,7 @@
     foreach ($arr as $key => $value) {
       echo '<td>' . $value['lnumber'] . '</td>';
       echo '<td>' . $value['licensetype'] . '</td>';
+      echo '<td>' . $value['category'] . '</td>';
       echo '<td>' . $value['bname'] . '</td>';
       echo '<td>' . $value['amount'] . '</td>';
       if ($value['status'] == 'INACTIVE') {
@@ -27,7 +29,7 @@
         // if ($value['status'] == 'ACTIVE') {
           echo '<td class="text-right">';
           echo '<div class="btn-group">';
-          echo '<a data-id="' . $value['lid'] . '" data-conf2="' . $value['lnumber'] . '" data-conf3="' . $value['licensetype'] . '" data-conf4="' . $value['bname'] . '" data-conf5="' . $value['amount'] . '" data-conf6="'.$value['businessid'].'" href="#editLicense" class="btn btn-xs btn-info open-editLicenseinfo" title="Bonyeza kubadili taariza za Leseni"><i class="fas fa-pencil-alt"></i></a>';
+          echo '<a data-id="' . $value['lid'] . '" data-conf2="' . $value['lnumber'] . '" data-conf3="' . $value['licensetype'] . '" data-conf4="' . $value['bname'] . '" data-conf5="' . $value['amount'] . '" data-conf6="'.$value['businessid'].'" data-conf7="'.$value['category'].'" href="#editLicense" class="btn btn-xs btn-info open-editLicenseinfo" title="Bonyeza kubadili taariza za Leseni"><i class="fas fa-pencil-alt"></i></a>';
     ?>
           <a class="btn btn-xs btn-danger" onClick="deleteLicenseinfo('<?php echo $value['lid']; ?>', '<?php echo $value['lnumber']; ?>')" title="Bonyeza kufuta Leseni"><i class="fas fa-trash"></i></a>
           </div>
@@ -49,6 +51,7 @@
   <tfoot>
     <th>Namba ya Leseni</th>
     <th>Aina ya leseni</th>
+    <th>Kategoria</th>
     <th>Jina la Biashara</th>
     <th>Kiwango</th>
     <th>Hali</th>

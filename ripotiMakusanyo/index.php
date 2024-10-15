@@ -173,7 +173,7 @@
                     <div class="card">
                       <div class="card-header border-0">
                         <h3 class="card-title text-danger font-weight-bolder" style="margin-bottom: 5px;">
-                          Ripoti ya Makusanyo kwa kila mwezi kwa njia ya jadweli
+                          Ripoti ya Makusanyo kwa kila mwezi kwa njia ya jadweli1
                         </h3>
                         <form>
                           <div class="row">
