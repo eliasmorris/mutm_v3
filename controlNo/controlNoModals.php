@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header bg-green">
-          <h4 class="modal-title">Huduma zilizoombwa kulipiwa kupitia namba ya ankara</h4>
+          <h4 class="modal-title">Huduma zilizoombwa kulipiwa kupitia namba ya ankara1</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>

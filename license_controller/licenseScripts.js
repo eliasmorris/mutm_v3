@@ -195,10 +195,6 @@ $(document).on("click", ".open-editLicenseinfo", function (e) {
 function deleteLicenseinfo(lid, lnumber) {
   var lid = lid;
   var lnumber = lnumber;
-
-  // var pubIP = document.getElementById('pubIP').value;
-  // var locIP = document.getElementById('locIP').value;
-  // var zonestatus = 'inactive';
   var c = confirm("Hakika unataka kufuta Leseni " + lnumber + "?");
 
   if (c) {
@@ -384,3 +380,5 @@ form.addEventListener('submit', function (e) {
 
 
 })
+
+

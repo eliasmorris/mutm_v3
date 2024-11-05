@@ -51,10 +51,6 @@
                     ?>
                     <div class="row">
                       <div class="col-sm-12 text-right">
-                      <a href="../billcontroller/" class="btn btn-sm btn-success" title="View bill iteams">
-                          <span class="fa fa-eye"></span>&nbsp;Bill Iteam
-                        </a>
-                        &nbsp;
                       <a href="../invoice/" class="btn btn-sm btn-success" title="View invoice">
                           <span class="fa fa-eye"></span>&nbsp;Invoice
                         </a>
@@ -119,6 +115,7 @@
 <?php
   include('../MySections/FooterLinks.php');
   include('licenseModals.php');
+  
 ?>
 
 <script type="text/javascript" src="licenseScripts.js"></script>

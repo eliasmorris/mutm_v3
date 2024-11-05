@@ -408,3 +408,30 @@ form.addEventListener('submit', function(e){
 
 
 })
+
+//call to view bill items
+$(document).on("click", ".open-viewLicenseinfo", function (e) {
+
+  e.preventDefault();
+
+  var _self = $(this);
+
+  var bussid = _self.data('id');
+
+  var busname = _self.data('conf2');
+  document.getElementById('bussname').innerHTML = busname;
+  
+  $(_self.attr('href')).modal('show');
+
+  $.ajax({
+    url: "getBillinfo.php",
+    type: "POST",
+    data:  {
+      bussid:bussid,
+    },
+      success: function(data){
+        document.getElementById("billInfo").innerHTML = data;
+    }
+  });
+
+});

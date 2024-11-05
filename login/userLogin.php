@@ -53,6 +53,7 @@
 		//	echo $response;
 			$DATA = json_decode($response,true);
 			//print_r($DATA);
+			if(is_iterable($DATA)){ //used to make data in array format
 			foreach ($DATA as $key => $receivedJson) {
 				// echo $value['userid'];
 				$_SESSION['userid'] = $receivedJson['userid'];
@@ -75,11 +76,14 @@
 				$_SESSION['log'] = 'in';
 				# code...
 			}
+		}else{
+			
+		}
 
 				if (!empty($_SESSION['userid']) AND $_SESSION['ustatus'] == 'active') {
 					echo 'success'; //locate to dashboard
 				}else{
-					echo 'Invalid username or password';   //display response
+					echo 'Invalid username or password1';   //display response
 				}
 
 
