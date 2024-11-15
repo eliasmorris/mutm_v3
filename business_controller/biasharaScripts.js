@@ -180,7 +180,7 @@ form.addEventListener('submit', function(e){
 })
 
 
-//call and fetch data from edit modal function
+//call biasharaupdate modal and fetch data from edit modal function
 $(document).on("click", ".open-editBusinessinfo", function (e) {
 
   e.preventDefault();
@@ -201,7 +201,8 @@ $(document).on("click", ".open-editBusinessinfo", function (e) {
   $("#emaill").val(emaill);
 
   var restaurentnumberr = _self.data('conf5');
-  $("#restaurentnumberr").val(restaurentnumberr);
+  $("#restaurentnumberr1").val(restaurentnumberr);
+  document.getElementById('restaurentnumberr1').innerHTML = restaurentnumberr;
 
   var phonenumberr = _self.data('conf6');
   $("#phonenumberr").val(phonenumberr);

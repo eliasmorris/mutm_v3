@@ -20,11 +20,25 @@
               </div>
             </div>
             <div class="col-sm-6">
+              <?php
+
+              $json = file_get_contents($publicIPConnent . 'mutm/api/selectlicensetype'); //receive json from url
+
+              $arr = json_decode($json, true); //covert json data into array format
+              ?>
               <div class="form-group">
                 <label for="btype">Aina ya Biashara
                   <span class="text-danger">*</span>
                 </label>
-                <select class="form-control" id="btype" name="btype" required="required" style="border: solid 1px green;">
+                <select class="form-control" id="btype" name="btype" required="required" style="border: solid 1px green;" onchange="displayPrice()">
+                  <option value="" hidden>Chagua aina ya Leseni</option>
+                  <?php
+                  foreach ($arr as $key => $value) {
+                    echo '<option value="' . $value['ltype'] . '">' . $value['ltype'] . '-' . number_format($value['price']) . '</option>';
+                  }
+                  ?>
+                </select>
+                <!-- <select class="form-control" id="btype" name="btype" required="required" style="border: solid 1px green;">
                   <option value="" hidden>Chagua aina ya Biashara</option>
                   <option value="ONE OR TWO STAR HOTEL">One or Two Star Hotel</option>
                   <option value="THREE OR FOUR STAR HOTEL">Thee or Four Star Hotel</option>
@@ -36,7 +50,7 @@
                   <option value="WAREHOUSE">WareHouse</option>
                   <option value="DELIVERY PERMIT">Delivery Permit</option>
                   <option value="SPECIAL OCCASION PERMIT">Special occasion Permit </option>
-                </select>
+                </select> -->
               </div>
             </div>
           </div>
@@ -53,10 +67,18 @@
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="restaurentnumber">Nambari ya Mgahawa/Bar
+                <label for="restaurentnumber">Idadi ya Mgahawa/Bar
                   <span class="text-danger">*</span>
                 </label>
-                <input type="text" name="restaurentnumber" id="restaurentnumber" class="form-control" placeholder="Ingiza Nambari ya Mgahawa" required="required" style="border: solid 1px green;">
+                <select class="form-control" id="restaurentnumber" name="restaurentnumber" required="required" style="border: solid 1px green;">
+                  <option value="" hidden>Chagua Idadi ya Migawaha</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                </select>
+                <!-- <input type="text" name="restaurentnumber" id="restaurentnumber" class="form-control" placeholder="Ingiza Nambari ya Mgahawa" required="required" style="border: solid 1px green;"> -->
               </div>
             </div>
           </div>
@@ -162,7 +184,6 @@
                   <option value="DELIVERY PERMIT">Delivery Permit</option>
                   <option value="SPECIAL OCCASION PERMIT">Special occasion Permit </option>
                 </select>
-                <!-- <input type="text" name="instnamei" id="instnamei" class="form-control" placeholder="Ingiza Jina la Taasisi" required="required" style="border: solid 1px green; text-transform:uppercase;"> -->
               </div>
             </div>
           </div>
@@ -178,10 +199,18 @@
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="restaurentnumber">Nambari ya Mgahawa/Bar
+                <label for="restaurentnumber">Idadi ya Mgahawa/Bar
                   <span class="text-danger">*</span>
                 </label>
-                <input type="text" name="restaurentnumberr" id="restaurentnumberr" class="form-control" placeholder="Ingiza Nambari ya Mgahawa" required="required" style="border: solid 1px green;">
+                <select class="form-control" id="restaurentnumberr" name="restaurentnumberr" required="required" style="border: solid 1px green;">
+                  <option id="restaurentnumberr1" value="" hidden>Chagua Idadi ya Migawaha</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                </select>
+
               </div>
             </div>
           </div>
@@ -194,7 +223,7 @@
                 </label>
                 <input type="text" name="phonenumberr" id="phonenumberr" class="form-control" placeholder="Ingiza Nambari ya Simu" required="required" style="border: solid 1px green;">
               </div>
-            </div> 
+            </div>
           </div>
           <div class="row">
             <div class="col-md-6">

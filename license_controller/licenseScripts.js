@@ -3,9 +3,8 @@ form.addEventListener('submit', function (e) {
 
   //e.preventDefault(); // dont remove modal if success
 
-  // var businessid = document.getElementById('businessid').value;
-  var lnumber = document.getElementById('lnumber').value;
-  var licensetype = document.getElementById('licensetype').value;
+  //var lnumber = document.getElementById('lnumber').value;
+  var licensetype = document.getElementById('ltype').value;
   var category = document.getElementById('category').value;
   var bname = document.getElementById('bname').value;
   var amount = document.getElementById('amount').value;
@@ -19,7 +18,7 @@ form.addEventListener('submit', function (e) {
 
     body: JSON.stringify({ //change data into json format 
       // "businessid": businessid,
-      "lnumber": lnumber,
+      //"lnumber": lnumber,
       "licensetype": licensetype,
       "category": category,
       "businessid": bname,
@@ -45,7 +44,6 @@ form.addEventListener('submit', function (e) {
       if (data == 'success') {
 
         alert('Umefanikiwa kusajili Leseni mpya');
-        // $( "#listTable" ).load( "index.php #listTable" );
         window.location.load(); //refresh current page
       } else {
         alert(data);
@@ -65,11 +63,10 @@ form.addEventListener('submit', function (e) {
 
   var lid = document.getElementById('lid').value;
   var lnumberr = document.getElementById('lnumberr').value;
-  var licensetypee = document.getElementById('licensetypee').value;
-  var category = document.getElementById('category').value;
+  var licensetypee = document.getElementById('licensetypp').value;
+  var categoryy = document.getElementById('categoryy').value;
   var bnamee = document.getElementById('bnamee').value;
   var amountt = document.getElementById('amountt').value;
-
   var publicIPu = document.getElementById('pubIPu').value;
   var localIPu = document.getElementById('locIPu').value;
 
@@ -83,7 +80,7 @@ form.addEventListener('submit', function (e) {
       //change data into json format
       "lnumber": lnumberr,
       "licensetype": licensetypee,
-      "category": category,
+      "category": categoryy,
       "businessid": bnamee,
       "amount": amountt
     })
@@ -114,49 +111,6 @@ form.addEventListener('submit', function (e) {
 
 
 })
-
-//onchange function to display category
-// function displayCategory() {
-//   var localbar = $('#licensetype').val();
-//   var category = document.getElementById('categoryDiv');
-
-//   if((localbar == 'LOCAL BAR') || (localbar == 'LIQOUR/GLOSERY SHOP')){
-//     $.ajax({
-//       url: "getCategory.php", //CODE TO GET REG NAME
-//       type: "POST",
-//       data: { id: $('#licensetype').val() }, //ELEMENT ID WHERE I GET VALUE
-//       success: function (data) {
-//         category.style.display = "block";
-//         $("#categoryDiv").html(data); //WHERE RESULT WILL BE DISPLAYED
-  
-//         $(function () {
-//           bsCustomFileInput.init();
-//         });
-  
-//         $(function () {
-//           //Initialize Select2 Elements
-//           $('.select2').select2(
-//             {
-//               theme: 'bootstrap4'
-//             })
-  
-//           //Initialize Select2 Elements
-//           $('.select2bs4').select2({
-//             theme: 'bootstrap4'
-//           })
-  
-//         })
-  
-//       }
-//     });
-//   }else{
-//     category.style.display = "none";
-//   }
-
-  
-//}
-
-
 
 //call edit license modal function
 $(document).on("click", ".open-editLicenseinfo", function (e) {
@@ -235,150 +189,44 @@ function deleteLicenseinfo(lid, lnumber) {
 }
 
 
-//call add new account into Institution modal function
-$(document).on("click", ".open-addAccountNo", function (e) {
+//excute if user select little source from dropp menu
+function displayPrice(){
+	// var myVar = myVar;
+  var ltid = document.getElementById('ltid').value;
 
-  e.preventDefault();
-
-  var _self = $(this);
-
-  var instituteid = _self.data('conf0');
-  $("#instituteidacc").val(instituteid);
-
-  var instcode = _self.data('conf2');
-  $("#instcodeacc").val(instcode);
-
-  var instname = _self.data('conf3');
-  $("#instnameacc").val(instname);
-
-  var insertAccount = _self.data('conf4'); //send insert query to the modal
-  $("#insertAccount").val(insertAccount);
-
-
-  $(_self.attr('href')).modal('show');
-});
-
-
-//call add POSinto Institution modal function
-$(document).on("click", ".open-addPOS", function (e) {
-
-  e.preventDefault();
-
-  var _self = $(this);
-
-  var instituteid = _self.data('conf0');
-  $("#instituteidps").val(instituteid);
-
-  var instcode = _self.data('conf2');
-  $("#instcodeps").val(instcode);
-
-  var instname = _self.data('conf3');
-  $("#instnameps").val(instname);
-
-
-  $(_self.attr('href')).modal('show');
-});
-
-
-//add account no
-var form = document.getElementById('addAccountNoForm');
-form.addEventListener('submit', function (e) {
-
-  // e.preventDefault(); // dont remove modal if success
-
-  var instituteid = document.getElementById('instituteidacc').value;
-  var instcode = document.getElementById('instcodeacc').value;
-  var instname = document.getElementById('instnameacc').value;
-  var accname = document.getElementById('accname').value;
-  var accnum = document.getElementById('accnum').value;
-  var bankcode = document.getElementById('bankcode').value;
-  var insertAccount = document.getElementById('insertAccount').value; //receive insert query from the modal
-
-  fetch(pubIP + "account/insertAccount", {
-    method: 'POST',
-    body: JSON.stringify({
-      //change data into json format
-      "accname": accname,
-      "accnum": accnum,
-      "bankcode": bankcode,
-      "instituteid": instituteid
-    }),
-    headers: {
-      "Content-Type": "application/json;charset= UTF-8"
-    }
-  }).then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    // console.log(data); //for testing only
-  })
-
-  //SEND INTO LOG
-  $.ajax({
-    url: "insertIntoLog.php", //CODE TO GET REG NAME
-    type: "POST",
-    data: { instname: instname, accname: accname, accnum: accnum, bankcode: bankcode, act: 'addAccountLog' }, //ELEMENT ID WHERE I GET VALUE
-    success: function (data) {
-      if (data == 'success') {
-        alert('Akaunti namba imesajiliwa kikamilifu katika taasisi');
-
-        // $( "#listTable" ).load( "index.php #listTable" );
-      } else {
-        alert('Samahani, Akaunti namba imeshindwa kusajiliwa! Jaribu tena');
+  
+    $.ajax({
+      url:"getPrice.php", //CODE TO GET REG NAME
+      type:"POST",
+      data:{ltid:ltid}, //ELEMENT ID WHERE I GET VALUE
+        success:function(data){
+           //alert(data);
+           //console.log(data);
+           $("#kiwangoDiv").html(data);
+        
+        
+        
       }
+  });
+   
+}
+
+//get shehia list from wilaya for update function
+function showPrice() {
+  var licensetypee = document.getElementById('licensetypee').value;
+  $.ajax({
+    url:"getPriceupdate.php", //CODE TO GET REG NAME
+    type:"POST",
+    data:{ltid:licensetypee}, //ELEMENT ID WHERE I GET VALUE
+      success:function(data){
+      $("#priceDiv").html(data); //WHERE RESULT WILL BE DISPLAYED
+
+      
+      
     }
   });
+}
 
 
-})
-
-
-//add POS
-var form = document.getElementById('addPOSForm');
-form.addEventListener('submit', function (e) {
-
-  // e.preventDefault(); // dont remove modal if success
-
-  var instituteid = document.getElementById('instituteidps').value;
-  var instcode = document.getElementById('instcodeps').value;
-  var instname = document.getElementById('instnameps').value;
-  var imei = document.getElementById('imeino').value;
-
-  var pubIP = document.getElementById('pubIPap').value;
-  var locIP = document.getElementById('locIPap').value;
-
-  fetch(pubIP + "insertPos", {
-    method: 'POST',
-    body: JSON.stringify({
-      //change data into json format
-      "imei": imei,
-      "instid": instituteid
-    }),
-    headers: {
-      "Content-Type": "application/json;charset= UTF-8"
-    }
-  }).then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    // console.log(data); //for testing only
-  })
-
-  //SEND INTO LOG
-  $.ajax({
-    url: "insertIntoLog.php", //CODE TO GET REG NAME
-    type: "POST",
-    data: { instname: instname, imei: imei, act: 'addImeiLog' }, //ELEMENT ID WHERE I GET VALUE
-    success: function (data) {
-      if (data == 'success') {
-        alert('POS mpya yenye imei namba ' + imei + ' imesajiliwa kikamilifu katika taasisi');
-
-        // $( "#listTable" ).load( "index.php #listTable" );
-      } else {
-        alert('Samahani, POS imeshindwa kusajiliwa! Jaribu tena');
-      }
-    }
-  });
-
-
-})
 
 
