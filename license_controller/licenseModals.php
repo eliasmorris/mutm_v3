@@ -121,7 +121,7 @@
                 <label for="lnumber">Namba ya Leseni
                   <span class="text-danger">*</span>
                 </label>
-                <input type="text" name="lnumberr" id="lnumberr" class="form-control" placeholder="Ingiza Namba ya Leseni" required="required" style="border: solid 1px green;">
+                <input type="text" name="lnumberr" id="lnumberr" class="form-control" readonly required="required" style="border: solid 1px green;">
               </div>
             </div>
             <div class="col-sm-6">
