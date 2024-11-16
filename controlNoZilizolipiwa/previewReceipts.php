@@ -145,7 +145,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;
-            	SERIKALI YA MAPINDUZI ZANZIBAR111111
+            	SERIKALI YA MAPINDUZI ZANZIBAR
             </h3>
             <h3 class="" style="font-weight: bold;">
             	&nbsp;&nbsp;&nbsp;&nbsp;
