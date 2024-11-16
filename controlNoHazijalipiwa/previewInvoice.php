@@ -361,7 +361,7 @@
                           $totalAmountinWord =  convertNumber($totalamount);
 
                         ?>
-                        Kiasi cha Malipo kwa Maneno&nbsp;:&nbsp;&nbsp;<?php  echo strtoupper($totalAmountinWord);?>
+                        Kiasi cha Malipo kwa Maneno11&nbsp;:&nbsp;&nbsp;<?php  echo strtoupper($totalAmountinWord);?>
                       <!-- Kiasi cha Malipo kwa Maneno&nbsp;:&nbsp;&nbsp;<?php  //echo numberTowords($totalamount).'ONLY';?> -->
                     </h3>
 

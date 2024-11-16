@@ -363,7 +363,7 @@
 
                         ?>
                       <!-- Kiasi cha Malipo kwa Maneno&nbsp;:&nbsp;&nbsp;<?php  //echo numberTowords("$totalamount").'ONLY';?> -->
-                      Kiasi cha Malipo kwa Maneno&nbsp;:&nbsp;&nbsp;<?php  echo strtoupper($totalAmountinWord);?>
+                      Kiasi cha Malipo kwa Maneno111&nbsp;:&nbsp;&nbsp;<?php  echo strtoupper($totalAmountinWord);?>
                     </h3>
 
                     <h3 style="font-weight: normal;">

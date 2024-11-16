@@ -63,8 +63,8 @@ function numberTowords($num)
 			if (substr($i, 0, 1) != "0")  $rettxt .= $tens[substr($i, 0, 1)];
 			if (substr($i, 1, 1) != "0") $rettxt .= " " . $ones[substr($i, 1, 1)];
 		} else {
-			//if (substr($i, 0, 1) != "0") $rettxt .= $ones[substr($i, 0, 1)];
-			//if (substr($i, 0, 1) != "0") $rettxt .= $ones[substr($i, 0, 1)] . " " . $hundreds[0];
+			
+			if (substr($i, 0, 1) != "0") $rettxt .= $ones[substr($i, 0, 1)] . " " . $hundreds[0];
 			if (substr($i, 1, 1) != "0") $rettxt .= " " . $tens[substr($i, 1, 1)];
 			if (substr($i, 2, 1) != "0") $rettxt .= " " . $ones[substr($i, 2, 1)];
 		}
