@@ -3,7 +3,7 @@ session_start();
 include('../Controller/connect.php');
 $distr = $_POST['did'];
 
-$json = file_get_contents($publicIp . 'mutm/api/getShehiaByDistId/' . $distr . '?email=' . $_SESSION['username'] . '&token=' . $_SESSION['logintoken']); //receive json from url
+$json = file_get_contents($pubIP . 'mutm/api/getShehiaByDistId/' . $distr . '?email=' . $_SESSION['username'] . '&token=' . $_SESSION['logintoken']); //receive json from url
 $arr = json_decode($json, true); //covert json data into array format
 
 ?>

@@ -22,7 +22,7 @@
             <div class="col-sm-6">
               <?php
 
-              $json = file_get_contents($publicIPConnent . 'mutm/api/selectlicensetype'); //receive json from url
+              $json = file_get_contents($pubIP . 'mutm/api/selectlicensetype'); //receive json from url
 
               $arr = json_decode($json, true); //covert json data into array format
               ?>
@@ -97,7 +97,7 @@
             <div class="col-md-6">
               <?php
 
-              $json = file_get_contents($publicIPConnent . 'mutm/api/selectdistrict'); //receive json from url
+              $json = file_get_contents($pubIP . 'mutm/api/selectdistrict'); //receive json from url
 
               $arr = json_decode($json, true); //covert json data into array format
               ?>
@@ -126,9 +126,9 @@
               </div>
             </div>
           </div>
-
-          <input type="hidden" name="publicIPa" id="publicIPa" value="<?php echo $publicIPConnent; ?>">
-          <input type="hidden" name="localIPa" id="localIPa" value="<?php echo $localIp; ?>">
+          
+          <input type="hidden" name="publicIPa" id="publicIPa" value="<?php echo $jsIPConnect; ?>">
+          <input type="hidden" name="localIPa" id="localIPa" value="<?php echo $locIP; ?>">
 
           <button class="btn btn-info">
             <span class="far fa-save"></span>&nbsp;
@@ -229,7 +229,7 @@
             <div class="col-md-6">
               <?php
 
-              $json = file_get_contents($publicIPConnent . 'mutm/api/selectdistrict'); //receive json from url
+              $json = file_get_contents($pubIP . 'mutm/api/selectdistrict'); //receive json from url
 
               $arr = json_decode($json, true); //covert json data into array format
               ?>
@@ -259,8 +259,8 @@
             </div>
           </div>
 
-          <input type="hidden" name="pubIPu" id="pubIPu" value="<?php echo $publicIPConnent; ?>">
-          <input type="hidden" name="locIPu" id="locIPu" value="<?php echo $localIp; ?>">
+          <input type="hidden" name="pubIPu" id="pubIPu" value="<?php echo $jsIPConnect; ?>">
+          <input type="hidden" name="locIPu" id="locIPu" value="<?php echo $locIP; ?>">
 
           <button class="btn btn-default">Badili</button>
         </form>

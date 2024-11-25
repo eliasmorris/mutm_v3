@@ -3,8 +3,8 @@
   include('../Controller/connect.php');
   
   $distrctid = $_POST['did'];
-  
-  $json = file_get_contents($publicIp.'mutm/api/getShehiaByDistId/'.$distrctid.'?email='. $_SESSION['username'].'&token='.$_SESSION['logintoken']);//receive json from url
+  //$publicIp
+  $json = file_get_contents($pubIP.'mutm/api/getShehiaByDistId/'.$distrctid.'?email='. $_SESSION['username'].'&token='.$_SESSION['logintoken']);//receive json from url
   $arr = json_decode($json, true); //covert json data into array format
 
 ?>

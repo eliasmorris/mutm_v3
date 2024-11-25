@@ -82,7 +82,7 @@
               <div class="card-body" id="listTable">
                 <?php
                 
-                  $json = file_get_contents($publicIPConnent.'mutm/api/getAllBusiness?pageNum=1&pageSize=20');
+                  $json = file_get_contents($pubIP.'mutm/api/getAllBusiness?pageNum=1&pageSize=20');
                   $arr = json_decode($json, true); //covert json data into array format
 
                   include('biasharaList.php');

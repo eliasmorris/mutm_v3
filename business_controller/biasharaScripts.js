@@ -10,10 +10,10 @@ form.addEventListener('submit', function(e){
   var pnumber = document.getElementById('pnumber').value;
   var sheh = document.getElementById('sheh').value;
 
-  var publicIP = document.getElementById('publicIPa').value;
+  var pubIP = document.getElementById('publicIPa').value;
   var localIPa = document.getElementById('localIPa').value;
   
-  fetch(publicIP+"mutm/api/insertBusiness",{
+  fetch(pubIP+"mutm/api/insertBusiness",{
     method:'POST',
     //mode: 'no-cors',  // This disables CORS
     headers:{
@@ -132,10 +132,10 @@ form.addEventListener('submit', function(e){
   var phonenumberr = document.getElementById('phonenumberr').value;
   var shehh = document.getElementById('shehh').value;
   
-  var publicIPu = document.getElementById('pubIPu').value;
+  var pubIP = document.getElementById('pubIPu').value;
   var localIPu = document.getElementById('locIPu').value;
   
-  fetch(publicIPu+"mutm/api/updateBusiness/"+busId,{
+  fetch(pubIP+"mutm/api/updateBusiness/"+busId,{
     method:'PUT',
     //mode: 'cors',  // This disables CORS
     headers:{
