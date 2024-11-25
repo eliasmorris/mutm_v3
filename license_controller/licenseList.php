@@ -6,7 +6,7 @@
       <th>Kategoria</th>
       <th>Jina la Biashara</th>
       <th>Kiwango</th>
-      <th>Hali</th>
+      <!-- <th>Hali</th> -->
       <th>Kitendo</th>
     </tr>
   </thead>
@@ -19,11 +19,11 @@
       echo '<td>' . $value['category'] . '</td>';
       echo '<td>' . $value['bname'] . '</td>';
       echo '<td>' . $value['amount'] . '</td>';
-      if ($value['status'] == 'INACTIVE') {
-        echo '<td class="text-danger">' . $value['status'] . '</td>';
-      } else {
-        echo '<td>' . $value['status'] . '</td>';
-      }
+      // if ($value['status'] == 'INACTIVE') {
+      //   echo '<td class="text-danger">' . $value['status'] . '</td>';
+      // } else {
+      //   echo '<td>' . $value['status'] . '</td>';
+      // }
 
       if ($_SESSION['urole'] == 'Msimamizi mkuu') {
         // if ($value['status'] == 'ACTIVE') {
@@ -55,7 +55,7 @@
     <th>Kategoria</th>
     <th>Jina la Biashara</th>
     <th>Kiwango</th>
-    <th>Hali</th>
+    <!-- <th>Hali</th> -->
     <th>Kitendo</th>
   </tfoot>
 </table>
