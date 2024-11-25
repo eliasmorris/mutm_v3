@@ -18,8 +18,8 @@
         </div>
 
       </div>
-      <input type="hidden" name="pubIPu" id="pubIPu" value="<?php echo $publicIPConnent; ?>">
-      <input type="hidden" name="locIPu" id="locIPu" value="<?php echo $localIp; ?>">
+      <input type="hidden" name="pubIPu" id="pubIPu" value="<?php echo $jsIPConnect1; ?>">
+      <input type="hidden" name="locIPu" id="locIPu" value="<?php echo $locIP1; ?>">
       <div class="modal-footer">
         <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" aria-label="Close">
           close

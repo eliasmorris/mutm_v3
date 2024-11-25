@@ -5,7 +5,7 @@ include("../Controller/configuration.php"); //configuration file
 $ltsIdd = $_POST["ltid"];
 
 //find bills service start
-$json = file_get_contents($pubIP . 'mutm/api/selectlicensetypebyid/'.$ltsIdd); //receive json from url
+$json = file_get_contents($pubIP1 . 'mutm/api/selectlicensetypebyid/'.$ltsIdd); //receive json from url
 
 $arr =  (array)json_decode($json, TRUE); //covert json data into array format
 

@@ -4,7 +4,7 @@
   
   $distrctid = $_POST['did'];
   //$publicIp
-  $json = file_get_contents($pubIP.'mutm/api/getShehiaByDistId/'.$distrctid.'?email='. $_SESSION['username'].'&token='.$_SESSION['logintoken']);//receive json from url
+  $json = file_get_contents($pubIP1.'mutm/api/getShehiaByDistId/'.$distrctid.'?email='. $_SESSION['username'].'&token='.$_SESSION['logintoken']);//receive json from url
   $arr = json_decode($json, true); //covert json data into array format
 
 ?>

@@ -3,7 +3,7 @@ session_start();
 include('../Controller/connect.php');
 $bussid = $_POST['bussid'];
 //$publicIPConnect
-$json = file_get_contents($pubIP . 'mutm/api/getBillItemByBussid/' . $bussid); //receive json from url
+$json = file_get_contents($pubIP1 . 'mutm/api/getBillItemByBussid/' . $bussid); //receive json from url
 $arr = json_decode($json, true); //covert json data into array format
 ?>
 

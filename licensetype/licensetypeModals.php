@@ -28,8 +28,8 @@
               </div>
             </div>
           </div>
-          <input type="hidden" name="publicIPa" id="publicIPa" value="<?php echo $jsIPConnect; ?>">
-          <input type="hidden" name="localIPa" id="localIPa" value="<?php echo $locIP; ?>">
+          <input type="hidden" name="publicIPa" id="publicIPa" value="<?php echo $jsIPConnect1; ?>">
+          <input type="hidden" name="localIPa" id="localIPa" value="<?php echo $locIP1; ?>">
 
           <button class="btn btn-info">
             <span class="far fa-save"></span>&nbsp;
@@ -75,8 +75,8 @@
               </div>
             </div>
           </div>
-          <input type="hidden" name="pubIPu" id="pubIPu" value="<?php echo $jsIPConnect; ?>">
-          <input type="hidden" name="locIPu" id="locIPu" value="<?php echo $locIP; ?>">
+          <input type="hidden" name="pubIPu" id="pubIPu" value="<?php echo $jsIPConnect1; ?>">
+          <input type="hidden" name="locIPu" id="locIPu" value="<?php echo $locIP1; ?>">
 
           <button class="btn btn-info">
             <span class="far fa-save"></span>&nbsp;
