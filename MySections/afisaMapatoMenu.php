@@ -31,6 +31,22 @@
   </a>
 </li>
 <li class="nav-item">
+  <a href="../business_controller/" class="nav-link text-white font-weight-bold">
+    <i class="nav-icon fas fa-money-bill-alt"></i>
+    <p>
+      Biashara
+    </p>
+  </a>
+</li>
+<li class="nav-item">
+  <a href="../license_controller/" class="nav-link text-white font-weight-bold">
+    <i class="nav-icon fas fa-balance-scale"></i>
+    <p>
+      License
+    </p>
+  </a>
+</li>
+<li class="nav-item">
   <a href="../malipo/" class="nav-link text-white font-weight-bold">
     <i class="nav-icon fas fa-money-bill-wave"></i>
     <p>

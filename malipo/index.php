@@ -179,7 +179,7 @@
                         <!-- <td><?php echo $values["ainaMalipo"]; ?></td> -->
                         <td class="text-right"><button class="btn btn-xs btn-danger" onClick="deletesingleBills('<?php echo $values["ltsIdChk"]; ?>')" title="Ondosha huduma">
                             <span class="fas fa-window-close"></span>
-                            Futa1
+                            Futa
                           </button>
                         </td>
                       </tr>

@@ -47,7 +47,7 @@
             <div class="card">
               <div class="card-header">
                 <?php
-                  if ($_SESSION['urole'] == 'Msimamizi mkuu') {
+                  if ($_SESSION['urole'] == 'Msimamizi mkuu' || $_SESSION['urole'] == 'Afisa mapato' ) {
                     ?>
                     <div class="row">
                       <div class="col-sm-12 text-right">

@@ -19,14 +19,10 @@
       echo '<td>' . $value['category'] . '</td>';
       echo '<td>' . $value['bname'] . '</td>';
       echo '<td>' . $value['amount'] . '</td>';
-      // if ($value['status'] == 'INACTIVE') {
-      //   echo '<td class="text-danger">' . $value['status'] . '</td>';
-      // } else {
-      //   echo '<td>' . $value['status'] . '</td>';
-      // }
+      
 
-      if ($_SESSION['urole'] == 'Msimamizi mkuu') {
-        // if ($value['status'] == 'ACTIVE') {
+      if ($_SESSION['urole'] == 'Msimamizi mkuu' || $_SESSION['urole'] == 'Afisa mapato' ) {
+       
           echo '<td class="text-right">';
           echo '<div class="btn-group">';
 
@@ -36,9 +32,7 @@
           </div>
     <?php
           echo '</td>';
-        // } else {
-        //   echo '<td class = "text-right">&nbsp;</td>';
-        // }
+        
       } else {
         echo '<td class="text-right">&nbsp;</td>';
       }
