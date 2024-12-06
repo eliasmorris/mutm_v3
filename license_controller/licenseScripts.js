@@ -238,7 +238,7 @@ function approveLicenseinfo(lid, lnumber) {
     fetch("http://102.223.7.135:6060/mutm/api/approveLicense/" + lid, {
       method: 'PUT',
       body: JSON.stringify({
-        "status": 'true'
+        "isapproved": 'true'
       }),
       headers: {
         "Content-Type": "application/json;charset= UTF-8"
