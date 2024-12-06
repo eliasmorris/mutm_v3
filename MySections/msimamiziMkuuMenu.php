@@ -39,6 +39,14 @@
   </a>
 </li>
 <li class="nav-item">
+  <a href="../shehia/" class="nav-link text-white font-weight-bold">
+    <i class="nav-icon fas fa-globe-africa"></i>
+    <p>
+      Shehia
+    </p>
+  </a>
+</li>
+<li class="nav-item">
   <a href="../accountNo/" class="nav-link text-white font-weight-bold">
     <i class="nav-icon fas fa-donate"></i>
     <p>

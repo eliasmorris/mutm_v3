@@ -228,5 +228,48 @@ function showPrice() {
 }
 
 
+//Approval License info function
+function approveLicenseinfo(lid, lnumber) {
+  var lid = lid;
+  var lnumber = lnumber;
+  var c = confirm("Hakika unataka kuhakiki Leseni " + lnumber + "?");
+
+  if (c) {
+    fetch("http://102.223.7.135:6060/mutm/api/approveLicense/" + lid, {
+      method: 'PUT',
+      body: JSON.stringify({
+        "status": 'true'
+      }),
+      headers: {
+        "Content-Type": "application/json;charset= UTF-8"
+      }
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      console.log(data);
+    })
+
+    //SEND INTO LOG
+    $.ajax({
+      url: "insertIntoLog.php", //CODE TO GET REG NAME
+      type: "POST",
+      data: { lnumber: lnumber, act: 'approve' }, //ELEMENT ID WHERE I GET VALUE
+      success: function (data) {
+        if (data == 'success') {
+          alert('leseni imehakikiwa kikamilifu');
+         window.location.load();
+        } else {
+          alert('Samahani, leseni imeshindwa kuhakikiwa! Jaribu tena');
+        }
+      }
+    });
+
+
+  } else {
+    //if not comfirm
+  }
+}
+
+
 
 

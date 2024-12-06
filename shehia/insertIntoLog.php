@@ -8,15 +8,11 @@
 		$insertLog['device'] = gethostbyaddr($_SERVER['REMOTE_ADDR']); //get device
 		if (isset($_POST['act'])) {
 			if ($_POST['act'] == 'insertLog') {
-				$insertLog['eventts'] = "Amesajili Aina ya Leseni ".$_POST['ltype']; //get event
+				$insertLog['eventts'] = "Shehia imesajiliwa kikamilifu".$_POST['shnam']; //get event
 			}elseif ($_POST['act'] == 'updateLog') {
-				$insertLog['eventts'] = "Amebadilisha Taarifa za Leseni ya  ".$_POST['ltype']; //get event
-			}elseif ($_POST['act'] == 'addAccountLog') {
-				$insertLog['eventts'] = "Amesajili Akaunti namba mpya katika Biashara ya  ".$_POST['ltype']; //get event
-			}elseif ($_POST['act'] == 'addImeiLog') {
-				$insertLog['eventts'] = "Amesajili POS mpya yenye imei namba ".$_POST['imei']." katika taasisi ya  ".$_POST['bname']; //get event
+				$insertLog['eventts'] = "Amebadilisha shehia ".$_POST['shnam']; //get event
 			}else{
-				$insertLog['eventts'] = "Ameifuta Biashara ya ".$_POST['ltype']; //get event
+				$insertLog['eventts'] = "Amefuta shehia ".$_POST['shnam']; //get event
 			}
 		}
 		

@@ -1,30 +1,44 @@
-<div class="modal fade" id="addlicensetype">
+<div class="modal fade" id="addshehia">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header bg-info">
-        <h4 class="modal-title">Sajili Aina ya Leseni</h4>
+        <h4 class="modal-title">Sajili Shehia</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form id="addLicensetypeForm">
+        <form id="addShehiaForm">
           <!-- <input type="hidden" name="businessid" id="businessid" class="form-control"> -->
           <div class="row">
             <div class="col-sm-6">
+              <?php
+
+              $json = file_get_contents($pubIP1 . 'mutm/api/selectdistrict'); //receive json from url
+
+              $arr = json_decode($json, true); //covert json data into array format
+              ?>
               <div class="form-group">
-                <label for="lnumber">Aina ya Leseni
+                <label for="lnumber">Wilaya
                   <span class="text-danger">*</span>
                 </label>
-                <input type="text" name="ltype" id="ltype" class="form-control" placeholder="Ingiza Aina ya Leseni" required="required" style="border: solid 1px green;">
+                <select class="form-control" id="distrct" name="distrct" style="border: solid 1px green;">
+                  <option value="" hidden>Chagua Wilaya</option>
+                  <?php
+                  foreach ($arr as $key => $value) {
+                    echo '<option value="' . $value['did'] . '">' . $value['dname'] . '</option>';
+                  }
+                  ?>
+                </select>
+                <!-- <input type="text" name="ltype" id="ltype" class="form-control" placeholder="Ingiza Aina ya Leseni" required="required" style="border: solid 1px green;"> -->
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="restaurentnumber">Kiwango
+                <label for="restaurentnumber">Shehia
                   <span class="text-danger">*</span>
                 </label>
-                <input type="number" name="price" id="price" class="form-control" placeholder="Ingiza kiwanga cha Pesa" required="required" style="border: solid 1px green;">
+                <input type="text" name="shnam" id="shnam" class="form-control" placeholder="Jaza shehia" required="required" style="border: solid 1px green;">
               </div>
             </div>
           </div>
@@ -56,7 +70,7 @@
       </div>
       <div class="modal-body">
         <form id="editLicensetypeForm">
-        <input type="hidden" name="ltid" id="ltid" class="form-control">
+          <input type="hidden" name="ltid" id="ltid" class="form-control">
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
@@ -90,5 +104,3 @@
   <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-
-

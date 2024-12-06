@@ -367,7 +367,14 @@
                     </h3>
 
                     <h3 style="font-weight: normal;">
-                      Tarehe ya Kutoa Bili&nbsp;:&nbsp;&nbsp;<?php  echo date( "d-m-Y", strtotime($requestdate));?>
+                      
+                      Tarehe ya Kutoa Bili&nbsp;:&nbsp;&nbsp;<?php 
+                       
+                      $time = date( "d-m-Y", strtotime($requestdate));
+                      //echo $time;
+                      $mydate=getdate(strtotime($time));
+                       echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
+                      ?>
                     </h3>
 
                     <h3 style="font-weight: normal;">

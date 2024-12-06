@@ -8,13 +8,13 @@
 		$insertLog['device'] = gethostbyaddr($_SERVER['REMOTE_ADDR']); //get device
 		if (isset($_POST['act'])) {
 			if ($_POST['act'] == 'insertLog') {
-				$insertLog['eventts'] = "Amesajili Biashara mpya ya ".$_POST['bname']; //get event
+				$insertLog['eventts'] = "Amesajili Biashara mpya ya ".$_POST['lnumber']; //get event
 			}elseif ($_POST['act'] == 'updateLog') {
-				$insertLog['eventts'] = "Amebadilisha Taarifa za Biashara ya  ".$_POST['bname']; //get event
+				$insertLog['eventts'] = "Amebadilisha Taarifa za Biashara ya  ".$_POST['lnumber']; //get event
 			}elseif ($_POST['act'] == 'addAccountLog') {
-				$insertLog['eventts'] = "Amesajili Akaunti namba mpya katika Biashara ya  ".$_POST['bname']; //get event
-			}elseif ($_POST['act'] == 'addImeiLog') {
-				$insertLog['eventts'] = "Amesajili POS mpya yenye imei namba ".$_POST['imei']." katika taasisi ya  ".$_POST['bname']; //get event
+				$insertLog['eventts'] = "Amesajili Akaunti namba mpya katika Biashara ya  ".$_POST['lnumber']; //get event
+			}elseif($_POST['act'] == 'approve'){
+				$insertLog['eventts'] = "Amehakiki kikamilifu leseni ya biashara ".$_POST['lnumber']; //get event
 			}else{
 				$insertLog['eventts'] = "Ameifuta Biashara ya ".$_POST['bname']; //get event
 			}

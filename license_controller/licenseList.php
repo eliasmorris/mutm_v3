@@ -6,7 +6,7 @@
       <th>Kategoria</th>
       <th>Jina la Biashara</th>
       <th>Kiwango</th>
-      <!-- <th>Hali</th> -->
+      <th>Hali</th>
       <th>Kitendo</th>
     </tr>
   </thead>
@@ -19,23 +19,34 @@
       echo '<td>' . $value['category'] . '</td>';
       echo '<td>' . $value['bname'] . '</td>';
       echo '<td>' . $value['amount'] . '</td>';
-      
 
-      if ($_SESSION['urole'] == 'Msimamizi mkuu' || $_SESSION['urole'] == 'Afisa mapato' ) {
-       
-          echo '<td class="text-right">';
-          echo '<div class="btn-group">';
-
-          echo '<a data-id="' . $value['lid'] . '" data-conf2="' . $value['lnumber'] . '" data-conf3="' . $value['licensetype'] . '" data-conf4="' . $value['bname'] . '" data-conf5="' . $value['amount'] . '" data-conf6="'.$value['businessid'].'" data-conf7="'.$value['category'].'" href="#editLicense" class="btn btn-xs btn-info open-editLicenseinfo" title="Bonyeza kubadili taariza za Leseni"><i class="fas fa-pencil-alt"></i></a>';
+      if ($value['isapproved'] == true) {
+        echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-success" >Approved</button></td>';
+      } else {
+        echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-warning">Not&nbsp;Approved</button></td>';
+      }
+      if ($value['isapproved'] != true) {
+        echo '<td class="text-right">';
+        echo '<div class="btn-group">';
+        if ($_SESSION['urole'] == 'Muangalizi mkuu') {
+          // echo '<a data-id="' . $value['lid'] . '" data-conf2="' . $value['lnumber'] . '" data-conf3="' . $value['licensetype'] . '" data-conf4="' . $value['bname'] . '" data-conf5="' . $value['amount'] . '" data-conf6="'.$value['businessid'].'" data-conf7="'.$value['category'].'" href="#editLicense" class="btn btn-xs btn-info open-editLicenseinfo" title="Bonyeza kubadili taariza za Leseni"><i class="fas fa-pencil-alt"></i></a>';
     ?>
-          <a class="btn btn-xs btn-danger" onClick="deleteLicenseinfo('<?php echo $value['lid']; ?>', '<?php echo $value['lnumber']; ?>')" title="Bonyeza kufuta Leseni"><i class="fas fa-trash"></i></a>
+          <a class="btn btn-sm btn-primary" onClick="approveLicenseinfo('<?php echo $value['lid']; ?>', '<?php echo $value['lnumber']; ?>')" title="Bonyeza kuhakiki Leseni">Approve</a>
           </div>
     <?php
-          echo '</td>';
-        
+        }
+        echo '</td>';
       } else {
-        echo '<td class="text-right">&nbsp;</td>';
+        echo '<td class="text-right">';
+        echo '<div class="btn-group">';
+        if ($_SESSION['urole'] == 'Afisa mapato') {
+
+          echo '<a href="printLicense.php?licenseId=' . $value['lid'] . '&businessid=' . $value['businessid'] . '" target="_blank" class="btn btn-primary btn-xs" title="Bonyeza kuprint leseni"><i class="fas fa-print"></i>Print</a>';
+          //echo '<td class="text-right">&nbsp;</td>';
+        }
       }
+
+
 
       echo '</tr>';
 
@@ -49,7 +60,7 @@
     <th>Kategoria</th>
     <th>Jina la Biashara</th>
     <th>Kiwango</th>
-    <!-- <th>Hali</th> -->
+    <th>Hali</th>
     <th>Kitendo</th>
   </tfoot>
 </table>

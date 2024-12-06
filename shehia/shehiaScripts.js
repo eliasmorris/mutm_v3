@@ -1,22 +1,22 @@
-var form = document.getElementById('addLicensetypeForm');
+var form = document.getElementById('addShehiaForm');
 form.addEventListener('submit', function (e) {
 
   //e.preventDefault(); // dont remove modal if success
 
-  var ltype = document.getElementById('ltype').value;
-  var price = document.getElementById('price').value;
+  var distrct = document.getElementById('distrct').value;
+  var shnam = document.getElementById('shnam').value;
 
   var publicIP = document.getElementById('publicIPa').value;
   var localIPa = document.getElementById('localIPa').value;
 
-  fetch(publicIP + "mutm/api/insertlicensetype", {
+  fetch(publicIP + "mutm/api/insertShehia", {
     method: 'POST',
     //mode: 'no-cors',  // This disables CORS
 
     body: JSON.stringify({ //change data into json format 
       // "businessid": businessid,
-      "ltype": ltype,
-      "price": price 
+      "deptid": distrct,
+      "shnam": shnam 
 
     }),
     headers: {
@@ -32,16 +32,16 @@ form.addEventListener('submit', function (e) {
   $.ajax({
     url: "insertIntoLog.php", //CODE TO GET REG NAME
     type: "POST",
-    data: { ltype: ltype, act: 'insertLog' }, //ELEMENT ID WHERE I GET VALUE
+    data: { shnam: shnam, act: 'insertLog' }, //ELEMENT ID WHERE I GET VALUE
     success: function (data) {
       if (data == 'success') {
 
-        alert('Umefanikiwa kusajili Aina ya Leseni mpya');
+        alert('Umefanikiwa shehia mpya');
         // $( "#listTable" ).load( "index.php #listTable" );
         window.location.load(); //refresh current page
       } else {
         alert(data);
-        alert('Samahani Aina ya Leseni imeshindwa kusajiliwa! Jaribu tena');
+        alert('Samahani shehia imeshindwa kusajiliwa! Jaribu tena');
       }
     }
   });

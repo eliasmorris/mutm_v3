@@ -7,6 +7,13 @@
 
   <?php
     include('../MySections/HeaderLinks.php');
+    if ($_SESSION['urole'] != 'Afisa mapato') {
+      // header('Location: ../?msg=sessionErr');
+      // exit;
+      session_destroy();
+      header('Location: ../login/');
+      exit;
+    }
   ?>
 </head>
 <!-- (oncontextmenu="return false")for stoping inspect element -->
