@@ -235,10 +235,10 @@ function approveLicenseinfo(lid, lnumber) {
   var c = confirm("Hakika unataka kuhakiki Leseni " + lnumber + "?");
 
   if (c) {
-    fetch("https://102.223.7.135:6060/mutm/api/approveLicense/" + lid, {
+    fetch("http://102.223.7.135:6060/mutm/api/approveLicense/" + lid, {
       method: 'PUT',
       body: JSON.stringify({
-        "isapproved": 'true'
+        // "isapproved": 'true'
       }),
       headers: {
         "Content-Type": "application/json;charset= UTF-8"
