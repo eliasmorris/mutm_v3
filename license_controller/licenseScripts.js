@@ -235,23 +235,19 @@ function approveLicenseinfo(lid, lnumber) {
   var c = confirm("Hakika unataka kuhakiki Leseni " + lnumber + "?");
 
   if (c) {
-    $.ajax({
-      url:"https://102.223.7.135:6060/mutm/api/approveLicense/" + lid,
-      type: "POST",
-    });
-    // fetch("https://102.223.7.135:6060/mutm/api/approveLicense/" + lid, {
-    //   method: 'PUT',
-    //   // body: JSON.stringify({
-    //   //   // "isapproved": 'true'
-    //   // }),
-    //   headers: {
-    //     "Content-Type": "application/json;charset= UTF-8"
-    //   }
-    // }).then(function (response) {
-    //   return response.json();
-    // }).then(function (data) {
-    //   console.log(data);
-    // })
+    fetch("http://102.223.7.135:6060/mutm/api/approveLicense/" + lid, {
+      method: 'PUT',
+      body: JSON.stringify({
+        "lid": lid
+      }),
+      headers: {
+        "Content-Type": "application/json;charset= UTF-8"
+      }
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      console.log(data);
+    })
 
     //SEND INTO LOG
     $.ajax({
