@@ -236,6 +236,7 @@ function approveLicenseinfo(lid, lnumber) {
 
   if (c) {
     fetch("https://102.223.7.135:6060/mutm/api/approveLicense/12", {
+       mode: 'no-cors',
       method: 'PUT',
       body: JSON.stringify({
         "lid": lid
