@@ -69,9 +69,9 @@
                           <span class="fa fa-eye"></span>&nbsp;Invoice
                         </a>
                         &nbsp;
-                        <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#addlicense">
+                        <!-- <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#addlicense">
                           <span class="fa fa-plus"></span>&nbsp;Leseni ya Biashara
-                        </button>
+                        </button> -->
                       </div>
                     </div>
                   <?php

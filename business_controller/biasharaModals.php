@@ -22,7 +22,7 @@
             <div class="col-sm-6">
               <?php
 
-              $json = file_get_contents($pubIP1 . 'mutm/api/selectlicensetype'); //receive json from url
+              $json = file_get_contents($pubIP . 'selectLittlesourceByInstitute/' . $_SESSION['instituteid']); //receive json from url
 
               $arr = json_decode($json, true); //covert json data into array format
               ?>
@@ -34,23 +34,10 @@
                   <option value="" hidden>Chagua aina ya Leseni</option>
                   <?php
                   foreach ($arr as $key => $value) {
-                    echo '<option value="' . $value['ltype'] . '">' . $value['ltype'] . '-' . number_format($value['price']) . '</option>';
+                    echo '<option value="' . $value['ltsname'] . '">' . $value['ltsname'] . '-' . number_format($value['ltsprice']) . '</option>';
                   }
                   ?>
                 </select>
-                <!-- <select class="form-control" id="btype" name="btype" required="required" style="border: solid 1px green;">
-                  <option value="" hidden>Chagua aina ya Biashara</option>
-                  <option value="ONE OR TWO STAR HOTEL">One or Two Star Hotel</option>
-                  <option value="THREE OR FOUR STAR HOTEL">Thee or Four Star Hotel</option>
-                  <option value="LOCAL BAR">Local Bar</option>
-                  <option value="LIQOUR/GLOSERY SHOP">Liqour/Glosery Shop</option>
-                  <option value="IMPORT PERMIT">Import Permit</option>
-                  <option value="GRADE A, AA, AAA AND BELOW STANDARD">Grade A, AA , AA and Below Standard</option>
-                  <option value="FIVE STAR HOTEL">Five Star Hotel</option>
-                  <option value="WAREHOUSE">WareHouse</option>
-                  <option value="DELIVERY PERMIT">Delivery Permit</option>
-                  <option value="SPECIAL OCCASION PERMIT">Special occasion Permit </option>
-                </select> -->
               </div>
             </div>
           </div>
@@ -169,7 +156,7 @@
             <div class="col-sm-6">
               <?php
 
-              $json = file_get_contents($pubIP1 . 'mutm/api/selectlicensetype'); //receive json from url
+              $json = file_get_contents($pubIP . 'selectLittlesourceByInstitute/' . $_SESSION['instituteid']); //receive json from url
 
               $arr = json_decode($json, true); //covert json data into array format
               ?>
@@ -181,7 +168,7 @@
                   <option id="btypee1" value="" hidden>Chagua aina ya Biashara</option>
                   <?php
                   foreach ($arr as $key => $value) {
-                    echo '<option value="' . $value['ltype'] . '">' . $value['ltype'] . '-' . number_format($value['price']) . '</option>';
+                    echo '<option value="' . $value['ltsname'] . '">' . $value['ltsname'] . '-' . number_format($value['ltsprice']) . '</option>';
                   }
                   ?>
                 </select>
