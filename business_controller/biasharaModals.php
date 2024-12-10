@@ -22,21 +22,35 @@
             <div class="col-sm-6">
               <?php
 
-              $json = file_get_contents($pubIP . 'selectLittlesourceByInstitute/' . $_SESSION['instituteid']); //receive json from url
+              // $json = file_get_contents($pubIP . 'selectLittlesourceByInstitute/' . $_SESSION['instituteid']); //receive json from url
 
-              $arr = json_decode($json, true); //covert json data into array format
+              // $arr = json_decode($json, true); //covert json data into array format
               ?>
               <div class="form-group">
                 <label for="btype">Aina ya Biashara
                   <span class="text-danger">*</span>
                 </label>
-                <select class="form-control" id="btype" name="btype" required="required" style="border: solid 1px green;" onchange="displayPrice()">
+                <!-- <select class="form-control" id="btype" name="btype" required="required" style="border: solid 1px green;" onchange="displayPrice()">
                   <option value="" hidden>Chagua aina ya Leseni</option>
                   <?php
-                  foreach ($arr as $key => $value) {
-                    echo '<option value="' . $value['ltsname'] . '">' . $value['ltsname'] . '-' . number_format($value['ltsprice']) . '</option>';
-                  }
+                  // foreach ($arr as $key => $value) {
+                  //   echo '<option value="' . $value['ltsname'] . '">' . $value['ltsname'] . '-' . number_format($value['ltsprice']) . '</option>';
+                  // }
                   ?>
+                </select> -->
+                <select class="form-control" id="btype" name="btype" required="required" style="border: solid 1px green;">
+                  <option value="" hidden>Chagua aina ya Biashara</option>
+                  <option value="IMPORTATION">Importation</option>
+                  <option value="FIVE STAR HOTEL">Five Star Hotel</option>
+                  <option value="FOUR OR TRHEE STAR HOTEL">Four or Three Star Hotel</option>
+                  <option value="TWO OR ONE STAR HOTEL">Two or One Star Hotel</option>
+                  <option value="HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD">Hotel With Grade A,AA,AAA and Below The Standard</option>
+                  <option value="LOCAL BAR">Local Bar</option>
+                  <option value="NIGHT CLUB">Night Club</option>
+                  <option value="WAREHOUSE">WareHouse</option>
+                  <option value="LIQOUR/GROCERY SHOP">Liqour/Grocery Shop</option>
+                  <option value="DELIVERY PERMIT">Delivery Permit</option>
+                  <option value="SPECIAL OCCASION PERMIT">Special occasion Permit </option>  
                 </select>
               </div>
             </div>
@@ -156,21 +170,36 @@
             <div class="col-sm-6">
               <?php
 
-              $json = file_get_contents($pubIP . 'selectLittlesourceByInstitute/' . $_SESSION['instituteid']); //receive json from url
+              // $json = file_get_contents($pubIP . 'selectLittlesourceByInstitute/' . $_SESSION['instituteid']); //receive json from url
 
-              $arr = json_decode($json, true); //covert json data into array format
+              // $arr = json_decode($json, true); //covert json data into array format
               ?>
               <div class="form-group">
                 <label for="instnamei">Aina ya Biashara
                   <span class="text-danger">*</span>
                 </label>
-                <select class="form-control" id="btypee" name="btypee" required="required" style="border: solid 1px green;">
+                <!-- <select class="form-control" id="btypee" name="btypee" required="required" style="border: solid 1px green;">
                   <option id="btypee1" value="" hidden>Chagua aina ya Biashara</option>
                   <?php
-                  foreach ($arr as $key => $value) {
-                    echo '<option value="' . $value['ltsname'] . '">' . $value['ltsname'] . '-' . number_format($value['ltsprice']) . '</option>';
-                  }
+                  // foreach ($arr as $key => $value) {
+                  //   echo '<option value="' . $value['ltype'] . '">' . $value['ltype'] . '-' . number_format($value['price']) . '</option>';
+                  // }
                   ?>
+                </select> -->
+
+                <select class="form-control" id="btypee" name="btypee" required="required" style="border: solid 1px green;">
+                  <option value="" id="btypee1" hidden>Chagua aina ya Biashara</option>
+                  <option value="IMPORTATION">Importation</option>
+                  <option value="FIVE STAR HOTEL">Five Star Hotel</option>
+                  <option value="FOUR OR TRHEE STAR HOTEL">Four or Three Star Hotel</option>
+                  <option value="TWO OR ONE STAR HOTEL">Two or One Star Hotel</option>
+                  <option value="HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD">Hotel With Grade A,AA,AAA and Below The Standard</option>
+                  <option value="LOCAL BAR">Local Bar</option>
+                  <option value="NIGHT CLUB">Night Club</option>
+                  <option value="WAREHOUSE">WareHouse</option>
+                  <option value="LIQOUR/GROCERY SHOP">Liqour/Grocery Shop</option>
+                  <option value="DELIVERY PERMIT">Delivery Permit</option>
+                  <option value="SPECIAL OCCASION PERMIT">Special occasion Permit </option>  
                 </select>
               </div>
             </div>
