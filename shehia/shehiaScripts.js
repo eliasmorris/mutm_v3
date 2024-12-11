@@ -6,13 +6,13 @@ form.addEventListener('submit', function (e) {
   var distrct = document.getElementById('distrct').value;
   var shnam = document.getElementById('shnam').value;
 
-  var pubIp = 'https://zcrlb.zssf.or.tz/'
   var publicIP = document.getElementById('publicIPa').value;
   var localIPa = document.getElementById('localIPa').value;
 
-  fetch(pubIp+'mutm/api/insertShehia', {
-    //mode: 'no-cors',  // This disables CORS
+  fetch(publicIP + "mutm/api/insertShehia", {
     method: 'POST',
+    //mode: 'no-cors',  // This disables CORS
+
     body: JSON.stringify({ //change data into json format 
       // "businessid": businessid,
       'deptid': distrct,
@@ -23,10 +23,10 @@ form.addEventListener('submit', function (e) {
       "Content-Type": "application/json;charset= UTF-8"
     },
   }).then(function (response) {
-      return response.json();
+    return response.json();
   }).then(function (data) {
     console.log(data); //for testing only
-  });
+  })
 
   //SEND INTO LOG
   $.ajax({
@@ -36,7 +36,7 @@ form.addEventListener('submit', function (e) {
     success: function (data) {
       if (data == 'success') {
 
-        alert('Umefanikiwa kusajili shehia mpya');
+        alert('Umefanikiwa shehia mpya');
         // $( "#listTable" ).load( "index.php #listTable" );
         window.location.load(); //refresh current page
       } else {
@@ -46,7 +46,7 @@ form.addEventListener('submit', function (e) {
     }
   });
 
-});
+})
 
 
 //update Leseni info
