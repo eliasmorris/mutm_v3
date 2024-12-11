@@ -12,9 +12,11 @@
 	$jsIPConnect = 'http://102.223.7.135:8881/'; //server PUBLIC IP FOR JAVASCRIPT CONNECTION
 
 	//used for bussiness and license controller
-	$pubIP1 = 'http://10.0.200.78:6060/'; //server local IP FOR JAVASCRIPT CONNECTION
-	$locIP1 = 'http://10.0.200.78:6060/'; //server local IP FOR JAVASCRIPT CONNECTION
+	//$pubIP1 = 'http://10.0.200.78:6060/'; //server local IP FOR JAVASCRIPT CONNECTION
+	//$locIP1 = 'http://10.0.200.78:6060/'; //server local IP FOR JAVASCRIPT CONNECTION
 	//$jsIPConnect1 = 'http://102.223.7.135:6060/'; //server PUBLIC IP FOR JAVASCRIPT CONNECTION
+	$pubIP1 = 'https://zcrlb.zssf.or.tz/';
+	$locIP1 = 'https://zcrlb.zssf.or.tz/';
 	$jsIPConnect1 = 'https://zcrlb.zssf.or.tz/';
 
 
