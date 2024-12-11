@@ -1,7 +1,7 @@
 var form = document.getElementById('addBusinessForm');
 form.addEventListener('submit', function(e){
 
-   //e.preventDefault(); // dont remove modal if success
+   e.preventDefault(); // dont remove modal if success
   
   var bname = document.getElementById('bname').value;
   var btype = document.getElementById('btype').value;
