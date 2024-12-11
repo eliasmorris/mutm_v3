@@ -22,9 +22,10 @@ form.addEventListener('submit', function (e) {
       "Content-Type": "application/json;charset= UTF-8"
     },
   }).then(function (response) {
-    alert (response.json());
+    return response.json();
   }).then(function (data) {
-    console.log(data); //for testing only
+    //console.log(data); //for testing only
+    alert(data);
   })
 
   //SEND INTO LOG
