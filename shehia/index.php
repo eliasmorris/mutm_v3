@@ -71,10 +71,10 @@
                 <div class="card-body" id="listTable">
                   <?php
 
-                  $json = file_get_contents($pubIP1 . 'mutm/api/selectlicensetype');
+                  $json = file_get_contents($pubIP1 . 'mutm/api/selectshehia');
                   $arr = json_decode($json, true); //covert json data into array format
 
-                  // include('shehiaList.php');
+                   include('shehiaList.php');
                   ?>
 
                 </div>

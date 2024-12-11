@@ -1,8 +1,7 @@
 <table id="example1" class="table table-bordered table-striped small">
   <thead>
     <tr>
-      <th>Aina ya leseni</th>
-      <th>Kiwango</th>
+      <th>Shehia Name</th>
       <th>Kitendo</th>
     </tr>
   </thead>
@@ -10,9 +9,8 @@
     <?php
     $num = 1;
     foreach ($arr as $key => $value) {
-      
-      echo '<td>' . $value['ltype'] . '</td>';
-      echo '<td>' . $value['price'] . '</td>';
+
+      echo '<td>' . $value['shname'] . '</td>';
       if ($_SESSION['urole'] == 'Msimamizi mkuu') {
         // if ($value['status'] == 'ACTIVE') {
         echo '<td class="text-right">';
@@ -38,8 +36,7 @@
     ?>
   </tbody>
   <tfoot>
-    <th>Aina ya leseni</th>
-    <th>Kiwango</th>
+    <th>Shehia Name</th>
     <th>Kitendo</th>
   </tfoot>
 </table>
