@@ -14,7 +14,7 @@
     </p>
   </a>
 </li>
-<li class="nav-item">
+<!-- <li class="nav-item">
   <a href="../business_controller/" class="nav-link text-white font-weight-bold">
     <i class="nav-icon fas fa-money-bill-alt"></i>
     <p>
@@ -29,7 +29,7 @@
       License
     </p>
   </a>
-</li>
+</li> -->
 <li class="nav-item">
   <a href="../zoni/" class="nav-link text-white font-weight-bold">
     <i class="nav-icon fas fa-globe-africa"></i>
