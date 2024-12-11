@@ -44,7 +44,7 @@ form.addEventListener('submit', function(e){
           
           alert('Umefanikiwa kusajili Biashara mpya ya ' + bname);
           // $( "#listTable" ).load( "index.php #listTable" );
-          window.location.load(); //refresh current page
+          window.location.reload(); //refresh current page
         }else{
           alert(data);
           alert('Samahani Biashara imeshindwa kusajiliwa! Jaribu tena');
