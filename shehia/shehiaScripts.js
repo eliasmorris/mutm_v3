@@ -15,8 +15,8 @@ form.addEventListener('submit', function (e) {
 
     body: JSON.stringify({ //change data into json format 
       // "businessid": businessid,
-      "deptid": distrct,
-      "shnam": shnam 
+      'deptid': distrct,
+      'shnam': shnam 
 
     }),
     headers: {
