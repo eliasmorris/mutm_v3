@@ -1,7 +1,7 @@
 var form = document.getElementById('addShehiaForm');
 form.addEventListener('submit', function (e) {
 
-  e.preventDefault(); // dont remove modal if success
+  //e.preventDefault(); // dont remove modal if success
 
   var distrct = document.getElementById('distrct').value;
   var shnam = document.getElementById('shnam').value;
@@ -212,105 +212,5 @@ $(document).on("click", ".open-addPOS", function (e) {
 });
 
 
-//add account no
-var form = document.getElementById('addAccountNoForm');
-form.addEventListener('submit', function (e) {
-
-  // e.preventDefault(); // dont remove modal if success
-
-  var instituteid = document.getElementById('instituteidacc').value;
-  var instcode = document.getElementById('instcodeacc').value;
-  var instname = document.getElementById('instnameacc').value;
-  var accname = document.getElementById('accname').value;
-  var accnum = document.getElementById('accnum').value;
-  var bankcode = document.getElementById('bankcode').value;
-  var insertAccount = document.getElementById('insertAccount').value; //receive insert query from the modal
-
-  fetch(pubIP + "account/insertAccount", {
-    method: 'POST',
-    body: JSON.stringify({
-      //change data into json format
-      "accname": accname,
-      "accnum": accnum,
-      "bankcode": bankcode,
-      "instituteid": instituteid
-    }),
-    headers: {
-      "Content-Type": "application/json;charset= UTF-8"
-    }
-  }).then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    // console.log(data); //for testing only
-  })
-
-  //SEND INTO LOG
-  $.ajax({
-    url: "insertIntoLog.php", //CODE TO GET REG NAME
-    type: "POST",
-    data: { instname: instname, accname: accname, accnum: accnum, bankcode: bankcode, act: 'addAccountLog' }, //ELEMENT ID WHERE I GET VALUE
-    success: function (data) {
-      if (data == 'success') {
-        alert('Akaunti namba imesajiliwa kikamilifu katika taasisi');
-
-        // $( "#listTable" ).load( "index.php #listTable" );
-      } else {
-        alert('Samahani, Akaunti namba imeshindwa kusajiliwa! Jaribu tena');
-      }
-    }
-  });
-
-
-})
-
-
-//add POS
-var form = document.getElementById('addPOSForm');
-form.addEventListener('submit', function (e) {
-
-  // e.preventDefault(); // dont remove modal if success
-
-  var instituteid = document.getElementById('instituteidps').value;
-  var instcode = document.getElementById('instcodeps').value;
-  var instname = document.getElementById('instnameps').value;
-  var imei = document.getElementById('imeino').value;
-
-  var pubIP = document.getElementById('pubIPap').value;
-  var locIP = document.getElementById('locIPap').value;
-
-  fetch(pubIP + "insertPos", {
-    method: 'POST',
-    body: JSON.stringify({
-      //change data into json format
-      "imei": imei,
-      "instid": instituteid
-    }),
-    headers: {
-      "Content-Type": "application/json;charset= UTF-8"
-    }
-  }).then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    // console.log(data); //for testing only
-  })
-
-  //SEND INTO LOG
-  $.ajax({
-    url: "insertIntoLog.php", //CODE TO GET REG NAME
-    type: "POST",
-    data: { instname: instname, imei: imei, act: 'addImeiLog' }, //ELEMENT ID WHERE I GET VALUE
-    success: function (data) {
-      if (data == 'success') {
-        alert('POS mpya yenye imei namba ' + imei + ' imesajiliwa kikamilifu katika taasisi');
-
-        // $( "#listTable" ).load( "index.php #listTable" );
-      } else {
-        alert('Samahani, POS imeshindwa kusajiliwa! Jaribu tena');
-      }
-    }
-  });
-
-
-})
 
 
