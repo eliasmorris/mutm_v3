@@ -30,7 +30,7 @@ form.addEventListener('submit', function (e) {
     
   }).then(function (data) {
     console.log(data); //for testing only
-  })
+  }).catch(error => console.log(error));
 
   //SEND INTO LOG
   // $.ajax({
@@ -50,7 +50,7 @@ form.addEventListener('submit', function (e) {
   //   }
   // });
 
-})
+});
 
 
 //update Leseni info
