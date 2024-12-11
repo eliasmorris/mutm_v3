@@ -9,8 +9,8 @@ form.addEventListener('submit', function (e) {
   var publicIP = document.getElementById('publicIPa').value;
   var localIPa = document.getElementById('localIPa').value;
 
-  fetch('http://102.223.7.135:6060/mutm/api/insertShehia', {
-    mode: 'no-cors',  // This disables CORS
+  fetch('https://cors-anywhere.herokuapp.com/http://102.223.7.135:6060/mutm/api/insertShehia', {
+    //mode: 'no-cors',  // This disables CORS
     method: 'POST',
     body: JSON.stringify({ //change data into json format 
       // "businessid": businessid,
