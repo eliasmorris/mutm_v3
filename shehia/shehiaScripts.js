@@ -22,7 +22,12 @@ form.addEventListener('submit', function (e) {
       "Content-Type": "application/json;charset= UTF-8"
     },
   }).then(function (response) {
-    return response.json();
+    if(response !== 200){
+      alert('not suceess');
+    }else{
+      return response.json();
+    }
+    
   }).then(function (data) {
     console.log(data); //for testing only
   })
