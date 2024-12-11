@@ -23,33 +23,28 @@ form.addEventListener('submit', function (e) {
       "Content-Type": "application/json;charset= UTF-8"
     },
   }).then(function (response) {
-    if(response !== 200){
-      alert('not suceess');
-    }else{
       return response.json();
-    }
-    
   }).then(function (data) {
     console.log(data); //for testing only
   }).catch(error => console.log(error));
 
   //SEND INTO LOG
-  // $.ajax({
-  //   url: "insertIntoLog.php", //CODE TO GET REG NAME
-  //   type: "POST",
-  //   data: { shnam: shnam, act: 'insertLog' }, //ELEMENT ID WHERE I GET VALUE
-  //   success: function (data) {
-  //     if (data == 'success') {
+  $.ajax({
+    url: "insertIntoLog.php", //CODE TO GET REG NAME
+    type: "POST",
+    data: { shnam: shnam, act: 'insertLog' }, //ELEMENT ID WHERE I GET VALUE
+    success: function (data) {
+      if (data == 'success') {
 
-  //       alert('Umefanikiwa kusajili shehia mpya');
-  //       // $( "#listTable" ).load( "index.php #listTable" );
-  //       window.location.load(); //refresh current page
-  //     } else {
-  //       alert(data);
-  //       alert('Samahani shehia imeshindwa kusajiliwa! Jaribu tena');
-  //     }
-  //   }
-  // });
+        alert('Umefanikiwa kusajili shehia mpya');
+        // $( "#listTable" ).load( "index.php #listTable" );
+        window.location.load(); //refresh current page
+      } else {
+        alert(data);
+        alert('Samahani shehia imeshindwa kusajiliwa! Jaribu tena');
+      }
+    }
+  });
 
 });
 
