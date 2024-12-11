@@ -22,10 +22,8 @@ form.addEventListener('submit', function (e) {
       "Content-Type": "application/json;charset= UTF-8"
     },
   }).then(function (response) {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
+    alert('success');
+    //return response.json();
   }).then(function (data) {
     console.log(data); //for testing only
   })
