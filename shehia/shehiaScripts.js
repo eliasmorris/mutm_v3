@@ -28,8 +28,8 @@ form.addEventListener('submit', function (e) {
       return response.json();
     }
     
-  }).then(function (response) {
-    console.log(response); //for testing only
+  }).then(function (data) {
+    console.log(data); //for testing only
   }).catch(error => console.log(error));
 
   //SEND INTO LOG
