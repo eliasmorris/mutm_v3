@@ -36,7 +36,7 @@ form.addEventListener('submit', function (e) {
     success: function (data) {
       if (data == 'success') {
 
-        alert('Umefanikiwa shehia mpya');
+        alert('Umefanikiwa Kusajili Shehia Mpya');
         // $( "#listTable" ).load( "index.php #listTable" );
         window.location.load(); //refresh current page
       } else {
