@@ -38,7 +38,7 @@ form.addEventListener('submit', function (e) {
 
         alert('Umefanikiwa Kusajili Shehia Mpya');
         // $( "#listTable" ).load( "index.php #listTable" );
-        window.location.load(); //refresh current page
+        window.location.reload(); //refresh current page
       } else {
         alert(data);
         alert('Samahani shehia imeshindwa kusajiliwa! Jaribu tena');
