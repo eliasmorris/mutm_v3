@@ -1,7 +1,7 @@
 var form = document.getElementById('addShehiaForm');
 form.addEventListener('submit', function (e) {
 
-  e.preventDefault(); // dont remove modal if success
+  //e.preventDefault(); // dont remove modal if success
 
   var distrct = document.getElementById('distrct').value;
   var shnam = document.getElementById('shnam').value;
