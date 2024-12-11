@@ -6,10 +6,11 @@ form.addEventListener('submit', function (e) {
   var distrct = document.getElementById('distrct').value;
   var shnam = document.getElementById('shnam').value;
 
+  var pubIp = 'https://zcrlb.zssf.or.tz/'
   var publicIP = document.getElementById('publicIPa').value;
   var localIPa = document.getElementById('localIPa').value;
 
-  fetch('https://zcrlb.zssf.or.tz/mutm/api/insertShehia', {
+  fetch(pubIP+'mutm/api/insertShehia', {
     //mode: 'no-cors',  // This disables CORS
     method: 'POST',
     body: JSON.stringify({ //change data into json format 
