@@ -19,13 +19,12 @@ form.addEventListener('submit', function (e) {
 
     }),
     headers: {
-      "Content-Type": "application/json;charset= UTF-8"
+      "Content-Type": "application/json"
     },
   }).then(function (response) {
     return response.json();
   }).then(function (data) {
-    //console.log(data); //for testing only
-    alert(data);
+    console.log(data); //for testing only
   })
 
   //SEND INTO LOG
