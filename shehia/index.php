@@ -9,8 +9,6 @@
   <?php
   include('../MySections/HeaderLinks.php');
   if ($_SESSION['urole'] != 'Msimamizi mkuu') {
-    // header('Location: ../?msg=sessionErr');
-    // exit;
     session_destroy();
     header('Location: ../login/');
     exit;
