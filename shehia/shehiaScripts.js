@@ -9,7 +9,7 @@ form.addEventListener('submit', function (e) {
   var publicIP = document.getElementById('publicIPa').value;
   var localIPa = document.getElementById('localIPa').value;
 
-  fetch(publicIP + "mutm/api/insertShehia", {
+  fetch('https://102.223.7.135:6060/mutm/api/insertShehia', {
     method: 'POST',
     //mode: 'no-cors',  // This disables CORS
 
