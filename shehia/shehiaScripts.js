@@ -50,20 +50,20 @@ form.addEventListener('submit', function (e) {
 
 
 //update Leseni info
-var form = document.getElementById('editLicensetypeForm');
+var form = document.getElementById('editShehiaForm');
 form.addEventListener('submit', function (e) {
 
   //e.preventDefault(); // dont remove modal if success
 
-  var ltid = document.getElementById('ltid').value;
-  var ltypee = document.getElementById('ltypee').value;
-  var pricee = document.getElementById('pricee').value;
+  var shehiaId = document.getElementById('shehiaId').value;
+  var distrct = document.getElementById('distrctt').value;
+  var shnam = document.getElementById('shnamm').value;
  
 
   var publicIPu = document.getElementById('pubIPu').value;
   var localIPu = document.getElementById('locIPu').value;
 
-  fetch(publicIPu + "mutm/api/updateLicense/" + ltid, {
+  fetch(publicIPu + "mutm/api/updateShehia/" + shehiaId, {
     method: 'PUT',
     //mode: 'cors',  // This disables CORS
     headers: {
@@ -71,8 +71,8 @@ form.addEventListener('submit', function (e) {
     },
     body: JSON.stringify({
       //change data into json format
-      "ltype": ltypee,
-      "price": pricee,
+      "deptid": distrct,
+      "shnam": shnam,
       
     })
 
@@ -87,12 +87,12 @@ form.addEventListener('submit', function (e) {
   $.ajax({
     url: "insertIntoLog.php", //CODE TO GET REG NAME
     type: "POST",
-    data: { ltype: ltypee, act: 'updateLog' }, //ELEMENT ID WHERE I GET VALUE
+    data: { shnam: shnam, act: 'updateLog' }, //ELEMENT ID WHERE I GET VALUE
     success: function (data) {
       if (data == 'success') {
-        alert('Taarifa za Aina ya Leseni zimebadilishwa kikamilifu');
-        //window.location.load(); //refresh current page
-        // $( "#listTable" ).load( "index.php #listTable" );
+        alert('Taarifa za Shehia zimebadilishwa kikamilifu');
+        window.location.reload(); //refresh current page
+        
       } else {
         // alert('Samahani Taarifa za biashara zimeshindwa kubadilishwa! Jaribu tena');
         alert(data);
@@ -103,22 +103,18 @@ form.addEventListener('submit', function (e) {
 
 })
 
-//call edit license type modal function
-$(document).on("click", ".open-editLicensetype", function (e) {
+//call edit shehia modal function
+$(document).on("click", ".open-editShehia", function (e) {
 
-  e.preventDefault();
+  //e.preventDefault();
 
   var _self = $(this);
 
-  var ltidd = _self.data('id');
-  $("#ltid").val(ltidd);
+  var shehiaId = _self.data('id');
+  $("#shehiaId").val(shehiaId);
 
-  var ltype = _self.data('conf2');
-  $("#ltypee").val(ltype);
-
-  var price = _self.data('conf3');
-  $("#pricee").val(price);
-  
+  var shnamm = _self.data('conf2');
+  $("#shnamm").val(shnamm);
 
   $(_self.attr('href')).modal('show');
 });
@@ -167,49 +163,6 @@ function deleteLicenseinfo(lid, lnumber) {
 }
 
 
-//call add new account into Institution modal function
-$(document).on("click", ".open-addAccountNo", function (e) {
-
-  e.preventDefault();
-
-  var _self = $(this);
-
-  var instituteid = _self.data('conf0');
-  $("#instituteidacc").val(instituteid);
-
-  var instcode = _self.data('conf2');
-  $("#instcodeacc").val(instcode);
-
-  var instname = _self.data('conf3');
-  $("#instnameacc").val(instname);
-
-  var insertAccount = _self.data('conf4'); //send insert query to the modal
-  $("#insertAccount").val(insertAccount);
-
-
-  $(_self.attr('href')).modal('show');
-});
-
-
-//call add POSinto Institution modal function
-$(document).on("click", ".open-addPOS", function (e) {
-
-  e.preventDefault();
-
-  var _self = $(this);
-
-  var instituteid = _self.data('conf0');
-  $("#instituteidps").val(instituteid);
-
-  var instcode = _self.data('conf2');
-  $("#instcodeps").val(instcode);
-
-  var instname = _self.data('conf3');
-  $("#instnameps").val(instname);
-
-
-  $(_self.attr('href')).modal('show');
-});
 
 
 

@@ -59,33 +59,46 @@
 <!-- /.modal -->
 
 
-<div class="modal fade" id="editLicensetype">
+<div class="modal fade" id="editShehia">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header bg-default">
-        <h4 class="modal-title">Badili taarifa za Leseni</h4>
+        <h4 class="modal-title">Badili taarifa za Shehia</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form id="editLicensetypeForm">
-          <input type="hidden" name="ltid" id="ltid" class="form-control">
+        <form id="editShehiaForm">
+          <input type="hidden" name="shehiaId" id="shehiaId" class="form-control">
           <div class="row">
             <div class="col-sm-6">
+              <?php
+
+              $json = file_get_contents($pubIP1 . 'mutm/api/selectdistrict'); //receive json from url
+
+              $arr = json_decode($json, true); //covert json data into array format
+              ?>
               <div class="form-group">
-                <label for="lnumber">Aina ya Leseni
+                <label for="lnumber">Wilaya
                   <span class="text-danger">*</span>
                 </label>
-                <input type="text" name="ltypee" id="ltypee" class="form-control" placeholder="Ingiza Aina ya Leseni" required="required" style="border: solid 1px green;">
+                <select class="form-control" id="distrctt" name="distrctt" style="border: solid 1px green;">
+                  <option value="" id="distrctt1" hidden>Chagua Wilaya</option>
+                  <?php
+                  foreach ($arr as $key => $value) {
+                    echo '<option value="' . $value['did'] . '">' . $value['dname'] . '</option>';
+                  }
+                  ?>
+                </select>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="restaurentnumber">Kiwango
+                <label for="shehia">Shehia
                   <span class="text-danger">*</span>
                 </label>
-                <input type="number" name="pricee" id="pricee" class="form-control" placeholder="Ingiza kiwanga cha Pesa" required="required" style="border: solid 1px green;">
+                <input type="text" name="shnamm" id="shnamm" class="form-control" placeholder="Ingiza shehia" required="required" style="border: solid 1px green;">
               </div>
             </div>
           </div>
