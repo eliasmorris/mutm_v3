@@ -11,7 +11,7 @@
 <label for="sheh">Shehia
   <span class="text-danger">*</span>
 </label>
-<select class="form-control select2" id="sheh" name="sheh" required="required" style="border: solid 1px green;" onchange="getCollectionByCollector()">
+<select class="form-control select2" id="sheh" name="sheh" required="required" style="border: solid 1px green;">
   <option value="">Chagua Shehia</option>
   <?php
     foreach ($arr as $key => $value) {
