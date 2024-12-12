@@ -258,7 +258,7 @@ function approveLicenseinfo(lid, lnumber) {
       success: function (data) {
         if (data == 'success') {
           alert('leseni imehakikiwa kikamilifu');
-         //window.location.load();
+         window.location.reload();
         } else {
           alert('Samahani, leseni imeshindwa kuhakikiwa! Jaribu tena');
         }
