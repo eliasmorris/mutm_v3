@@ -45,6 +45,8 @@ form.addEventListener('submit', function(e){
   // e.preventDefault(); // dont remove modal if success
   
   var mdsid = document.getElementById('mdsidl').value;
+  var sourcetype = document.getElementById('sourcetype').value;
+  var prefix = document.getElementById('prefix').value;
   var ltsid = document.getElementById('ltsidl').value;
   var ltsname = document.getElementById('ltsnamel').value;
   var ltsprice = document.getElementById('ltspricel').value;
@@ -53,16 +55,21 @@ form.addEventListener('submit', function(e){
   var subspcode = document.getElementById('subspcodel').value;
   var paymenttype = document.getElementById('paymenttypell').value;
 
-  var pubIP = document.getElementById('pubIP').value;
-  var locIP = document.getElementById('locIP').value;
+  // var pubIP = document.getElementById('pubIP').value;
+  // var locIP = document.getElementById('locIP').value;
+  //fetch(pubIP+"updateLittlesource/"+ltsid,{
+  var publicIPu = document.getElementById('pubIPu').value;
+  var localIPu = document.getElementById('locIPu').value;
   
-  fetch(pubIP+"updateLittlesource/"+ltsid,{
+  fetch(publicIPu+"updateLittlesource/"+ltsid,{
     method:'PUT',
     body:JSON.stringify({
       //change data into json format
       "gfscode": gfscode,
       "ltsname": ltsname,
       "mdsid": mdsid,
+      "sourcetype": sourcetype,
+      "prefix": prefix,
       "paymenttype": paymenttype,
       "price": ltsprice,
       "scondition": scondition,

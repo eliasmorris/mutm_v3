@@ -7,6 +7,7 @@
       <th>Jina la Biashara</th>
       <th>Kiwango</th>
       <th>Hali</th>
+      <th>Hali2</th>
       <th>Kitendo</th>
     </tr>
   </thead>
@@ -19,10 +20,17 @@
       echo '<td>' . $value['category'] . '</td>';
       echo '<td>' . $value['bname'] . '</td>';
       echo '<td>' . $value['amount'] . '</td>';
-
+      if ($value['cstatus'] == 'PAID') {
+        echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-success" >PAID</button></td>';
+      } else {
+        echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-warning">CREATED</button></td>';
+      }
+      
+      //echo '<td>' . $value['cstatus'] . '</td>';
       if ($value['isapproved'] == true) {
         echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-success" >Approved</button></td>';
       } else {
+        
         echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-warning">Not&nbsp;Approved</button></td>';
       }
       if ($value['isapproved'] != true) {
@@ -54,13 +62,4 @@
     }
     ?>
   </tbody>
-  <tfoot>
-    <th>Namba ya Leseni</th>
-    <th>Aina ya leseni</th>
-    <th>Kategoria</th>
-    <th>Jina la Biashara</th>
-    <th>Kiwango</th>
-    <th>Hali</th>
-    <th>Kitendo</th>
-  </tfoot>
 </table>
