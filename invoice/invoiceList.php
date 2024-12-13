@@ -28,7 +28,7 @@
       //   echo '<td>' . $value['status'] . '</td>';
       // }
 
-      if ($_SESSION['urole'] == 'Muangalizi mkuu') {
+      if ($_SESSION['urole'] == 'Afisa mapato') {
         // if ($value['status'] == 'ACTIVE') {
         echo '<td class="text-right">';
         echo '<div class="btn-group">';
