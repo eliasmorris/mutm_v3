@@ -28,20 +28,17 @@
       //   echo '<td>' . $value['status'] . '</td>';
       // }
 
-      if ($_SESSION['urole'] == 'Msimamizi mkuu') {
+      if ($_SESSION['urole'] == 'Muangalizi mkuu') {
         // if ($value['status'] == 'ACTIVE') {
         echo '<td class="text-right">';
         echo '<div class="btn-group">';
         echo '<a href="previewInvoice.php?invid='.$value['invlid'].'&refn='.$value['referencenumberr'].'&controlnumber='.$value['controlnumber'].'&status='.$value['status'].'" target="_blank" class="btn btn-primary btn-xs" title="Bonyeza kuprint"><i class="fas fa-print"></i>Invoice</a>';
-        // echo '<a data-id="' . $value['lid'] . '" data-conf2="' . $value['lnumber'] . '" data-conf3="' . $value['licensetype'] . '" data-conf4="' . $value['bname'] . '" data-conf5="' . $value['amount'] . '" href="#editInvoice" class="btn btn-xs btn-info open-editInvoiceinfo" title="Bonyeza kubadili taariza za Leseni"><i class="fas fa-pencil-alt"></i> Badili</a>';
     ?>
         <!-- <a class="btn btn-xs btn-danger" onClick="deleteLicenseinfo('<?php echo $value['lid']; ?>', '<?php echo $value['lnumber']; ?>')" title="Bonyeza kufuta Invoice"><i class="fas fa-trash"></i> Futa</a> -->
         </div>
     <?php
         echo '</td>';
-        // } else {
-        //   echo '<td class = "text-right">&nbsp;</td>';
-        // }
+        
       } else {
         echo '<td class="text-right">&nbsp;</td>';
       }
