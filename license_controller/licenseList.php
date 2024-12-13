@@ -26,13 +26,19 @@
         echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-warning">CREATED</button></td>';
       }
       
-      //echo '<td>' . $value['cstatus'] . '</td>';
-      if ($value['isapproved'] == true) {
+      if ($value['isapproved'] == true && $value['cstatus'] == 'PAID') {
+
         echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-success" >Approved</button></td>';
-      } else {
-        
+
+      } elseif($value['isapproved'] == false && $value['cstatus'] == 'PAID'){
+
         echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-warning">Not&nbsp;Approved</button></td>';
+
+      } elseif($value['isapproved'] == false && $value['cstatus'] == 'CREATED') {
+        
+        
       }
+      
       if ($value['isapproved'] != true) {
         echo '<td class="text-right">';
         echo '<div class="btn-group">';

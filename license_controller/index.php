@@ -58,7 +58,7 @@
                 <div class="card-header">
                   <?php
                   if ($_SESSION['urole'] == 'Afisa mapato') {
-                  // if ($_SESSION['urole'] == 'Msimamizi mkuu' || $_SESSION['urole'] == 'Afisa mapato' || $_SESSION['urole'] == 'Muangalizi mkuu') {
+                    // if ($_SESSION['urole'] == 'Msimamizi mkuu' || $_SESSION['urole'] == 'Afisa mapato' || $_SESSION['urole'] == 'Muangalizi mkuu') {
                   ?>
                     <div class="row">
                       <div class="col-sm-12 text-right">
@@ -87,9 +87,14 @@
                     <li class="nav-item">
                       <a class="nav-link active" id="custom-content-above-home-tab" data-toggle="pill" href="#hazijahakikiwa" role="tab" aria-controls="custom-content-above-home" aria-selected="true">Hazijahakikiwa</a>
                     </li>
-
                     <li class="nav-item">
                       <a class="nav-link text-success" id="custom-content-above-profile-tab" data-toggle="pill" href="#zilizohakikiwa" role="tab" aria-controls="custom-content-above-profile" aria-selected="false">Zilizohakikiwa</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-success" id="custom-content-above-profile-tab" data-toggle="pill" href="#zilizolipiwa" role="tab" aria-controls="custom-content-above-profile" aria-selected="false">Zilizolipiwa</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-primary" id="custom-content-above-profile-tab" data-toggle="pill" href="#hazijalipiwa" role="tab" aria-controls="custom-content-above-profile" aria-selected="false">Hazijalipiwa</a>
                     </li>
                   </ul>
                   <div class="tab-content" id="custom-content-above-tabContent">
@@ -109,7 +114,7 @@
                     </div>
                     <!-- End License hazijahakikiwa -->
 
-                    <!-- start license zilizolipiwa -->
+                    <!-- start license zilizohakikiwa -->
                     <div class="tab-pane fade" id="zilizohakikiwa" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
                       <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
                         <?php
@@ -122,7 +127,37 @@
 
                       </div>
                     </div>
+                    <!-- End License zilizohakikiwa -->
+
+                    <!-- start license zilizolipiwa -->
+                    <div class="tab-pane fade" id="zilizolipiwa" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
+                      <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
+                        <?php
+
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/PAID?pageNum=1&pageSize=20');
+                        $arr = json_decode($json, true); //covert json data into array format
+
+                        include('licenseList.php');
+                        ?>
+
+                      </div>
+                    </div>
                     <!-- End License zilizolipiwa -->
+
+                    <!-- start license hazijalipiwa -->
+                    <div class="tab-pane fade" id="hazijalipiwa" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
+                      <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
+                        <?php
+
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/CREATED?pageNum=1&pageSize=20');
+                        $arr = json_decode($json, true); //covert json data into array format
+
+                        include('licenseList.php');
+                        ?>
+
+                      </div>
+                    </div>
+                    <!-- End License hazijalipiwa -->
                   </div>
                 </div>
                 <!-- /.card-body -->
