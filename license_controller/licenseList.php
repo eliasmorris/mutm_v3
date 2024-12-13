@@ -7,7 +7,7 @@
       <th>Jina la Biashara</th>
       <th>Kiwango</th>
       <th>Hali</th>
-      <th>Hali2</th>
+      <th>Uhakiki</th>
       <th>Kitendo</th>
     </tr>
   </thead>

@@ -52,7 +52,7 @@
         }
       ?>
   </tbody>
-  <tfoot>
+  <!-- <tfoot>
     <th>Business Name</th>
     <th>Business Type</th>
     <th>Email</th>
@@ -61,5 +61,5 @@
     <th>Namba ya Mgahawa</th>
     <th>Hali</th>
     <th>Kitendo</th>
-  </tfoot>
+  </tfoot> -->
 </table>
