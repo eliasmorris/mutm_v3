@@ -76,7 +76,7 @@
                             }
                             ?>
                           </select>
-                          <input type="text" class="form-control" placeholder="Ingiza jina la mlipaji" id="fullName" name="fullName" required="required" style="border: solid 1px green;">
+                          <!-- <input type="text" class="form-control" placeholder="Ingiza jina la mlipaji" id="fullName" name="fullName" required="required" style="border: solid 1px green;"> -->
                         </div>
                       </div>
                       <div class="col-sm-6">

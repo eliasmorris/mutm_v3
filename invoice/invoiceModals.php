@@ -41,7 +41,7 @@
           </div>
 
           <div class="row">
-          <div class="col-sm-12">
+            <div class="col-sm-12">
               <div class="form-group">
                 <label for="invoicetype">Aina ya Invoice
                   <span class="text-danger">*</span>
@@ -63,26 +63,26 @@
             <div class="col-md-6">
               <?php
 
-              $json = file_get_contents($pubIP1 . 'mutm/api/getAllLicense?pageNum=1&pageSize=100'); //receive json from url
+              $json = file_get_contents($pubIP1 . 'mutm/api/getAllBusiness?pageNum=1&pageSize=20'); //receive json from url
 
               $arr = json_decode($json, true); //covert json data into array format
               ?>
               <div class="form-group">
-                <label for="lnumber">Leseni
+                <label for="lnumber">Biashara
                   <span class="text-danger">*</span>
                 </label>
                 <select class="form-control" id="lnumber" name="lnumber" required="required" style="border: solid 1px green;">
                   <option value="" hidden>Chagua Biashara</option>
                   <?php
                   foreach ($arr as $key => $value) {
-                    echo '<option value="' . $value['licenseid'] . '">' . $value['lnumber'] . '</option>';
+                    echo '<option value="' . $value['bussid'] . '">' . $value['bname'] . '</option>';
                   }
                   ?>
                 </select>
               </div>
             </div>
           </div>
-          
+
           <input type="hidden" name="publicIPa" id="publicIPa" value="<?php echo $jsIPConnect1; ?>">
           <input type="hidden" name="localIPa" id="localIPa" value="<?php echo $locIP1; ?>">
 
@@ -110,7 +110,7 @@
         </button>
       </div>
       <div class="modal-body">
-      <form id="addLicenseForm">
+        <form id="addLicenseForm">
           <input type="hidden" name="lid" id="lid" class="form-control">
           <div class="row">
             <div class="col-sm-6">
@@ -135,7 +135,7 @@
             <div class="col-md-6">
               <?php
 
-              $json = file_get_contents($pubIP1.'mutm/api/getAllBusiness?pageNum=1&pageSize=20'); //receive json from url
+              $json = file_get_contents($pubIP1 . 'mutm/api/getAllBusiness?pageNum=1&pageSize=20'); //receive json from url
 
               $arr = json_decode($json, true); //covert json data into array format
               ?>
@@ -162,7 +162,7 @@
               </div>
             </div>
           </div>
-          
+
           <input type="hidden" name="publicIPa" id="publicIPa" value="<?php echo $jsIPConnect1; ?>">
           <input type="hidden" name="localIPa" id="localIPa" value="<?php echo $locIP1; ?>">
 
@@ -178,4 +178,3 @@
   <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-
