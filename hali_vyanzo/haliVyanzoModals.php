@@ -47,6 +47,7 @@
                   <option value="" id="sourcetype1" hidden>Chagua aina ya chanzo</option>
                   <option value="F">Form</option>
                   <option value="L">Leseni</option>
+                  <option value="I">Inspection</option>
                 </select>
               </div>
             </div>
@@ -57,10 +58,13 @@
                 </label>
                 <select class="form-control" id="prefix" name="prefix" required="required" style="border: solid 1px green;">
                   <option value="" id="prefix1" hidden>Chagua Kifupisho</option>
-                  <option value="HL">HL</option>
-                  <option value="L">L</option>
-                  <option value="SP">SP</option>
-                  <option value="S">S</option>
+                  <option value="I">Importation</option>
+                  <option value="D">Delivery</option>
+                  <option value="W">Warehouse</option>
+                  <option value="HL">Hotel License</option>
+                  <option value="L">Liquor Bar</option>
+                  <option value="SP">Special Permit</option>
+                  <option value="S">Shop/Grocery</option>
                 </select>
               </div>
             </div>
