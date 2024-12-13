@@ -62,10 +62,6 @@
                   ?>
                     <div class="row">
                       <div class="col-sm-12 text-right">
-                        <!-- <a href="../licensetype/" class="btn btn-sm btn-success" title="View license type">
-                          <span class="fa fa-eye"></span>&nbsp;Aina ya leseni
-                        </a>
-                        &nbsp; -->
                         <a href="../invoice/" class="btn btn-sm btn-success" title="View invoice">
                           <span class="fa fa-eye"></span>&nbsp;Invoice
                         </a>
@@ -85,7 +81,7 @@
                   <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
 
                     <li class="nav-item">
-                      <a class="nav-link active" id="custom-content-above-home-tab" data-toggle="pill" href="#hazijahakikiwa" role="tab" aria-controls="custom-content-above-home" aria-selected="true">Hazijahakikiwa</a>
+                      <a class="nav-link text-warning active" id="custom-content-above-home-tab" data-toggle="pill" href="#hazijahakikiwa" role="tab" aria-controls="custom-content-above-home" aria-selected="true">Hazijahakikiwa</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link text-success" id="custom-content-above-profile-tab" data-toggle="pill" href="#zilizohakikiwa" role="tab" aria-controls="custom-content-above-profile" aria-selected="false">Zilizohakikiwa</a>
