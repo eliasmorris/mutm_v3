@@ -5,6 +5,7 @@
       <th>Aina ya leseni</th>
       <th>Kategoria</th>
       <th>Jina la Biashara</th>
+      <th>Shehia</th>
       <th>Kiwango</th>
       <th>Hali</th>
       <th>Uhakiki</th>
@@ -19,6 +20,7 @@
       echo '<td>' . $value['licensetype'] . '</td>';
       echo '<td>' . $value['category'] . '</td>';
       echo '<td>' . $value['bname'] . '</td>';
+      echo '<td>' . $value['shname'] . '</td>';
       echo '<td>' . $value['amount'] . '</td>';
       if ($value['cstatus'] == 'PAID') {
         echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-success" >PAID</button></td>';
@@ -38,7 +40,7 @@
         
         
       }
-      
+
       if ($value['isapproved'] != true) {
         echo '<td class="text-right">';
         echo '<div class="btn-group">';
