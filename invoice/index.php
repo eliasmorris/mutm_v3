@@ -46,7 +46,7 @@
             <div class="card">
               <div class="card-header">
                 <?php
-                  if ($_SESSION['urole'] == 'Msimamizi mkuu') {
+                  if ($_SESSION['urole'] == 'Muangalizi mkuu') {
                     ?>
                     <div class="row">
                       <div class="col-sm-12 text-right">
@@ -56,17 +56,18 @@
                       </div>
                     </div>
                     <?php
-                  }elseif ($_SESSION['urole'] == 'Muangalizi mkuu') {
+                  }
+                  // elseif ($_SESSION['urole'] == 'Muangalizi mkuu') {
                     ?>
-                    <div class="row">
+                    <!-- <div class="row">
                       <div class="col-sm-12 text-right">
                         <a href="../accountNo/" class="btn btn-sm btn-success" title="Orodha ya namba za malipo zilizosajiliwa">
                           <span class="fa fa-eye"></span>&nbsp;Namba za Malipo zilizosajiliwa
                         </a>
                       </div>
-                    </div>
+                    </div> -->
                     <?php
-                  }
+                  // }
                 ?>
                 
               </div>
