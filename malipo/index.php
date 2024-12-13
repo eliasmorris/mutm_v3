@@ -60,22 +60,22 @@
                       <div class="col-sm-6">
                         <?php
 
-                        // $json = file_get_contents($pubIP1 . 'mutm/api/getAllBusiness?pageNum=1&pageSize=20'); //receive json from url
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getAllBusiness?pageNum=1&pageSize=20'); //receive json from url
 
-                        // $arr = json_decode($json, true); //covert json data into array format
+                        $arr = json_decode($json, true); //covert json data into array format
                         ?>
                         <div class="form-group">
                           <label for="fullName">Jina la Biashara <span class="small">(Mtu binafsi/Kampuni/Shirika/nk)</span>:
                             <span class="text-danger">*</span>
                           </label>
-                          <!-- <select class="form-control" id="fullName" name="fullName" required="required" style="border: solid 1px green;">
+                          <select class="form-control" id="fullName" name="fullName" required="required" style="border: solid 1px green;">
                             <option value="" hidden>Chagua Biashara</option>
                             <?php
-                            // foreach ($arr as $key => $value) {
-                            //   echo '<option value="' . $value['bname'] . '">' . $value['bname'] . '</option>';
-                            // }
+                            foreach ($arr as $key => $value) {
+                              echo '<option value="' . $value['bname'] . '">' . $value['bname'] . '</option>';
+                            }
                             ?>
-                          </select> -->
+                          </select>
                           <input type="text" class="form-control" placeholder="Ingiza jina la mlipaji" id="fullName" name="fullName" required="required" style="border: solid 1px green;">
                         </div>
                       </div>
