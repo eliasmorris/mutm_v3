@@ -6,14 +6,15 @@ form.addEventListener('submit', function(e){
   var username = document.getElementById('usernameE').value;
 
   var pubIP = document.getElementById('pubIPf').value;
+  alert(pubIP);
   var locIP = document.getElementById('locIPf').value;
 
   fetch(pubIP+"selectUsersByEmail/"+username,{
   method:'GET',
-  body:JSON.stringify({
-    //change data into json format
-    // "username": username
-  }),
+  // body:JSON.stringify({
+  //   //change data into json format
+  //   "username": username
+  // }),
   headers:{
     "Content-Type":"application/json;charset= UTF-8"
   }
