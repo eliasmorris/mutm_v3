@@ -10,10 +10,10 @@ form.addEventListener('submit', function(e){
 
   fetch(pubIP+"selectUsersByEmail/"+username,{
   method:'GET',
-  // body:JSON.stringify({
-  //   //change data into json format
-  //   "username": username
-  // }),
+  body:JSON.stringify({
+    //change data into json format
+    // "username": username
+  }),
   headers:{
     "Content-Type":"application/json;charset= UTF-8"
   }
