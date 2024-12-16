@@ -6,7 +6,6 @@ form.addEventListener('submit', function(e){
   var username = document.getElementById('usernameE').value;
 
   var pubIP = document.getElementById('pubIPf').value;
-  alert(pubIP);
   var locIP = document.getElementById('locIPf').value;
 
   fetch(pubIP+"selectUsersByEmail/"+username,{
