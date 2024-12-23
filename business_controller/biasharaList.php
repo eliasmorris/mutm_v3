@@ -1,6 +1,7 @@
 <table id="example1" class="table table-bordered table-striped small">
   <thead>
     <tr>
+    <th>SNo</th>
       <th>Business Name</th>
       <th>Business Type</th>
       <th>Email</th>
@@ -15,6 +16,7 @@
       <?php
         $num = 1;
         foreach ($arr as $key => $value) {
+          echo '<td>'.$num.'</td>';
           echo '<td>'.$value['bname'].'</td>';
           echo '<td>'.$value['btype'].'</td>';
           echo '<td class="font-weight-bold">'.$value['email'].'</td>';

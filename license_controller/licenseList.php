@@ -1,6 +1,7 @@
 <table id="example1" class="table table-bordered table-striped small">
   <thead>
     <tr>
+    <th>SNo</th>
       <th>Namba ya Leseni</th>
       <th>Aina ya leseni</th>
       <th>Kategoria</th>
@@ -16,6 +17,7 @@
     <?php
     $num = 1;
     foreach ($arr as $key => $value) {
+      echo '<td>' .$num. '</td>';
       echo '<td>' . $value['lnumber'] . '</td>';
       echo '<td>' . $value['licensetype'] . '</td>';
       echo '<td>' . $value['category'] . '</td>';
