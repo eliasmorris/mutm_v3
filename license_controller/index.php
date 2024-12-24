@@ -115,7 +115,7 @@
                       <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
                         <?php
 
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/true?pageNum=1&pageSize=20');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/true?pageNum=1&pageSize=200');
                         $arr = json_decode($json, true); //covert json data into array format
 
                         include('licenseList.php');
@@ -130,7 +130,7 @@
                       <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
                         <?php
 
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/PAID?pageNum=1&pageSize=20');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/PAID?pageNum=1&pageSize=200');
                         $arr = json_decode($json, true); //covert json data into array format
 
                         include('licenseList.php');
@@ -145,7 +145,7 @@
                       <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
                         <?php
 
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/CREATED?pageNum=1&pageSize=20');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/CREATED?pageNum=1&pageSize=200');
                         $arr = json_decode($json, true); //covert json data into array format
 
                         include('licenseList.php');
