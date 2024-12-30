@@ -48,6 +48,7 @@ form.addEventListener('submit', function(e){
   var sourcetype = document.getElementById('sourcetype').value;
   var prefix = document.getElementById('prefix').value;
   var ltsid = document.getElementById('ltsidl').value;
+  alert(ltsid);
   var ltsname = document.getElementById('ltsnamel').value;
   var ltsprice = document.getElementById('ltspricel').value;
   var scondition = document.getElementById('sconditionll').value;
@@ -63,21 +64,32 @@ form.addEventListener('submit', function(e){
   
   fetch(publicIPu+"updateLittlesource/"+ltsid,{
     method:'PUT',
+    headers:{
+      "Content-Type":"application/json; charset= UTF-8"
+    },
     body:JSON.stringify({
       //change data into json format
-      "gfscode": gfscode,
-      "ltsname": ltsname,
-      "mdsid": mdsid,
-      "sourcetype": sourcetype,
-      "prefix": prefix,
-      "paymenttype": paymenttype,
-      "price": ltsprice,
-      "scondition": scondition,
-      "subspcode": subspcode
-    }),
-    headers:{
-      "Content-Type":"application/json;charset= UTF-8"
-    }
+      "mdsid":mdsid,
+      "ltsname":ltsname,
+      "price":ltsprice,
+      "scondition":scondition,
+      "gfscode":gfscode,
+      "paymenttype":paymenttype,
+      "subspcode":subspcode,
+      "sourcetype":sourcetype,
+      "prefix":prefix
+
+      // "gfscode": gfscode,
+      // "ltsname": ltsname,
+      // "mdsid": mdsid,
+      // "sourcetype": sourcetype,
+      // "prefix": prefix,
+      // "paymenttype": paymenttype,
+      // "price": ltsprice,
+      // "scondition": scondition,
+      // "subspcode": subspcode
+    })
+    
   }).then(function(response){
     return response.json();
   }).then(function(data){

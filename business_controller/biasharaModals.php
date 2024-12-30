@@ -129,23 +129,7 @@
           </div>
 
           <input type="hidden" name="publicIPa" id="publicIPa" value="<?php echo $jsIPConnect1; ?>">
-          <input type="hidden" name="localIPa" id="localIPa" value="<?php echo $locIP1; ?>">
-          <?php
-
-          //End point used for validation
-          $json = file_get_contents($pubIP1 . 'mutm/api/getAllBusiness?pageNum=1&pageSize=50');
-          $arr = json_decode($json, true); //covert json data into array format
-
-          $num = 1;
-          foreach ($arr as $key => $value) {
-
-          ?>
-            <input type="text" name="validbusinessname" id="validbusinessname" value="<?php echo $value['bname']; ?>">
-          <?php
-
-            $num++;
-          }
-          ?>
+          <input type="hidden" name="localIPa" id="localIPa" value="<?php echo $locIP1; ?>"> 
           <button class="btn btn-info">
             <span class="far fa-save"></span>&nbsp;
             Sajili
