@@ -101,7 +101,7 @@
                     <div class="col-sm-12">
 
                         <h2 style="font-weight: normal;">
-                            <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
+                            <b><?php echo strtoupper($arr['bname']); ?></b> is hereby permitted to import all and any alcoholic products and has a right to import, storage within a warehousing, sell, distribution and delivery.
                         </h2>
                         <br>
                         <br>
@@ -109,7 +109,7 @@
                         <br>
                         <br>
                         <h2 style="font-weight: normal;">
-                            This permit issued subject to the Liquor Control Act, 2020 and its Regulations of 2020 and expire on the 31st DECEMBER 2025.
+                            This permit issued subject to the Liquor Control Act No. 9 of 2020 and its Regulations of 2020 and shall expire on the 31st DECEMBER 2025.
                         </h2>
                         <br>
                         <br>
