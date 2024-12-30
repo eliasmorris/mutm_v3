@@ -54,7 +54,6 @@ form.addEventListener('submit', function(e){
   var gfscode = document.getElementById('gfscodel').value;
   var subspcode = document.getElementById('subspcodel').value;
   var paymenttype = document.getElementById('paymenttypell').value;
-  alert([ltsid,mdsid,ltsname,ltsprice,scondition,gfscode,paymenttype,subspcode,sourcetype,prefix]);
   // var pubIP = document.getElementById('pubIP').value;
   // var locIP = document.getElementById('locIP').value;
   //fetch(pubIP+"updateLittlesource/"+ltsid,{
@@ -77,16 +76,7 @@ form.addEventListener('submit', function(e){
       "subspcode":subspcode,
       "sourcetype":sourcetype,
       "prefix":prefix
-
-      // "gfscode": gfscode,
-      // "ltsname": ltsname,
-      // "mdsid": mdsid,
-      // "sourcetype": sourcetype,
-      // "prefix": prefix,
-      // "paymenttype": paymenttype,
-      // "price": ltsprice,
-      // "scondition": scondition,
-      // "subspcode": subspcode
+      
     })
     
   }).then(function(response){
