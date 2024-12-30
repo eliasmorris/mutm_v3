@@ -9,7 +9,7 @@
   <?php
 
   include('../MySections/HeaderLinks.php');
-  if ($_SESSION['urole'] != 'Muangalizi mkuu' && $_SESSION['urole'] != 'Afisa mapato') {
+  if ($_SESSION['urole'] != 'Mwenyekiti bodi' && $_SESSION['urole'] != 'Afisa mapato') {
     // header('Location: ../?msg=sessionErr');
     // exit;
     session_destroy();
