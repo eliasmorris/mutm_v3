@@ -92,6 +92,7 @@ form.addEventListener('submit', function(e){
     data:{mdsid:mdsid, ltsname:ltsname, act:'updateLog'}, //ELEMENT ID WHERE I GET VALUE
       success:function(data){
       alert('Umefanikiwa kubadili taarifa za hali ya chanzo');
+      window.location.load(); //refresh current page
     }
   });
 
