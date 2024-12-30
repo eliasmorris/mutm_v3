@@ -9,6 +9,7 @@ form.addEventListener('submit', function(e){
   var restaurentnumber = document.getElementById('restaurentnumber').value;
   var pnumber = document.getElementById('pnumber').value;
   var sheh = document.getElementById('sheh').value;
+  //var validbusinessname = document.getElementById('validbusinessname').value;
 
   var pubIP = document.getElementById('publicIPa').value;
   var localIPa = document.getElementById('localIPa').value;

@@ -50,7 +50,7 @@
                   <option value="WAREHOUSE">WareHouse</option>
                   <option value="LIQOUR/GROCERY SHOP">Liqour/Grocery Shop</option>
                   <option value="DELIVERY PERMIT">Delivery Permit</option>
-                  <option value="SPECIAL OCCASION PERMIT">Special occasion Permit </option>  
+                  <option value="SPECIAL OCCASION PERMIT">Special occasion Permit </option>
                 </select>
               </div>
             </div>
@@ -130,7 +130,22 @@
 
           <input type="hidden" name="publicIPa" id="publicIPa" value="<?php echo $jsIPConnect1; ?>">
           <input type="hidden" name="localIPa" id="localIPa" value="<?php echo $locIP1; ?>">
+          <?php
 
+          //End point used for validation
+          $json = file_get_contents($pubIP1 . 'mutm/api/getAllBusiness?pageNum=1&pageSize=50');
+          $arr = json_decode($json, true); //covert json data into array format
+
+          $num = 1;
+          foreach ($arr as $key => $value) {
+
+          ?>
+            <input type="text" name="validbusinessname" id="validbusinessname" value="<?php echo $value['bname']; ?>">
+          <?php
+
+            $num++;
+          }
+          ?>
           <button class="btn btn-info">
             <span class="far fa-save"></span>&nbsp;
             Sajili
@@ -199,7 +214,7 @@
                   <option value="WAREHOUSE">WareHouse</option>
                   <option value="LIQOUR/GROCERY SHOP">Liqour/Grocery Shop</option>
                   <option value="DELIVERY PERMIT">Delivery Permit</option>
-                  <option value="SPECIAL OCCASION PERMIT">Special occasion Permit </option>  
+                  <option value="SPECIAL OCCASION PERMIT">Special occasion Permit </option>
                 </select>
               </div>
             </div>
