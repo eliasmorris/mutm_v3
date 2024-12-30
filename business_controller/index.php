@@ -7,7 +7,7 @@
 
   <?php
     include('../MySections/HeaderLinks.php');
-    if ($_SESSION['urole'] != 'Afisa mapato') {
+    if ($_SESSION['urole'] != 'Mwenyekiti bodi' && $_SESSION['urole'] != 'Afisa mapato') {
       
       session_destroy();
       header('Location: ../login/');
