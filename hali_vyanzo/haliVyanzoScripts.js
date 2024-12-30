@@ -48,14 +48,13 @@ form.addEventListener('submit', function(e){
   var sourcetype = document.getElementById('sourcetype').value;
   var prefix = document.getElementById('prefix').value;
   var ltsid = document.getElementById('ltsidl').value;
-  alert(ltsid);
   var ltsname = document.getElementById('ltsnamel').value;
   var ltsprice = document.getElementById('ltspricel').value;
   var scondition = document.getElementById('sconditionll').value;
   var gfscode = document.getElementById('gfscodel').value;
   var subspcode = document.getElementById('subspcodel').value;
   var paymenttype = document.getElementById('paymenttypell').value;
-
+  alert([ltsid,mdsid,ltsname,ltsprice,scondition,gfscode,paymenttype,subspcode,sourcetype,prefix]);
   // var pubIP = document.getElementById('pubIP').value;
   // var locIP = document.getElementById('locIP').value;
   //fetch(pubIP+"updateLittlesource/"+ltsid,{
