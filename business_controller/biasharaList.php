@@ -29,7 +29,7 @@
             echo '<td>'.$value['status'].'</td>';
           }
             
-             if ($_SESSION['urole'] == 'Msimamizi mkuu' || $_SESSION['urole'] == 'Afisa mapato' ) {
+             if ($_SESSION['urole'] == 'Afisa mapato' ) {
                if ($value['status'] == 'ACTIVE') {
                  echo '<td class="text-right">';
                   echo '<div class="btn-group">';
@@ -44,6 +44,11 @@
                 echo '<td class = "text-right">&nbsp;</td>';
                }
               
+            }elseif($_SESSION['urole'] == 'Mwenyekiti bodi'){
+              echo '<td class="text-right">';
+              echo '<div class="btn-group">';
+              echo '<a data-id="' . $value['bussid'] . '" data-conf2="'.$value['bname'].'"  href="#viewLicense" class="btn btn-xs btn-success open-viewLicenseinfo" title="Bonyeza kuona bill za Leseni"><i class="fa fa-eye"></i></a>';
+              echo'</td>';
             }else{
               echo '<td class="text-right">&nbsp;</td>';
             }
@@ -54,14 +59,5 @@
         }
       ?>
   </tbody>
-  <!-- <tfoot>
-    <th>Business Name</th>
-    <th>Business Type</th>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Shehia Name</th>
-    <th>Namba ya Mgahawa</th>
-    <th>Hali</th>
-    <th>Kitendo</th>
-  </tfoot> -->
+ 
 </table>

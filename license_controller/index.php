@@ -57,7 +57,7 @@
               <div class="card">
                 <div class="card-header">
                   <?php
-                  if ($_SESSION['urole'] == 'Afisa mapato' || $_SESSION['urole'] == 'Muangalizi mkuu') {
+                  if ($_SESSION['urole'] == 'Afisa mapato') {
                     // if ($_SESSION['urole'] == 'Msimamizi mkuu' || $_SESSION['urole'] == 'Afisa mapato' || $_SESSION['urole'] == 'Muangalizi mkuu') {
                   ?>
                     <div class="row">
@@ -100,7 +100,7 @@
                         <?php
 
                         // $json = file_get_contents($pubIP.'selectInstitutionInfo'); //receive json from url
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/false?pageNum=1&pageSize=20');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/false?pageNum=1&pageSize=50');
                         $arr = json_decode($json, true); //covert json data into array format
 
                         include('licenseList.php');
@@ -115,7 +115,7 @@
                       <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
                         <?php
 
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/true?pageNum=1&pageSize=200');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/true?pageNum=1&pageSize=50');
                         $arr = json_decode($json, true); //covert json data into array format
 
                         include('licenseList.php');
@@ -130,7 +130,7 @@
                       <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
                         <?php
 
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/PAID?pageNum=1&pageSize=200');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/PAID?pageNum=1&pageSize=50');
                         $arr = json_decode($json, true); //covert json data into array format
 
                         include('licenseList.php');
@@ -145,7 +145,7 @@
                       <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
                         <?php
 
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/CREATED?pageNum=1&pageSize=200');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/CREATED?pageNum=1&pageSize=50');
                         $arr = json_decode($json, true); //covert json data into array format
 
                         include('licenseList.php');
