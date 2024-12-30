@@ -74,6 +74,7 @@
                                                 ?>
                                                 <option value="Msimamizi mkuu">Msimamizi mkuu</option>
                                                 <option value="Muangalizi mkuu">Muangalizi mkuu</option>
+                                                <option value="Mwenyekiti bodi">Mwenyekiti wa Bodi</option>
                                                 <?php
                                             }
                                         ?>

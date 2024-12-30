@@ -35,6 +35,10 @@
 
             include('../MySections/muangaliziMkuuMenu.php');
 
+          }elseif ($_SESSION['urole'] == 'Mwenyekiti bodi') {
+
+            include('../MySections/mwenyekitiwabodiMenu.php');
+
           }elseif ($_SESSION['urole'] == 'Msimamizi msaidizi') {
 
             include('../MySections/msimamiziMsaidiziMenu.php');
