@@ -1,7 +1,7 @@
 <table id="example1" class="table table-bordered table-striped small">
   <thead>
     <tr>
-    <th>SNo</th>
+      <th>SNo</th>
       <th>Namba ya Leseni</th>
       <th>Aina ya leseni</th>
       <th>Kategoria</th>
@@ -17,7 +17,7 @@
     <?php
     $num = 1;
     foreach ($arr as $key => $value) {
-      echo '<td>' .$num. '</td>';
+      echo '<td>' . $num . '</td>';
       echo '<td>' . $value['lnumber'] . '</td>';
       echo '<td>' . $value['licensetype'] . '</td>';
       echo '<td>' . $value['category'] . '</td>';
@@ -29,18 +29,14 @@
       } else {
         echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-warning">CREATED</button></td>';
       }
-      
+
       if ($value['isapproved'] == true && $value['cstatus'] == 'PAID') {
 
         echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-success" >Approved</button></td>';
-
-      } elseif($value['isapproved'] == false && $value['cstatus'] == 'PAID'){
+      } elseif ($value['isapproved'] == false && $value['cstatus'] == 'PAID') {
 
         echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-warning">Not&nbsp;Approved</button></td>';
-
-      } elseif($value['isapproved'] == false && $value['cstatus'] == 'CREATED') {
-        
-        
+      } elseif ($value['isapproved'] == false && $value['cstatus'] == 'CREATED') {
       }
 
       if ($value['isapproved'] != true) {
@@ -59,7 +55,7 @@
         echo '<div class="btn-group">';
         if ($_SESSION['urole'] == 'Afisa mapato') {
 
-          echo '<a href="printLicense.php?licenseId=' . $value['lid'] . '&businessid=' . $value['businessid'] . '" target="_blank" class="btn btn-primary btn-xs" title="Bonyeza kuprint leseni"><i class="fas fa-print"></i>Print</a>';
+          echo '<a href="printLicense.php?licenseId=' . $value['lid'] . '&businessid=' . $value['businessid'] . '&businesscategory=' . $value['category'] . '" target="_blank" class="btn btn-primary btn-xs" title="Bonyeza kuprint leseni"><i class="fas fa-print"></i>Print</a>';
           //echo '<td class="text-right">&nbsp;</td>';
         }
       }

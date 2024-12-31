@@ -28,6 +28,8 @@
 
     $businessid = $_GET['businessid'];
 
+    $businesscategory = $_GET['businesscategory'];
+
     ?>
 </head>
 
@@ -37,7 +39,7 @@
             <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-12" style="text-align: center;">
-                        
+
                         <!-- <img src="../dist/img/smz_logo.png" style="width:150px; height:100px;"> -->
                     </div>
                 </div>
@@ -56,7 +58,7 @@
                     $value['paiddate'] = $arr['paiddate'];
                     $value['receiptnumber'] = $arr['receiptnumber'];
                     $value['shname'] = $arr['shname'];
-                    
+
 
                     if ($value['licensetype'] == "") {
                     }
@@ -100,9 +102,55 @@
                 <div class="row" style="margin-top: 20px;">
                     <div class="col-sm-12">
 
-                        <h2 style="font-weight: normal;">
-                            <b><?php echo strtoupper($arr['bname']); ?></b> is hereby permitted to import all and any alcoholic products and has a right to import, storage within a warehousing, sell, distribution and delivery.
-                        </h2>
+                        <?php
+                        if ($businesscategory == "PERMIT FOR IMPORT") {
+                        ?>
+                            <h2 style="font-weight: normal;">
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby permitted to import all and any alcoholic products and has a right to import, storage within a warehousing, sell, distribution and delivery.
+                            </h2>
+                        <?php
+                        } elseif ($businesscategory == 'LICENSE FOR LIQOUR SHOP LICENSE') {
+                        ?>
+                            <h2 style="font-weight: normal;">
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
+                            </h2>
+                        <?php
+                        } elseif ($businesscategory == 'PRINCIPAL LICENSE FOR FOUR OR THREE STAR HOTEL') {
+
+                        ?>
+                            <h2 style="font-weight: normal;">
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
+                            </h2>
+                        <?php
+                        } elseif ($businesscategory == 'LICENSE FEE FOR LOCAL BAR') {
+
+                        ?>
+                            <h2 style="font-weight: normal;">
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell by retail, intoxicating liquor to be consumed on the premises between four o'clock in the evening and twelve o'clock at night.
+                            </h2>
+                        <?php
+                        } elseif ($businesscategory == 'LICENSE FOR SPECIAL OCCASION PERMIT') {
+
+                        ?>
+                            <h2 style="font-weight: normal;">
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby permitted to conduct business of intoxicating product for sell and qualified to be a bar as prescribed with a board decision.
+                            </h2>
+                        <?php
+                        } elseif ($businesscategory == 'LICENSE FEE FOR WAREHOUSE') {
+                        ?>
+                            <h2 style="font-weight: normal;">
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby LICENSE FEE FOR WAREHOUSE .....
+                            </h2>
+                        <?php
+                        } elseif ($businesscategory == 'LICENSE FOR DELIVERY PERMIT') {
+                        ?>
+                            <h2 style="font-weight: normal;">
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby LICENSE FOR DELIVERY PERMIT.....
+                            </h2>
+                        <?php
+                        }
+
+                        ?>
                         <br>
                         <br>
                         <h2 style="font-weight: normal;">The premises situated at: <b><?php echo strtoupper($arr['shname']); ?></b></h2>
@@ -114,16 +162,16 @@
                         <br>
                         <br>
                         <h2 style="font-weight: normal; text-align: center;">
-                            Date&nbsp;:&nbsp;&nbsp;<?php 
-                            $time = date( "d-m-Y", strtotime($arr['paiddate']));
-                            $mydate=getdate(strtotime($time));
-                            echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
-                            
-                            ?>
+                            Date&nbsp;:&nbsp;&nbsp;<?php
+                                                    $time = date("d-m-Y", strtotime($arr['paiddate']));
+                                                    $mydate = getdate(strtotime($time));
+                                                    echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
+
+                                                    ?>
                         </h2>
                         <br>
                         <br>
-                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo number_format($arr['amount'],2). '/='; ?></b></h2>
+                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo number_format($arr['amount'], 2) . '/='; ?></b></h2>
                         <br>
                         <br>
                     </div>
