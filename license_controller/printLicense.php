@@ -143,9 +143,10 @@
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'LICENSE FOR DELIVERY PERMIT') {
+                            
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby LICENSE FOR DELIVERY PERMIT.....
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
                             </h2>
                         <?php
                         }
