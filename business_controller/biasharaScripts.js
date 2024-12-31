@@ -169,10 +169,10 @@ form.addEventListener('submit', function(e){
         if(data == 'success'){
           alert('Taarifa za Biashara zimebadilishwa kikamilifu');
           window.location.load(); //refresh current page
-          // $( "#listTable" ).load( "index.php #listTable" );
+          
         }else{
-          // alert('Samahani Taarifa za biashara zimeshindwa kubadilishwa! Jaribu tena');
-          alert(data);
+          alert('Samahani Taarifa za biashara zimeshindwa kubadilishwa! Jaribu tena');
+          
         }
     }
   });
