@@ -31,10 +31,10 @@ form.addEventListener('submit', function(e){
     
   }).then(response => {
     if (response.ok) {
-      alert('Post of Data Request Successful');
+      alert('Umefanikiwa kusajili Biashara mpya ya ' + bname);
       //console.log('Umefanikiwa kusajili Biashara mpya ya ' + bname);
     } else {
-      alert('Post of Data Request Unsuccessful ');
+      alert('Samahani Biashara imeshindwa kusajiliwa! Jaribu tena');
     }
     return response;
   })
