@@ -29,11 +29,20 @@ form.addEventListener('submit', function(e){
         "sheh": sheh  
     })
     
-  }).then(function(response){
+  }).then(response => {
+    if (response.ok) {
+      alert('Post of Data Request Successful');
+      //console.log('Umefanikiwa kusajili Biashara mpya ya ' + bname);
+    } else {
+      alert('Post of Data Request Unsuccessful ');
+    }
+    return response;
+  })
+  .then(function(response){
     return response.json();
   }).then(function(data){
      console.log(data); //for testing only
-  })
+  }).catch(error => console.log(error))
 
   //SEND INTO LOG
   $.ajax({
@@ -47,7 +56,7 @@ form.addEventListener('submit', function(e){
           // $( "#listTable" ).load( "index.php #listTable" );
           window.location.reload(); //refresh current page
         }else{
-          alert(data);
+          //alert(data);
           alert('Samahani Biashara imeshindwa kusajiliwa! Jaribu tena');
         }
     }
