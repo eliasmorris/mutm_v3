@@ -234,3 +234,35 @@ form.addEventListener('submit', function(e){
   });
 
   })
+
+  //get email and phone number
+function displayinfo() {
+  $.ajax({
+    url:"gatemailphone.php", //CODE TO GET REG NAME
+    type:"POST",
+    data:{fullname:$('#fullName').val()}, //ELEMENT ID WHERE I GET VALUE
+      success:function(data){
+      $("#otherInfoDiv").html(data); //WHERE RESULT WILL BE DISPLAYED
+      
+
+      $(function () {
+        bsCustomFileInput.init();
+      });
+      
+      $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2(
+            {
+          theme: 'bootstrap4'
+        })
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+          theme: 'bootstrap4'
+        })
+
+      })
+      
+    }
+  });
+}

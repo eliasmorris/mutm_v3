@@ -68,6 +68,7 @@
                           <label for="fullName">Jina la Biashara <span class="small">(Mtu binafsi/Kampuni/Shirika/nk)</span>:
                             <span class="text-danger">*</span>
                           </label>
+                          <!-- onchange="displayinfo()" -->
                           <select class="form-control select2" id="fullName" name="fullName" required="required" style="border: solid 1px green;">
                             <option value="" hidden>Chagua Biashara</option>
                             <?php
@@ -79,21 +80,22 @@
                           <!-- <input type="text" class="form-control" placeholder="Ingiza jina la mlipaji" id="fullName" name="fullName" required="required" style="border: solid 1px green;"> -->
                         </div>
                       </div>
-                      <div class="col-sm-6">
-                        <div class="form-group">
-                          <label for="email">Baruapepe:</label>
-                          <span class="text-danger"></span>
-                          <input type="email" name="email" id="email" class="form-control" placeholder="Ingiza baruapepe" style="border: solid 1px green;">
-                        </div>
-                      </div>
-                    </div>
 
-                    <div class="row">
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label for="payerIdentificationNumber">Namba ya Kitambulisho:</label>
                           <span class="text-danger">*</span>
                           <input type="text" name="payerIdentificationNumber" id="payerIdentificationNumber" class="form-control" placeholder="Ingiza kitambulisho cha mlipaji" style="border: solid 1px green;" required="required">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row" id="otherInfoDiv">
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <label for="email">Baruapepe:</label>
+                          <span class="text-danger"></span>
+                          <input type="email" name="email" id="email" class="form-control" placeholder="Ingiza baruapepe" style="border: solid 1px green;">
                         </div>
                       </div>
                       <div class="col-sm-6">
