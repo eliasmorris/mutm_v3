@@ -175,63 +175,7 @@ form.addEventListener('submit', function(e){
   var ltsid = document.getElementById('ltsid').value;
   var sumT = document.getElementById('sum').value;
   
-  $.ajax({
-    url: "requestCn.php",
-    type: "POST",
-    data:  {
-      fullName:fullName,
-    	email:email,
-    	payerIdentificationNumber:payerIdentificationNumber,
-    	phoneNumber:phoneNumber,
-      ltsid:ltsid,
-      sumT:sumT,
-      request:"request"
-    },
-    	success: function(data){
-        if (data == '7101') {
-
-          //SEND INTO LOG
-          $.ajax({
-            url:"insertIntoLog.php", //CODE TO GET REG NAME
-            type:"POST",
-            data:{fullName:fullName,phoneNumber:phoneNumber,sumT:sumT,act:'updateLog'}, //ELEMENT ID WHERE I GET VALUE
-              success:function(data){
-
-              // //direct to another page
-              // window.location.href = "../dashboard/"; //go to the dashboard
-              // return false;
-              // // console.log(data); //for testing only
-
-            }
-          });
-          
-          document.getElementById('fullName').value = "";
-          document.getElementById('email').value = "";
-          document.getElementById('payerIdentificationNumber').value = "";
-          document.getElementById('phoneNumber').value = "";
-          document.getElementById('ltsid').value = "";
-          $( "#malipoTable").load( "index.php #malipoTable");
-          // alert('Maombi ya namba ya ankara yamefanikiwa!');
-          alert(data + ' - Maombi ya namba ya ankara yamekamilika!');
-          // document.getElementById('rJson').innerHTML = data;
-          // window.location="../malipo/";
-          
-        }else{
-          document.getElementById('fullName').value = "";
-          document.getElementById('email').value = "";
-          document.getElementById('payerIdentificationNumber').value = "";
-          document.getElementById('phoneNumber').value = "";
-          document.getElementById('ltsid').value = "";
-          $( "#malipoTable").load( "index.php #malipoTable");
-          alert(data + ' - Maombi hayajakamilika Jaribu Tena!');
-          // document.getElementById('rJson').innerHTML = data;
-          // window.location="../malipo/";
-          // alert(data);
-        }
-       
-		
-    }
-  });
+  alert(phoneNumber);
 
   })
 
