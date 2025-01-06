@@ -68,7 +68,8 @@
                           <label for="fullName">Jina la Biashara <span class="small">(Mtu binafsi/Kampuni/Shirika/nk)</span>:
                             <span class="text-danger">*</span>
                           </label>
-                          <select class="form-control select2" id="fullName" name="fullName" required="required" style="border: solid 1px green;" onchange="displayinfo()">
+                          <!-- onchange="displayinfo()" -->
+                          <select class="form-control select2" id="fullName" name="fullName" required="required" style="border: solid 1px green;">
                             <option value="" hidden>Chagua Biashara</option>
                             <?php
                             foreach ($arr as $key => $value) {
