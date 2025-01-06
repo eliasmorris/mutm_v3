@@ -90,7 +90,7 @@
                 <label for="phonenumber">Nambari ya Simu
                   <span class="text-danger">*</span>
                 </label>
-                <input type="tel" name="pnumber" id="pnumber" pattern="[1-9]{1}[0-9]{8}" class="form-control" placeholder="Ingiza Nambari ya Simu" required="required" style="border: solid 1px green;">
+                <input type="tel" name="pnumber" id="pnumber" pattern="[1-9]{1}[0-9]{8}" placeholder="eg: 773217012" minlength="9" maxlength="9" class="form-control" placeholder="Ingiza Nambari ya Simu" required="required" style="border: solid 1px green;">
               </div>
             </div>
           </div>
