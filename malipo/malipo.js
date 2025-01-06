@@ -223,7 +223,7 @@ form.addEventListener('submit', function(e){
           document.getElementById('phoneNumber').value = "";
           document.getElementById('ltsid').value = "";
           $( "#malipoTable").load( "index.php #malipoTable");
-          alert(data + ' - Maombi hayajakamilika!');
+          alert(data + ' - Maombi hayajakamilika Jaribu Tena!');
           // document.getElementById('rJson').innerHTML = data;
           // window.location="../malipo/";
           // alert(data);
