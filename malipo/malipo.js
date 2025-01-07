@@ -213,6 +213,7 @@ form.addEventListener('submit', function(e){
           $( "#malipoTable").load( "index.php #malipoTable");
           // alert('Maombi ya namba ya ankara yamefanikiwa!');
           alert(data + ' - Maombi ya namba ya ankara yamekamilika!');
+          window.location.reload(); //refresh current page
           // document.getElementById('rJson').innerHTML = data;
           // window.location="../malipo/";
           
@@ -224,6 +225,7 @@ form.addEventListener('submit', function(e){
           document.getElementById('ltsid').value = "";
           $( "#malipoTable").load( "index.php #malipoTable");
           alert(data + ' - Maombi hayajakamilika!');
+          window.location.reload(); //refresh current page
           // document.getElementById('rJson').innerHTML = data;
           // window.location="../malipo/";
           // alert(data);
@@ -244,7 +246,6 @@ function displayinfo() {
       success:function(data){
       $("#otherInfoDiv").html(data); //WHERE RESULT WILL BE DISPLAYED
       
-
       $(function () {
         bsCustomFileInput.init();
       });
