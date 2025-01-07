@@ -65,6 +65,8 @@
                   <option value="L">Liquor Bar</option>
                   <option value="SP">Special Permit</option>
                   <option value="S">Shop/Grocery</option>
+                  <option value="F">Form</option>
+                  <option value="IN">Inspection</option>
                 </select>
               </div>
             </div>

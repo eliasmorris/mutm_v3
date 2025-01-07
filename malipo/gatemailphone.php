@@ -2,12 +2,14 @@
 //session_start();
 include('../Controller/connect.php');
 include("../Controller/configuration.php"); //configuration file
-$fullname = $_POST['fullname'];
+$fullName = $_POST["fullName"];
 
-$json = file_get_contents($pubIP1 . 'mutm/api/getBusinessByName/'.$fullname); //receive json from url
-$arr = json_decode($json, TRUE); //covert json data into array format
-$value['email'] = $arr['email'];
-$value['phonenumber'] = $arr['phonenumber'];
+echo $json = file_get_contents($pubIP1.'mutm/api/getBusinessByName/'.$fullName); //receive json from url
+$arr = (array)json_decode($json, TRUE); //covert json data into array format
+
+
+echo $value['email'] = $arr['email'];
+echo $value['phonenumber'] = $arr['phonenumber'];
 ?>
 
 <div class="col-sm-6">
