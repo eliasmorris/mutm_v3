@@ -123,36 +123,6 @@
                       </div>
                     </div>
                     <!-- End License zilizohakikiwa -->
-
-                    <!-- start license zilizolipiwa -->
-                    <!-- <div class="tab-pane fade" id="zilizolipiwa" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
-                      <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
-                        <?php
-
-                        // $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/PAID?pageNum=1&pageSize=50');
-                        // $arr = json_decode($json, true); //covert json data into array format
-
-                        // include('licenseList.php');
-                        ?>
-
-                      </div>
-                    </div> -->
-                    <!-- End License zilizolipiwa -->
-
-                    <!-- start license hazijalipiwa -->
-                    <!-- <div class="tab-pane fade" id="hazijalipiwa" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
-                      <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
-                        <?php
-
-                        // $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatuspaid/CREATED?pageNum=1&pageSize=50');
-                        // $arr = json_decode($json, true); //covert json data into array format
-
-                        // include('licenseList.php');
-                        ?>
-
-                      </div>
-                    </div> -->
-                    <!-- End License hazijalipiwa -->
                   </div>
                 </div>
                 <!-- /.card-body -->
