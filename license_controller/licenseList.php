@@ -1,22 +1,23 @@
 <table id="example1" class="table table-bordered table-striped small">
   <thead>
     <tr>
-      <th>SNo</th>
-      <th>Namba ya Leseni</th>
-      <th>Aina ya leseni</th>
-      <th>Kategoria</th>
-      <th>Jina la Biashara</th>
-      <th>Shehia</th>
-      <th>Kiwango</th>
-      <th>Hali</th>
-      <th>Uhakiki</th>
-      <th>Kitendo</th>
+      <th class="text-center">SNo</th>
+      <th class="text-center">Namba ya Leseni</th>
+      <th class="text-center">Aina ya leseni</th>
+      <th class="text-center">Kategoria</th>
+      <th class="text-center">Jina la Biashara</th>
+      <th class="text-center">Shehia</th>
+      <th class="text-center">Kiwango</th>
+      <th class="text-center">Hali</th>
+      <th class="text-center">Uhakiki</th>
+      <th class="text-center">Kitendo</th>  
     </tr>
   </thead>
   <tbody>
     <?php
     $num = 1;
     foreach ($arr as $key => $value) {
+      echo '<tr>';
       echo '<td>' . $num . '</td>';
       echo '<td>' . $value['lnumber'] . '</td>';
       echo '<td>' . $value['licensetype'] . '</td>';
@@ -33,11 +34,19 @@
       if ($value['isapproved'] == true && $value['cstatus'] == 'PAID') {
 
         echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-success" >Approved</button></td>';
-      } elseif ($value['isapproved'] == false && $value['cstatus'] == 'PAID') {
+      } else{
 
         echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-warning">Not&nbsp;Approved</button></td>';
-      } elseif ($value['isapproved'] == false && $value['cstatus'] == 'CREATED') {
       }
+
+      // if ($value['isapproved'] == true && $value['cstatus'] == 'PAID') {
+
+      //   echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-success" >Approved</button></td>';
+      // } elseif ($value['isapproved'] == false && $value['cstatus'] == 'PAID') {
+
+      //   echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-warning">Not&nbsp;Approved</button></td>';
+      // } elseif ($value['isapproved'] == false && $value['cstatus'] == 'CREATED') {
+      // }
 
       if ($value['isapproved'] != true) {
         echo '<td class="text-right">';
@@ -57,11 +66,12 @@
 
           echo '<a href="printLicense.php?licenseId=' . $value['lid'] . '&businessid=' . $value['businessid'] . '&businesscategory=' . $value['category'] . '" target="_blank" class="btn btn-primary btn-xs" title="Bonyeza kuprint leseni"><i class="fas fa-print"></i>Print</a>';
           //echo '<td class="text-right">&nbsp;</td>';
+          ?>
+          </div>
+          <?php
+          echo '</td>';
         }
       }
-
-
-
       echo '</tr>';
 
       $num++;

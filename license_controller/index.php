@@ -86,20 +86,16 @@
                     <li class="nav-item">
                       <a class="nav-link text-success" id="custom-content-above-profile-tab" data-toggle="pill" href="#zilizohakikiwa" role="tab" aria-controls="custom-content-above-profile" aria-selected="false">Zilizohakikiwa</a>
                     </li>
-                    <!-- <li class="nav-item">
-                      <a class="nav-link text-success" id="custom-content-above-profile-tab" data-toggle="pill" href="#zilizolipiwa" role="tab" aria-controls="custom-content-above-profile" aria-selected="false">Zilizolipiwa</a>
-                    </li> -->
-                    <!-- <li class="nav-item">
-                      <a class="nav-link text-primary" id="custom-content-above-profile-tab" data-toggle="pill" href="#hazijalipiwa" role="tab" aria-controls="custom-content-above-profile" aria-selected="false">Hazijalipiwa</a>
-                    </li> -->
+                    
                   </ul>
                   <div class="tab-content" id="custom-content-above-tabContent">
                     <!-- start license hazijahakikiwa -->
                     <div class="tab-pane fade show active" id="hazijahakikiwa" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
-                      <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
+                    
+                    <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
                         <?php
 
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/false?pageNum=1&pageSize=50');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/false?pageNum=1&pageSize=500');
                         $arr = json_decode($json, true); //covert json data into array format
 
                         include('licenseList.php');
@@ -114,7 +110,7 @@
                       <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
                         <?php
 
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/true?pageNum=1&pageSize=50');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/true?pageNum=1&pageSize=500');
                         $arr = json_decode($json, true); //covert json data into array format
 
                         include('licenseList.php');
@@ -123,6 +119,8 @@
                       </div>
                     </div>
                     <!-- End License zilizohakikiwa -->
+                  </div>
+                   
                   </div>
                 </div>
                 <!-- /.card-body -->
@@ -155,7 +153,6 @@
   include('licenseModals.php');
 
   ?>
-
   <script type="text/javascript" src="licenseScripts.js"></script>
 </body>
 
