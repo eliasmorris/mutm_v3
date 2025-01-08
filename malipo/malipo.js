@@ -211,11 +211,8 @@ form.addEventListener('submit', function(e){
           document.getElementById('phoneNumber').value = "";
           document.getElementById('ltsid').value = "";
           $( "#malipoTable").load( "index.php #malipoTable");
-          // alert('Maombi ya namba ya ankara yamefanikiwa!');
           alert(data + ' - Maombi ya namba ya ankara yamekamilika!');
           window.location.reload(); //refresh current page
-          // document.getElementById('rJson').innerHTML = data;
-          // window.location="../malipo/";
           
         }else{
           document.getElementById('fullName').value = "";
