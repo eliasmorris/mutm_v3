@@ -241,7 +241,7 @@ form.addEventListener('submit', function(e){
 function displayinfo() {
   $.ajax({
     url:"gatemailphone.php", //CODE TO GET REG NAME
-    type:"POST",
+    type:"GET",
     data:{fullName:$('#fullName').val()}, //ELEMENT ID WHERE I GET VALUE
       success:function(data){
       $("#otherInfoDiv").html(data); //WHERE RESULT WILL BE DISPLAYED

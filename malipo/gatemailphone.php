@@ -2,9 +2,9 @@
 //session_start();
 include('../Controller/connect.php');
 include("../Controller/configuration.php"); //configuration file
-$fullName = $_POST["fullName"];
+$fullName = $_GET["fullName"];
 
-echo $json = file_get_contents($pubIP1.'mutm/api/getBusinessByName/'.$fullName); //receive json from url
+echo $json = file_get_contents($pubIP1."mutm/api/getBusinessByName/".$fullName); //receive json from url
 $arr = (array)json_decode($json, TRUE); //covert json data into array format
 
 

@@ -10,8 +10,8 @@
   include('../MySections/HeaderLinks.php');
   ?>
 </head>
-
-<body class="hold-transition sidebar-mini" oncontextmenu="return false">
+<!-- oncontextmenu="return false" -->
+<body class="hold-transition sidebar-mini" >
   <div id="loader" class="center"></div>
   <div class="wrapper">
     <?php
@@ -68,6 +68,7 @@
                           <label for="fullName">Jina la Biashara <span class="small">(Mtu binafsi/Kampuni/Shirika/nk)</span>:
                             <span class="text-danger">*</span>
                           </label>
+                          <!-- onchange="displayinfo()" -->
                           <select class="form-control select2" id="fullName" name="fullName" required="required" style="border: solid 1px green;">
                             <option value="" hidden>Chagua Biashara</option>
                             <?php
