@@ -95,7 +95,7 @@
                     <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
                         <?php
 
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/false?pageNum=1&pageSize=500');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/false?pageNum=1&pageSize=50');
                         $arr = json_decode($json, true); //covert json data into array format
 
                         include('licenseList.php');
@@ -110,10 +110,10 @@
                       <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
                         <?php
 
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/true?pageNum=1&pageSize=500');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/true?pageNum=1&pageSize=50');
                         $arr = json_decode($json, true); //covert json data into array format
 
-                        include('licenseList.php');
+                        include('approvedLicense.php');
                         ?>
 
                       </div>
@@ -121,7 +121,7 @@
                     <!-- End License zilizohakikiwa -->
                   </div>
                    
-                  </div>
+                  
                 </div>
                 <!-- /.card-body -->
               </div>
