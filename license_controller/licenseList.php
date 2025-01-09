@@ -25,7 +25,7 @@
         echo '<td>' . $value['category'] . '</td>';
         echo '<td>' . $value['bname'] . '</td>';
         echo '<td>' . $value['shname'] . '</td>';
-        echo '<td>' . $value['amount'] . '</td>';
+        echo '<td>' . number_format($value['amount'],2) . ' TZS</td>';
         if ($value['cstatus'] == 'PAID') {
           echo '<td class = "text-right">&nbsp;<button class="btn btn-sm btn-success" >PAID</button></td>';
         } else {
@@ -45,7 +45,7 @@
           echo '<div class="btn-group">';
           if ($_SESSION['urole'] == 'Mwenyekiti bodi') {
             if ($value['cstatus'] == 'PAID') {
-    ?>
+              ?>
               <a class="btn btn-sm btn-primary" onclick="approveLicenseinfo('<?php echo $value['lid']; ?>', '<?php echo $value['lnumber']; ?>')" title="Bonyeza kuhakiki Leseni">Approve</a>
               </div>
             <?php

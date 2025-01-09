@@ -107,7 +107,7 @@
 
                     <!-- start license zilizohakikiwa -->
                     <div class="tab-pane fade" id="zilizohakikiwa" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
-                      <div class="card-body table-responsive p-0" id="notPaidSearchDiv">
+                      <div class="card-body table-responsive p-0" id="zilizohakikiwaDiv">
                         <?php
 
                         $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/true?pageNum=1&pageSize=50');
@@ -120,8 +120,6 @@
                     </div>
                     <!-- End License zilizohakikiwa -->
                   </div>
-                   
-                  
                 </div>
                 <!-- /.card-body -->
               </div>
