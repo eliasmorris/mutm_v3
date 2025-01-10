@@ -31,12 +31,16 @@ form.addEventListener('submit', function(e){
     
   }).then(response => {
     if (response.ok) {
-      alert('Umefanikiwa kusajili Biashara mpya ya ' + bname);
+      if(confirm('Hakika Unataka Kusajili Biashara mpya ya' + bname)){
+        alert('Umefanikiwa kusajili Biashara mpya ya ' + bname);
+      }else{
+        alert('Umefanikiwa kuhairi biashara');
+      }
      
       //console.log('Umefanikiwa kusajili Biashara mpya ya ' + bname);
     } else {
       
-      alert('Samahani Biashara yenye jina'+ bname + 'tayari imeshasajiliwa sajili mpya');
+      confirm('Samahani Biashara yenye jina'+ bname + 'tayari imeshasajiliwa sajili mpya');
     }
     return response;
   })
