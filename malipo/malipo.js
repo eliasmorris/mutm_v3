@@ -211,8 +211,14 @@ form.addEventListener('submit', function(e){
           document.getElementById('phoneNumber').value = "";
           document.getElementById('ltsid').value = "";
           $( "#malipoTable").load( "index.php #malipoTable");
-          alert(data + ' - Maombi ya namba ya ankara yamekamilika!');
-          window.location.reload(); //refresh current page
+          if (confirm('Ni Kweli Unataka Kuomba Ankara Number')) {
+            alert(data + ' - Maombi ya namba ya ankara yamekamilika!');
+            window.location.reload(); //refresh current page
+          } else {
+            alert('Umefanikiwa Kuhairisha');
+            window.location.reload(); //refresh current page
+          }
+          
           
         }else{
           document.getElementById('fullName').value = "";
