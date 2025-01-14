@@ -40,7 +40,7 @@ function sendtoCart() {
           document.getElementById('ujumbe').innerHTML = 'Jaza Idadi na Ubofye kitufe cha save kuhifadhi huduma uliyochagua';
           document.getElementById('saveQtyBtn').style.display = 'none';
           document.getElementById('ujumbe').style.display = 'none';
-          window.location.reload(true); //refresh current page
+          //window.location.reload(true); //refresh current page
           // $("#chanzoKidogoDiv").html(data); //WHERE RESULT WILL BE DISPLAYED
         }
 
@@ -214,8 +214,8 @@ form.addEventListener('submit', function (e) {
         $("#malipoTable").load("index.php #malipoTable");
         if (confirm('Ni Kweli Unataka Kuomba Ankara Number')) {
           alert(data + ' - Maombi ya namba ya ankara yamekamilika!');
-          history.go(0);
-          //location.reload(true); //refresh current page
+          location.reload(true); //refresh current page
+          //history.go(0);
           // window.location.href = "https://mutm.tamisemim.go.tz/mutm_v3/malipo/"; //go to the dashboard
           //window.location.replace("https://mutm.tamisemim.go.tz/mutm_v3/malipo/");
           //window.location.reload(true); //refresh current page
