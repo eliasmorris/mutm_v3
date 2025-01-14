@@ -214,7 +214,8 @@ form.addEventListener('submit', function (e) {
         $("#malipoTable").load("index.php #malipoTable");
         if (confirm('Ni Kweli Unataka Kuomba Ankara Number')) {
           alert(data + ' - Maombi ya namba ya ankara yamekamilika!');
-          location.reload(true); //refresh current page
+          history.go(0);
+          //location.reload(true); //refresh current page
           // window.location.href = "https://mutm.tamisemim.go.tz/mutm_v3/malipo/"; //go to the dashboard
           //window.location.replace("https://mutm.tamisemim.go.tz/mutm_v3/malipo/");
           //window.location.reload(true); //refresh current page
