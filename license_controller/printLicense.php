@@ -193,7 +193,7 @@
                         <br>
                         <br>
                         <!-- $arr['amount'], 2 -->
-                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo number_format('3,400,000') . '/='; ?></b></h2>
+                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo number_format(3,400,000) . '/='; ?></b></h2>
                         <br>
                         <br>
                     </div>
