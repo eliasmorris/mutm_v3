@@ -81,7 +81,7 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo strtoupper('ZCRLB/HL/050'); ?>
+                            <?php echo 'ZCRLB/HL/050'; ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
