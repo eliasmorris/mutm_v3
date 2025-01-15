@@ -139,7 +139,7 @@
                         } elseif ($businesscategory == 'EACH SUBSIDIARY LICENSE FOR HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD') {
                             ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo strtoupper($arr['bname'])."(MINI BAR)"; ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'LICENSE FEE FOR LOCAL BAR') {
