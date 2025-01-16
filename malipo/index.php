@@ -69,7 +69,7 @@
                             <span class="text-danger">*</span>
                           </label>
                           <!-- onchange="displayinfo()" -->
-                          <select class="form-control select2" id="fullName" name="fullName" required="required" style="border: solid 1px green;">
+                          <select class="form-control select2" id="fullName" name="fullName" required="required" style="border: solid 1px green;" onchange="displayinfo()">
                             <option value="" hidden>Chagua Biashara</option>
                             <?php
                             foreach ($arr as $key => $value) {
