@@ -3,7 +3,8 @@ form.addEventListener('submit', function(e){
 
    //e.preventDefault(); // dont remove modal if success
   
-  var bname = document.getElementById('bname').value;
+  var bssname = document.getElementById('bname').value;
+  var bname = bssname.toUpperCase();
   var btype = document.getElementById('btype').value;
   var email = document.getElementById('email').value;
   var restaurentnumber = document.getElementById('restaurentnumber').value;
@@ -141,7 +142,8 @@ form.addEventListener('submit', function(e){
    //e.preventDefault(); // dont remove modal if success
   
   var busId = document.getElementById('busId').value;
-  var bnamee = document.getElementById('bnamee').value;
+  var bssnamee = document.getElementById('bnamee').value;
+  var bnamee = bssnamee.toUpperCase();
   var btypee = document.getElementById('btypee').value;
   var emaill = document.getElementById('emaill').value;
   var restaurentnumberr = document.getElementById('restaurentnumberr').value;
