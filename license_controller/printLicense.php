@@ -101,7 +101,7 @@
 
                 <div class="row" style="margin-top: 20px;">
                     <div class="col-sm-12">
-asfgadsgfdg
+
                         <?php
                         if ($businesscategory == "PERMIT FOR IMPORT") {
                         ?>

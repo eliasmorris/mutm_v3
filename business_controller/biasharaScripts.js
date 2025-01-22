@@ -143,7 +143,7 @@ form.addEventListener('submit', function(e){
   
   var busId = document.getElementById('busId').value;
   var bssnamee = document.getElementById('bnamee').value;
-  var bnamee = bssnamee.toUpperCase();
+  var bnamee = bssnamee.toLowerCase();
   var btypee = document.getElementById('btypee').value;
   var emaill = document.getElementById('emaill').value;
   var restaurentnumberr = document.getElementById('restaurentnumberr').value;
