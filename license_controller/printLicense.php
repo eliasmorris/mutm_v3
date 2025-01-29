@@ -186,7 +186,7 @@
                         ?>
                         <br>
                         <br>
-                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo strtoupper($arr['shname']); ?></b></h2>
+                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'KISAUNI'; ?></b></h2>
                         <br>
                         <br>
                         <h2 style="font-weight: normal;">
