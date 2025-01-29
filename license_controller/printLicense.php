@@ -81,13 +81,13 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo 'ZCRLB/L/203'; ?>
+                            <?php echo strtoupper($arr['lnumber']); ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: right; color:#0B57D0;">
 
-                            Receipt No: <?php echo '173736286746'; ?>
+                            Receipt No: <?php echo strtoupper($arr['receiptnumber']); ?>
                         </h3>
                     </div>
 
@@ -106,13 +106,13 @@
                         if ($businesscategory == "PERMIT FOR IMPORT") {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED'; ?></b> is hereby permitted to import all and any alcoholic products and has a right to import, storage within a warehousing, sell, distribution and delivery.
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby permitted to import all and any alcoholic products and has a right to import, storage within a warehousing, sell, distribution and delivery.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'LICENSE FOR LIQOUR SHOP LICENSE') {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED'; ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'PRINCIPAL LICENSE FOR FOUR OR THREE STAR HOTEL') {
@@ -145,7 +145,7 @@
                         } elseif ($businesscategory == 'PRINCIPAL LICENSE FOR HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD') {
                             ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED'; ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'EACH SUBSIDIARY LICENSE FOR HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD') {
@@ -158,7 +158,7 @@
 
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED (SHOP TWO)'; ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell by retail, intoxicating liquor to be consumed on the premises between four o'clock in the evening and twelve o'clock at night.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'LICENSE FOR SPECIAL OCCASION PERMIT') {
@@ -186,7 +186,7 @@
                         ?>
                         <br>
                         <br>
-                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'KISAUNI'; ?></b></h2>
+                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo strtoupper($arr['shname']); ?></b></h2>
                         <br>
                         <br>
                         <h2 style="font-weight: normal;">
@@ -198,13 +198,13 @@
                             Date&nbsp;:&nbsp;&nbsp;<?php
                                                     $time = date("d-m-Y", strtotime($arr['paiddate']));
                                                     $mydate = getdate(strtotime($time));
-                                                    echo "27 this $mydate[month] day $mydate[weekday] $mydate[year]";
+                                                    echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
 
                                                     ?>
                         </h2>
                         <br>
                         <br>
-                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '2,500,000'. '/='; ?></b></h2>
+                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo number_format($arr['amount'], 2). '/='; ?></b></h2>
                         <br>
                         <br>
                     </div>
