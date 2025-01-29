@@ -196,8 +196,8 @@
                         <br>
                         <h2 style="font-weight: normal; text-align: center;">
                             Date&nbsp;:&nbsp;&nbsp;<?php
-                                                    //$time = date("d-m-Y", strtotime($arr['paiddate']));
-                                                    //$mydate = getdate(strtotime($time));
+                                                    $time = date("d-m-Y", strtotime($arr['paiddate']));
+                                                    $mydate = getdate(strtotime($time));
                                                     echo "28 this $mydate[month] day $mydate[weekday] $mydate[year]";
 
                                                     ?>
