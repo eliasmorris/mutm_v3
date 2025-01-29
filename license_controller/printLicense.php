@@ -81,13 +81,13 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo 'ZCRLB/L/202'; ?>
+                            <?php echo 'ZCRLB/L/203'; ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: right; color:#0B57D0;">
 
-                            Receipt No: <?php echo '173724789065'; ?>
+                            Receipt No: <?php echo '173736286746'; ?>
                         </h3>
                     </div>
 
