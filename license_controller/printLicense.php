@@ -158,7 +158,7 @@
 
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED (SHOP ONE)'; ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
+                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED (SHOP TWO)'; ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'LICENSE FOR SPECIAL OCCASION PERMIT') {
