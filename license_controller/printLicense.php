@@ -81,13 +81,13 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo 'ZCRLB/I/201'; ?>
+                            <?php echo 'ZCRLB/HL/200'; ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: right; color:#0B57D0;">
 
-                            Receipt No: <?php echo '1737361167936'; ?>
+                            Receipt No: <?php echo '1737361586542'; ?>
                         </h3>
                     </div>
 
@@ -145,7 +145,7 @@
                         } elseif ($businesscategory == 'PRINCIPAL LICENSE FOR HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD') {
                             ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
+                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED'; ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'EACH SUBSIDIARY LICENSE FOR HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD') {
@@ -198,13 +198,13 @@
                             Date&nbsp;:&nbsp;&nbsp;<?php
                                                     $time = date("d-m-Y", strtotime($arr['paiddate']));
                                                     $mydate = getdate(strtotime($time));
-                                                    echo "28 this $mydate[month] day $mydate[weekday] $mydate[year]";
+                                                    echo "27 this $mydate[month] day $mydate[weekday] $mydate[year]";
 
                                                     ?>
                         </h2>
                         <br>
                         <br>
-                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '30,000,000'. '/='; ?></b></h2>
+                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo number_format($arr['amount'], 2). '/='; ?></b></h2>
                         <br>
                         <br>
                     </div>
