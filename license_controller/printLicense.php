@@ -198,8 +198,7 @@
                             Date&nbsp;:&nbsp;&nbsp;<?php
                                                     //$time = date("d-m-Y", strtotime($arr['paiddate']));
                                                     //$mydate = getdate(strtotime($time));
-                                                    //echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
-                                                    echo '28';
+                                                    echo "28 this $mydate[month] day $mydate[weekday] $mydate[year]";
 
                                                     ?>
                         </h2>
