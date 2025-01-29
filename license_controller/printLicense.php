@@ -87,7 +87,7 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: right; color:#0B57D0;">
 
-                            Receipt No: <?php echo '1737361558391'; ?>
+                            Receipt No: <?php echo '1737361167936'; ?>
                         </h3>
                     </div>
 
@@ -196,7 +196,7 @@
                         <br>
                         <h2 style="font-weight: normal; text-align: center;">
                             Date&nbsp;:&nbsp;&nbsp;<?php
-                                                    $time = date("d-m-Y", strtotime($arr['paiddate']));
+                                                    $time = date("d-m-Y", 28-01-2025);
                                                     $mydate = getdate(strtotime($time));
                                                     echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
 
