@@ -81,13 +81,13 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo 'ZCRLB/HL/200 '; ?>
+                            <?php echo strtoupper($arr['lnumber']); ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: right; color:#0B57D0;">
 
-                            Receipt No: <?php echo '1737361586542'; ?>
+                            Receipt No: <?php echo strtoupper($arr['receiptnumber']); ?>
                         </h3>
                     </div>
 
@@ -145,7 +145,7 @@
                         } elseif ($businesscategory == 'PRINCIPAL LICENSE FOR HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD') {
                             ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED'; ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'EACH SUBSIDIARY LICENSE FOR HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD') {
