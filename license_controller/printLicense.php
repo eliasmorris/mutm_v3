@@ -158,7 +158,7 @@
 
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell by retail, intoxicating liquor to be consumed on the premises between four o'clock in the evening and twelve o'clock at night.
+                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED'; ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'LICENSE FOR SPECIAL OCCASION PERMIT') {
