@@ -196,9 +196,10 @@
                         <br>
                         <h2 style="font-weight: normal; text-align: center;">
                             Date&nbsp;:&nbsp;&nbsp;<?php
-                                                    $time = date("d-m-Y", 01-28-2025);
-                                                    $mydate = getdate(strtotime($time));
-                                                    echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
+                                                    //$time = date("d-m-Y", strtotime($arr['paiddate']));
+                                                    //$mydate = getdate(strtotime($time));
+                                                    //echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
+                                                    echo '28';
 
                                                     ?>
                         </h2>
