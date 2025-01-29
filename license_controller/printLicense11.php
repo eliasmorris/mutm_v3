@@ -81,13 +81,13 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo strtoupper($arr['lnumber']); ?>
+                            <?php echo 'ZCRLB/HL/201'; ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: right; color:#0B57D0;">
 
-                            Receipt No: <?php echo strtoupper($arr['receiptnumber']); ?>
+                            Receipt No: <?php echo '1737361167936'; ?>
                         </h3>
                     </div>
 
@@ -106,7 +106,7 @@
                         if ($businesscategory == "PERMIT FOR IMPORT") {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby permitted to import all and any alcoholic products and has a right to import, storage within a warehousing, sell, distribution and delivery.
+                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED'; ?></b> is hereby permitted to import all and any alcoholic products and has a right to import, storage within a warehousing, sell, distribution and delivery.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'LICENSE FOR LIQOUR SHOP LICENSE') {
@@ -186,7 +186,7 @@
                         ?>
                         <br>
                         <br>
-                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo strtoupper($arr['shname']); ?></b></h2>
+                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'KISAUNI'; ?></b></h2>
                         <br>
                         <br>
                         <h2 style="font-weight: normal;">
@@ -198,13 +198,13 @@
                             Date&nbsp;:&nbsp;&nbsp;<?php
                                                     $time = date("d-m-Y", strtotime($arr['paiddate']));
                                                     $mydate = getdate(strtotime($time));
-                                                    echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
+                                                    echo "28 this $mydate[month] day $mydate[weekday] $mydate[year]";
 
                                                     ?>
                         </h2>
                         <br>
                         <br>
-                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo number_format($arr['amount'], 2). '/='; ?></b></h2>
+                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '30,000,000'. '/='; ?></b></h2>
                         <br>
                         <br>
                     </div>
