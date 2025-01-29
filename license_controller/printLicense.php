@@ -81,13 +81,13 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo 'ZCRLB/HL/200'; ?>
+                            <?php echo 'ZCRLB/L/202'; ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: right; color:#0B57D0;">
 
-                            Receipt No: <?php echo '1737361586542'; ?>
+                            Receipt No: <?php echo '173724789065'; ?>
                         </h3>
                     </div>
 
@@ -112,7 +112,7 @@
                         } elseif ($businesscategory == 'LICENSE FOR LIQOUR SHOP LICENSE') {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
+                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED'; ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'PRINCIPAL LICENSE FOR FOUR OR THREE STAR HOTEL') {
@@ -204,7 +204,7 @@
                         </h2>
                         <br>
                         <br>
-                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo number_format($arr['amount'], 2). '/='; ?></b></h2>
+                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '2,500,000'. '/='; ?></b></h2>
                         <br>
                         <br>
                     </div>
