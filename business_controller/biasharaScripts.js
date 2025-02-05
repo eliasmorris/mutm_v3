@@ -144,7 +144,8 @@ form.addEventListener('submit', function(e){
   
   var busId = document.getElementById('busId').value;
   var bssnamee = document.getElementById('bnamee').value;
-  var bnamee = bssnamee.toLowerCase();
+  var bnamee1 = bssnamee.toUpperCase();
+  var bnamee = bnamee1.replace(/^\s+|\s+$/gm,'');
   var btypee = document.getElementById('btypee').value;
   var emaill = document.getElementById('emaill').value;
   var restaurentnumberr = document.getElementById('restaurentnumberr').value;
