@@ -4,7 +4,8 @@ form.addEventListener('submit', function(e){
    //e.preventDefault(); // dont remove modal if success
   
   var bssName = document.getElementById('bname').value;
-  var bname = bssName.toUpperCase();
+  var bname1 = bssName.toUpperCase();
+  var bname = bname1.replace(/^\s+|\s+$/gm,'');
   var btype = document.getElementById('btype').value;
   var email = document.getElementById('email').value;
   var restaurentnumber = document.getElementById('restaurentnumber').value;
