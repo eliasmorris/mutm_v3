@@ -81,7 +81,7 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo 'ZCRLB/HL/043'; ?>
+                            <?php echo strtoupper($arr['lnumber']); ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
@@ -135,9 +135,6 @@
                             <h2 style="font-weight: normal;">
                                 <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
-                            <!-- <h2 style="font-weight: normal;">
-                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
-                            </h2> -->
                         <?php
                         } elseif ($businesscategory == 'EACH SUBSIDIARY FOR FIVE STAR HOTEL BAR') {
                             ?>
@@ -207,8 +204,7 @@
                         </h2>
                         <br>
                         <br>
-                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '3,200,000'. '/='; ?></b></h2>
-                        <!-- <h2 style="text-align: center;"> <b>FEE PAID TSH <?php //echo number_format($arr['amount'], 2). '/='; ?></b></h2> -->
+                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo number_format($arr['amount'], 2). '/='; ?></b></h2>
                         <br>
                         <br>
                     </div>
