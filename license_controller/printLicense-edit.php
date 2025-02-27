@@ -81,13 +81,13 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo 'ZCRLB/SIP/201'; ?>
+                            <?php echo 'ZCRLB/HL/043'; ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: right; color:#0B57D0;">
 
-                            Receipt No: <?php echo '1737361167936'; ?>
+                            Receipt No: <?php echo strtoupper($arr['receiptnumber']); ?>
                         </h3>
                     </div>
 
