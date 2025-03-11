@@ -63,6 +63,7 @@
                         $json = file_get_contents($pubIP1 . 'mutm/api/getAllBusiness?pageNum=1&pageSize=500'); //receive json from url
 
                         $arr = json_decode($json, true); //covert json data into array format
+              
                         ?>
                         <div class="form-group">
                           <label for="fullName">Jina la Biashara <span class="small">(Mtu binafsi/Kampuni/Shirika/nk)</span>:
@@ -73,7 +74,7 @@
                             <option value="" hidden>Chagua Biashara</option>
                             <?php
                             foreach ($arr as $key => $value) {
-                              echo '<option value="' . $value['bname'] . '">' . $value['bname'] . '</option>';
+                              echo '<option value="'.strtoupper($value['bname']).'">' . $value['bname'] . '</option>';
                             }
                             ?>
                           </select>

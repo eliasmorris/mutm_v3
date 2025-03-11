@@ -88,6 +88,7 @@
                     </li>
                     
                   </ul>
+                  <a class="btn btn-primary" target="_blank" href="printLicense-edit.php">Print license</a>
                   <div class="tab-content" id="custom-content-above-tabContent">
                     <!-- start license hazijahakikiwa -->
                     <div class="tab-pane fade show active" id="hazijahakikiwa" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
@@ -110,7 +111,7 @@
                       <div class="card-body table-responsive p-0" id="zilizohakikiwaDiv">
                         <?php
 
-                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/true?pageNum=1&pageSize=100');
+                        $json = file_get_contents($pubIP1 . 'mutm/api/getLicenseByStatus/true?pageNum=1&pageSize=200');
                         $arr = json_decode($json, true); //covert json data into array format
 
                         include('approvedLicense.php');

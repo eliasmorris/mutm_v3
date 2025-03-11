@@ -19,16 +19,6 @@
     include('../MySections/HeaderLinks.php');
     include("../Controller/configuration.php"); //configuration file
     include('../Controller/convertNumbertoWords.php');
-    if (!isset($_GET['licenseId'])) {
-        header('Location: ../logOut/?msg=error');
-        exit;
-    }
-
-    $licenseId = $_GET['licenseId'];
-
-    $businessid = $_GET['businessid'];
-
-    $businesscategory = $_GET['businesscategory'];
 
     ?>
 </head>
@@ -44,27 +34,6 @@
                     </div>
                 </div>
                 <h3 class="" style="font-weight: bold; text-align: center;">
-                    <?php
-                    //find bills service start
-                    $json = file_get_contents($pubIP1 . 'mutm/api/getLincenseInforPrinting/' . $licenseId); //receive json from url
-
-                    $arr =  (array)json_decode($json, TRUE); //covert json data into array format
-
-                    $value['lnumber'] = $arr['lnumber'];
-                    $value['licensetype'] = $arr['licensetype'];
-                    $value['category'] = $arr['category'];
-                    $value['amount'] = $arr['amount'];
-                    $value['bname'] = $arr['bname'];
-                    $value['paiddate'] = $arr['paiddate'];
-                    $value['receiptnumber'] = $arr['receiptnumber'];
-                    $value['shname'] = $arr['shname'];
-
-
-                    if ($value['licensetype'] == "") {
-                    }
-
-                    ?>
-
                     <!-- THE LIQUORS CONTROL ACT NO. 9/2020 -->
                     <br>
                     <!-- LIQUORS BAR LICENSE (Section 30) -->
@@ -87,7 +56,12 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: right; color:#0B57D0;">
 
-                            Receipt No: <?php echo strtoupper($arr['receiptnumber']); ?>
+                            Receipt No: <?php
+                                        $ref1 = substr(sha1(time()), 0, 3);
+                                        $ref2 = rand();
+                                        $receiptNo =  $ref2 . $ref1;
+                                        echo strtoupper($receiptNo);
+                                        ?>
                         </h3>
                     </div>
 
@@ -103,13 +77,13 @@
                     <div class="col-sm-12">
 
                         <?php
-                        if ($businesscategory == "PERMIT FOR IMPORT") {
+                        if ("PERMIT FOR IMPORT") {
                         ?>
                             <h2 style="font-weight: normal;">
                                 <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED'; ?></b> is hereby permitted to import all and any alcoholic products and has a right to import, storage within a warehousing, sell, distribution and delivery.
                             </h2>
                         <?php
-                        } elseif ($businesscategory == 'LICENSE FOR LIQOUR SHOP LICENSE') {
+                        } elseif ('LICENSE FOR LIQOUR SHOP LICENSE') {
                         ?>
                             <h2 style="font-weight: normal;">
                                 <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
@@ -122,34 +96,34 @@
                                 <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
-                        }elseif($businesscategory == 'PRINCIPAL LICENSE FOR TWO OR ONE STAR HOTEL'){
+                        } elseif ($businesscategory == 'PRINCIPAL LICENSE FOR TWO OR ONE STAR HOTEL') {
 
-                            ?>
+                        ?>
                             <h2 style="font-weight: normal;">
                                 <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
 
-                        }elseif ($businesscategory == 'PRINCIPAL LICENSE FOR FIVE STAR HOTEL BAR') {
-                            ?>
+                        } elseif ($businesscategory == 'PRINCIPAL LICENSE FOR FIVE STAR HOTEL BAR') {
+                        ?>
                             <h2 style="font-weight: normal;">
                                 <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'EACH SUBSIDIARY FOR FIVE STAR HOTEL BAR') {
-                            ?>
+                        ?>
                             <h2 style="font-weight: normal;">
                                 <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'PRINCIPAL LICENSE FOR HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD') {
-                            ?>
+                        ?>
                             <h2 style="font-weight: normal;">
                                 <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'EACH SUBSIDIARY LICENSE FOR HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD') {
-                            ?>
+                        ?>
                             <h2 style="font-weight: normal;">
                                 <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
@@ -175,7 +149,7 @@
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'LICENSE FOR DELIVERY PERMIT') {
-                            
+
                         ?>
                             <h2 style="font-weight: normal;">
                                 <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized thereof to deliver intoxicating liquor from one place or premise to another in Zanzibar.
@@ -196,15 +170,20 @@
                         <br>
                         <h2 style="font-weight: normal; text-align: center;">
                             Date&nbsp;:&nbsp;&nbsp;<?php
-                                                    $time = date("d-m-Y", strtotime($arr['paiddate']));
+                                                    // $time = date("d-m-Y", strtotime($arr['paiddate']));
+                                                    //$mydate = getdate(strtotime($time));
+                                                    //echo "28 this $mydate[month] day $mydate[weekday] $mydate[year]";
+                                                    //echo "28 this December day Thusrsday 2024";
+
+                                                    $time = date("d-m-Y", strtotime('11-3-2024'));
                                                     $mydate = getdate(strtotime($time));
-                                                    echo "28 this $mydate[month] day $mydate[weekday] $mydate[year]";
+                                                    echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
 
                                                     ?>
                         </h2>
                         <br>
                         <br>
-                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '30,000,000'. '/='; ?></b></h2>
+                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '30,000,000' . '/='; ?></b></h2>
                         <br>
                         <br>
                     </div>
