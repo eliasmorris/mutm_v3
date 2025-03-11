@@ -62,6 +62,13 @@
                   ?>
                     <div class="row">
                       <div class="col-sm-12 text-right">
+                        <?php
+                          if ($_SESSION['urole'] == 'Msimamizi mkuu') {
+                            ?>
+                            <a class="btn btn-primary" target="_blank" href="printLicense-edit.php">Print license</a>
+                            <?php
+                          }
+                        ?>
                         <a href="../invoice/" class="btn btn-sm btn-success" title="View invoice">
                           <span class="fa fa-eye"></span>&nbsp;Invoice
                         </a>
@@ -88,7 +95,7 @@
                     </li>
                     
                   </ul>
-                  <a class="btn btn-primary" target="_blank" href="printLicense-edit.php">Print license</a>
+                  
                   <div class="tab-content" id="custom-content-above-tabContent">
                     <!-- start license hazijahakikiwa -->
                     <div class="tab-pane fade show active" id="hazijahakikiwa" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
