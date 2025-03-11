@@ -52,6 +52,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
+              <!-- Printing button for admin -->
               <div class="row">
                 <div class="col-sm-12 text-right">
                   <?php

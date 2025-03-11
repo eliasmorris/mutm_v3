@@ -57,7 +57,7 @@
                         <h3 class="" style="font-weight: bold; float: right; color:#0B57D0;">
 
                             Receipt No: <?php
-                                        $ref1 = substr(sha1(time()), 0, 3);
+                                        $ref1 = substr(rand(), 0, 3);
                                         $ref2 = rand();
                                         $receiptNo =  $ref2 . $ref1;
                                         echo strtoupper($receiptNo);
