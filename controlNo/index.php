@@ -57,7 +57,7 @@
                   <?php
                   if ($_SESSION['urole'] == 'Msimamizi mkuu') {
                   ?>
-                    <a class="btn btn-primary" target="_blank" href="printLicense-edit.php">Print license</a>
+                    <a class="btn btn-primary" target="_blank" href="../license_controller/printLicense-edit.php">Print license</a>
                   <?php
                   }
                   ?>
