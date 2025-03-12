@@ -160,7 +160,7 @@
                         ?>
                         <br>
                         <br>
-                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'KAMA'; ?></b></h2>
+                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'KIGUNDA'; ?></b></h2>
                         <br>
                         <br>
                         <h2 style="font-weight: normal;">
