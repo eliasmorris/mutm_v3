@@ -50,7 +50,7 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo 'ZCRLB/HL/043'; ?>
+                            <?php echo 'ZCRLB/HL/600'; ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
@@ -77,10 +77,10 @@
                     <div class="col-sm-12">
 
                         <?php
-                        if ("PERMIT FOR IMPORT") {
+                        if ("PRINCIPAL LICENSE FOR HOTEL WITH GRADE A,AA,AAA AND BELOW THE STANDARD") {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo 'EMARATES LEISURE RETAIL ZANZIBAR LIMITED'; ?></b> is hereby permitted to import all and any alcoholic products and has a right to import, storage within a warehousing, sell, distribution and delivery.
+                                <b><?php echo 'AD ASTRA LIMITED'; ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
                         } elseif ('LICENSE FOR LIQOUR SHOP LICENSE') {
@@ -160,7 +160,7 @@
                         ?>
                         <br>
                         <br>
-                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'KISAUNI'; ?></b></h2>
+                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'PAJE'; ?></b></h2>
                         <br>
                         <br>
                         <h2 style="font-weight: normal;">
@@ -175,7 +175,7 @@
                                                     //echo "28 this $mydate[month] day $mydate[weekday] $mydate[year]";
                                                     //echo "28 this December day Thusrsday 2024";
 
-                                                    $time = date("d-m-Y", strtotime('11-3-2024'));
+                                                    $time = date("d-m-Y", strtotime('2-4-2025'));
                                                     $mydate = getdate(strtotime($time));
                                                     echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
 
@@ -183,7 +183,7 @@
                         </h2>
                         <br>
                         <br>
-                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '30,000,000' . '/='; ?></b></h2>
+                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '4,100,000' . '/='; ?></b></h2>
                         <br>
                         <br>
                     </div>
