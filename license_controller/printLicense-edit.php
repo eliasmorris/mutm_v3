@@ -80,7 +80,7 @@
                         if ("PRINCIPAL LICENSE FOR FIVE STAR HOTEL BAR") {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo 'SEA CLIFF RESORT AND SPA LIMITED'; ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
+                                <b><?php echo 'MAISHA LIMITED'; ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
                         } elseif ('LICENSE FOR LIQOUR SHOP LICENSE') {
@@ -175,7 +175,7 @@
                                                     //echo "28 this $mydate[month] day $mydate[weekday] $mydate[year]";
                                                     //echo "28 this December day Thusrsday 2024";
 
-                                                    $time = date("d-m-Y", strtotime('7-2-2025'));
+                                                    $time = date("d-m-Y", strtotime('11-2-2025'));
                                                     $mydate = getdate(strtotime($time));
                                                     echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
 
