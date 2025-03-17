@@ -70,15 +70,15 @@
                             <span class="text-danger">*</span>
                           </label>
                           <!-- onchange="displayinfo()" -->
-                          <select class="form-control select2" id="fullName" name="fullName" required="required" style="border: solid 1px green;" onchange="displayinfo()">
+                          <!-- <select class="form-control select2" id="fullName" name="fullName" required="required" style="border: solid 1px green;" onchange="displayinfo()">
                             <option value="" hidden>Chagua Biashara</option>
                             <?php
-                            foreach ($arr as $key => $value) {
-                              echo '<option value="'.strtoupper($value['bname']).'">' . $value['bname'] . '</option>';
-                            }
+                            //foreach ($arr as $key => $value) {
+                              //echo '<option value="'.strtoupper($value['bname']).'">' . $value['bname'] . '</option>';
+                            //}
                             ?>
-                          </select>
-                          <!-- <input type="text" class="form-control" placeholder="Ingiza jina la mlipaji" id="fullName" name="fullName" required="required" style="border: solid 1px green;"> -->
+                          </select> -->
+                          <input type="text" class="form-control" placeholder="Ingiza jina la mlipaji" id="fullName" name="fullName" required="required" style="border: solid 1px green;">
                         </div>
                       </div>
 
