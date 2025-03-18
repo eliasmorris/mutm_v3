@@ -178,7 +178,7 @@
                         } elseif ($businesscategory == 'LICENSE FEE FOR WAREHOUSE') {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby LICENSE FEE FOR WAREHOUSE .....
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized thereof to store intoxicating liquors subject to the conditions and restrictions set by the Board.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'LICENSE FOR DELIVERY PERMIT') {
