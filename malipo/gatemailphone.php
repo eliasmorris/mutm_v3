@@ -4,6 +4,13 @@ include('../Controller/connect.php');
 include("../Controller/configuration.php"); //configuration file
 $fullName = $_GET["fullName"];
 $pubIP1 = 'https://zcrlb.zssf.or.tz/mutm/api/getBusinessByName/'.$fullName;
+$content = file_get_contents($pubIP1);
+        if (strpos($http_response_header[0], "200")) { 
+         echo "SUCCESS";
+       } 
+       else { 
+              echo "FAILED";
+            }
 //$json = file_get_contents($pubIP1."mutm/api/getBusinessByName/".$fullName); //receive json from url
 $json =  file_get_contents($pubIP1);
 $arr = (array)json_decode($json, TRUE); //covert json data into array format
