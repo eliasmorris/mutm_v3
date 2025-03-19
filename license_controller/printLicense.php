@@ -136,7 +136,7 @@
                                 <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
-                        }elseif ($businesscategory == 'EACH SUBSIDIARY FOR FOUR OR TREE STAR HOTEL BAR') {
+                        }elseif ($businesscategory == 'EACH SUBSIDIARY LICENSE FOR FOUR OR THREE STAR HOTEL') {
                             ?>
                             <h2 style="font-weight: normal;">
                                 <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
