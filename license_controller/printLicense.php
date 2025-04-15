@@ -130,6 +130,12 @@
                             </h2>
                         <?php
 
+                        }elseif($businesscategory == 'EACH SUBSIDIARY LICENSE FOR TWO OR ONE STAR HOTEL'){
+                            ?>
+                            <h2 style="font-weight: normal;">
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
+                            </h2>
+                        <?php
                         }elseif ($businesscategory == 'PRINCIPAL LICENSE FOR FIVE STAR HOTEL BAR') {
                             ?>
                             <h2 style="font-weight: normal;">
