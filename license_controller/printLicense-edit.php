@@ -50,18 +50,18 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo 'ZCRLB/HL/660'; ?>
+                            <?php echo 'ZCRLB/HL/306'; ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: right; color:#0B57D0;">
 
                             Receipt No: <?php
-                                        $ref1 = substr(rand(), 0, 3);
-                                        $ref2 = rand();
-                                        $receiptNo =  $ref2 . $ref1;
-                                        echo strtoupper($receiptNo);
-                                        //echo '1740471810226';
+                                        // $ref1 = substr(rand(), 0, 3);
+                                        // $ref2 = rand();
+                                        // $receiptNo =  $ref2 . $ref1;
+                                        // echo strtoupper($receiptNo);
+                                        echo '1738140267058';
                                         ?>
                         </h3>
                     </div>
@@ -81,7 +81,7 @@
                         if ("PRINCIPAL LICENSE FOR FIVE STAR HOTEL BAR") {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo 'ZANZIBAR BEACH RESORT - MAZIZINI'; ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
+                                <b><?php echo 'THE RESIDENCE ZANZIBAR'; ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
                         } elseif ('LICENSE FOR LIQOUR SHOP LICENSE') {
@@ -161,7 +161,7 @@
                         ?>
                         <br>
                         <br>
-                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'KIEMBE SAMAKI'; ?></b></h2>
+                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'KIZIMKAZI DIMBANI'; ?></b></h2>
                         <br>
                         <br>
                         <h2 style="font-weight: normal;">
@@ -172,7 +172,7 @@
                         <h2 style="font-weight: normal; text-align: center;">
                             Date&nbsp;:&nbsp;&nbsp;<?php
 
-                                                    $time = date("d-m-Y", strtotime('27-03-2025'));
+                                                    $time = date("d-m-Y", strtotime('29-01-2025'));
                                                     $mydate = getdate(strtotime($time));
                                                     echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
 
@@ -180,7 +180,7 @@
                         </h2>
                         <br>
                         <br>
-                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '5,600,000' . '/='; ?></b></h2>
+                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '6,400,000' . '/='; ?></b></h2>
                         <br>
                         <br>
                     </div>
