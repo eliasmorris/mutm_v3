@@ -50,7 +50,7 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo 'ZCRLB/L/720'; ?>
+                            <?php echo 'ZCRLB/HL/660'; ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
@@ -81,16 +81,15 @@
                         if ("PRINCIPAL LICENSE FOR FIVE STAR HOTEL BAR") {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo 'HIGHBARY BAR'; ?></b> is hereby licensed 
-                                to sell by retail, intoxicating liquor to be consumed on the premises 
-                                between four o'clock in the evening and twelve o'clock at night.
+                                <b><?php echo 'ZANZIBAR BEACH RESORT - MAZIZINI'; ?></b> is hereby licensed to sell intoxicating liquor to be consumed in that hotel in accordance with the provision of this Act.
                             </h2>
                         <?php
                         } elseif ('LICENSE FOR LIQOUR SHOP LICENSE') {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized thereof to
-                                 deliver intoxicating liquor from one place or premise to another in Zanzibar.
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized
+                                 thereof to deliver intoxicating liquor from one place or premise to 
+                                 another in Zanzibar.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'PRINCIPAL LICENSE FOR FOUR OR THREE STAR HOTEL') {
@@ -173,18 +172,19 @@
                         ?>
                         <br>
                         <br>
-                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'KIGUNDA'; ?></b></h2>
+                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'KIEMBE SAMAKI'; ?></b></h2>
                         <br>
                         <br>
                         <h2 style="font-weight: normal;">
-                            This permit issued subject to the Liquor Control Act No. 9 of 2020 and its Regulations of 2020 and shall expire on the 31st DECEMBER 2025.
+                            This permit issued subject to the Liquor Control Act No. 9 
+                            of 2020 and its Regulations of 2020 and shall expire on the 31st DECEMBER 2025.
                         </h2>
                         <br>
                         <br>
                         <h2 style="font-weight: normal; text-align: center;">
                             Date&nbsp;:&nbsp;&nbsp;<?php
 
-                                                    $time = date("d-m-Y", strtotime('24-07-2025'));
+                                                    $time = date("d-m-Y", strtotime('27-03-2025'));
                                                     $mydate = getdate(strtotime($time));
                                                     echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
 
