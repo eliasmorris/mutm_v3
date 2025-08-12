@@ -50,7 +50,7 @@
                     <div class="col-sm-6">
                         <h3 class="" style="font-weight: bold; float: left; color:#0B57D0;">
 
-                            <?php echo 'ZCRLB/L/708'; ?>
+                            <?php echo 'ZCRLB/L/601'; ?>
                         </h3>
                     </div>
                     <div class="col-sm-6">
@@ -81,7 +81,7 @@
                         if ("PRINCIPAL LICENSE FOR FIVE STAR HOTEL BAR") {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo'TRIPLE THREE INVESTMENT'; ?></b> is hereby licensed 
+                                <b><?php echo'ROSA\'S MEXICAN KITCHEN & THE BAR AT BAZAAR'; ?></b> is hereby licensed 
                                 to sell by retail, intoxicating liquor to be consumed on the premises 
                                 between four o'clock in the evening and twelve o'clock at night.
                             </h2>
@@ -89,8 +89,9 @@
                         } elseif ('LICENSE FOR LIQOUR SHOP LICENSE') {
                         ?>
                             <h2 style="font-weight: normal;">
-                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized thereof to
-                                 deliver intoxicating liquor from one place or premise to another in Zanzibar.
+                                <b><?php echo strtoupper($arr['bname']); ?></b> is hereby authorized
+                                 thereof to deliver intoxicating liquor from one place or premise to 
+                                 another in Zanzibar.
                             </h2>
                         <?php
                         } elseif ($businesscategory == 'PRINCIPAL LICENSE FOR FOUR OR THREE STAR HOTEL') {
@@ -173,7 +174,7 @@
                         ?>
                         <br>
                         <br>
-                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'KIWENGWA'; ?></b></h2>
+                        <h2 style="font-weight: normal;">The premises situated at: <b><?php echo 'JAMBIANI'; ?></b></h2>
                         <br>
                         <br>
                         <h2 style="font-weight: normal;">
@@ -185,7 +186,7 @@
                         <h2 style="font-weight: normal; text-align: center;">
                             Date&nbsp;:&nbsp;&nbsp;<?php
 
-                                                    $time = date("d-m-Y", strtotime('14-05-2025'));
+                                                    $time = date("d-m-Y", strtotime('11-07-2025'));
                                                     $mydate = getdate(strtotime($time));
                                                     echo "$mydate[mday] this $mydate[month] day $mydate[weekday] $mydate[year]";
 
@@ -193,7 +194,7 @@
                         </h2>
                         <br>
                         <br>
-                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '5,600,000' . '/='; ?></b></h2>
+                        <h2 style="text-align: center;"> <b>FEE PAID TSH <?php echo '3,000,000' . '/='; ?></b></h2>
                         <br>
                         <br>
                     </div>
